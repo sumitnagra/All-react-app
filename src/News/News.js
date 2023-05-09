@@ -3,7 +3,7 @@ import GroupNews from "./Newsinrow";
 import Navbar from "./NewsNavbar";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function NewsMonkey() {
+function DailyNews() {
     return (
         <>
             <Router>
@@ -22,4 +22,4 @@ function NewsMonkey() {
         </>
     )
 }
-export default NewsMonkey;
+export default DailyNews;

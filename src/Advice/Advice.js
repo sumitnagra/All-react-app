@@ -16,7 +16,7 @@ const Advice=()=>{
         <>
         <div className="main">
         <div className="Advice">
-            <p>{advice}</p>
+            <p className="p1">{advice}</p>
             <button onClick={open}>GIVE ME ADVICE!</button>
         </div>
         </div>

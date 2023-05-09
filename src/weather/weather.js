@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './weather.css'
-import svg from '../images/cloud-sun-rain-solid.svg'
+import svg from '../images/weather.jpg'
 const Weather = () => {
 
   const [Articles, setArticles] = useState()
@@ -65,7 +65,7 @@ const Weather = () => {
           <input type="search" style={{ padding: "4px", borderRadius: "5px", width: "400px" }} onChange={(e) => setCity(e.target.value)} />
           <button className="btn btn-outline-success sm" onClick={newWeather}>search</button>
         </div>
-        <div className="card" style={{ width: "35rem", height: "300px", display: "flex" }}>
+        <div className="card" style={{ width: "35rem", height: "300px", display: "flex"  }}>
           <div style={{ height: "150px", width: "100%", padding: "5px" }}>
 
             <span style={{ fontSize: "50px", padding: "10px" }}>{info.main}</span>
@@ -74,7 +74,7 @@ const Weather = () => {
           </div>
 
 
-          <div style={{ height: "70px", display: "flex" }}>
+          <div style={{ height: "70px", display: "flex" }} className='map'>
             <div style={{ padding: "5px", backgroundColor: "black", width: "60%", height: "100%", color: "white", fontSize: "45px", fontWeight: "lighter" }}>{info.temp}&deg;<span style={{ fontSize: "30px", padding: "10px" }}>{info.name}<span style={{ marginBottom: "50px", padding: "10px", fontSize: "15px" }}>{info.country}</span></span></div>
             <div style={{ padding: "10px", color: "white", backgroundColor: "skyblue", height: "100%", width: "40%", fontSize: "18px" }}>
               <div> Sunrise {Sunrise} AM</div>

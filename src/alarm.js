@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import audio from './images/loud_alarm.mp3'
 
-const Alarm = () => {
+const Alarm = () =>{
     const [value, setvalue] = useState('')
 
     let tune = new Audio(audio)

@@ -17,7 +17,7 @@ const GroupNews = (props) => {
     }
     useEffect(() => {
         Update()
-    }, [props.catagory])
+    }, [props.catagory],1000)
 
   const  fetchMoreData=async()=>{
      setPage(page+1)

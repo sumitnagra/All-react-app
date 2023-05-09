@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { costumeReducer } from "./reducer";
+import textReducer from './reducer'
 
-const store= configureStore({
-reducer:{
-    coustom:costumeReducer
-},
+const store=configureStore({
+    reducer:{
+        letter:textReducer,
+    },
 })
 
-export default store;
+export default store
