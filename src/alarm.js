@@ -36,7 +36,7 @@ const Alarm = () =>{
             <div className="jumbotron jumbotron-fluid mt-5">
                 <div className="container">
                     <h1 className="display-4"><input className="sm" type="text" value={value} onChange={(e) => { setvalue(e.target.value) }} placeholder="YYYY-MM-DD HH:MM:SS" /></h1>
-<h5>Use 24 hour time format
+<h5>Use 24 hour time format</h5>
                     <p className="lead"><button type="button" className="btn btn-secondary" onClick={setAlarm}>Set Alarm</button></p>
                     <h5>Alarm will sound after {count} second</h5>
                 </div>

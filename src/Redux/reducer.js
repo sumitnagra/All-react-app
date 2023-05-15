@@ -11,10 +11,11 @@ const Textslice = createSlice({
             return action.payload.toLowerCase();
         },
         toCopy: (state, action) => {
-            navigator.clipboard.writeText(action.payload);
+         navigator.clipboard.writeText(action.payload);
         },
         removeSpace:(state,action)=>{
-            return action.payload.split(/[ ]+/).join(' ')
+          return  action.payload.split(/[ ]+/).join(' ')
+        
         },
         reverse:(state,action)=>{
             return action.payload.split("").reverse().join("");

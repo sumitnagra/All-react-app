@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Newsitem from './Newsitem'
-import Loading from '../Loading';
+import Loading from './Loading';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const GroupNews = (props) => {

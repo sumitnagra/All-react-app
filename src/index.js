@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import DailyNews from './News/News'
 // import Alarm from './alarm.js'
-import Myapp from './FirstApp';
-// import App from './App';
+import Myapp from './textUtilize/FirstApp';
+import App from './todo list/App';
 
-import Alert from './Alert.js'
+import Alert from './News/Alert.js'
 import Weather from './weather/weather.js';
 
 import { Provider } from 'react-redux';
@@ -35,8 +35,8 @@ const Hello = () => {
       {/* <App/> */}
       {/* < Weather/> */}
 
+    {/* <Advice/> */}
     </Provider>
-    {/* <Advice/>*/}
   </>
   )
 }

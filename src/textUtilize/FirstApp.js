@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { useState, useEffect } from "react";
-import { toUpper, toLower, toCopy, removeSpace, reverse } from "./Redux/reducer";
+import { toUpper, toLower, toCopy, removeSpace, reverse } from "../Redux/reducer";
 
 
 const Myapp = (props) => {
@@ -19,8 +19,8 @@ const Myapp = (props) => {
         props.showAlert("Converted to lowercase ", "success")
     }
     const copyText = () => {
-        dispatch(toCopy(text))
         props.showAlert("Copied successully", "success")
+        dispatch(toCopy(text))
 
     }
     const reset = () => {
