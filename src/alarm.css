@@ -1,0 +1,39 @@
+body {
+    background-color: whitesmoke;
+}
+
+.alarm {
+    border-radius: 15px;
+    margin-top: 5rem;
+    margin-left: 18rem;
+    background-color: white;
+    width: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.sm {
+    border: solid black 1px;
+    width: 650px;
+    height: 100px
+}
+
+@media screen and (min-width:350px) and (max-width:720px) {
+    .alarm {
+        border-radius: 15px;
+        margin-top: 7rem;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        background-color: lightgray;
+        width: 99%;
+        height: 99%;
+        display: flex;
+    }
+
+    .sm {
+        background-color: lightgray;
+        width: 90vh;
+    }
+}

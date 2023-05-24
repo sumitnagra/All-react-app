@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { useState, useEffect } from "react";
-import { toUpper, toLower, toCopy, removeSpace, reverse } from "../Redux/reducer";
+import { toUpper, toLower, toCopy, removeSpace, reverse, jsonstring, convertStringToJson } from "../Redux/reducer";
 
 
 const Myapp = (props) => {
@@ -9,6 +9,7 @@ const Myapp = (props) => {
     const data = useSelector(state => state.letter)
     useEffect(() => {
         setText(data)
+        console.log(data)
     }, [data])
     const toUpperCase = () => {
         dispatch(toUpper(text))
@@ -38,21 +39,31 @@ const Myapp = (props) => {
         dispatch(reverse(text))
         props.showAlert("Reversed ", "success");
     }
+    const jsonString = () => {
+        dispatch(jsonstring(text))
+        props.showAlert("Converted to String", "success");
+    }
+    const stringjson = () => {
+        dispatch(convertStringToJson(text))
+        props.showAlert("Converted to object ", "success");
+    }
 
     return (
         <>
-            <div className="container my-5 mx-5 ">
+            <div className="container mx-5 " style={{ position: "relative", top: "100px" }}>
                 <h1>Enter text Here</h1>
-                <textarea id="myBox" className="col-20" style={{ resize: "none" }} cols={150} rows={10} value={text} onChange={(event) => setText(event.target.value)}></textarea>
-                <button className="btn btn-primary mx-2  " disabled={text.length === 0} onClick={toUpperCase}>Uppercase</button>
-                <button className="btn btn-success mx-2 " disabled={text.length === 0} onClick={Lowercase}>Lowercase</button>
-                <button className="btn btn-success mx-2 " disabled={text.length === 0} onClick={copyText}>Copy to Clipboard</button>
-                <button className="btn btn-dark mx-2 " disabled={text.length === 0} onClick={Spaces}>Remove Extra Spaces </button>
-                <button className="btn btn-danger mx-2 " disabled={text.length === 0} onClick={reset}>Reset</button>
-                <button className="btn btn-danger mx-2 " disabled={text.length === 0} onClick={revers}>Reverse</button>
+                <textarea id="myBox" className="col-20" value={text} onChange={(event) => setText(event.target.value)}></textarea>
+                <button className="btn btn-primary mx-2 my-2  " disabled={text.length === 0} onClick={toUpperCase}>Uppercase</button>
+                <button className="btn btn-success mx-2 my-2 " disabled={text.length === 0} onClick={Lowercase}>Lowercase</button>
+                <button className="btn btn-success mx-2 my-2 " disabled={text.length === 0} onClick={copyText}>Copy to Clipboard</button>
+                <button className="btn btn-dark mx-2 my-2 " disabled={text.length === 0} onClick={Spaces}>Remove Extra Spaces </button>
+                <button className="btn btn-danger mx-2 my-2 " disabled={text.length === 0} onClick={reset}>Reset</button>
+                <button className="btn btn-danger mx-2 my-2 " disabled={text.length === 0} onClick={revers}>Reverse</button>
+                <button className="btn btn-danger mx-2 my-2 " disabled={text.length === 0} onClick={jsonString}>JSON String</button>
+                <button className="btn btn-danger mx-2 my-2 " disabled={text.length === 0} onClick={stringjson}>String to JSON</button>
 
             </div>
-            <div className="container my-5">
+            <div className="container my-5" style={{position:"relative",top:"100px"}} >
                 <h2>Text Summary:</h2>
                 <h5>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} character</h5>
                 <h3>Preview:</h3>

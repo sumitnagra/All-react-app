@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Newsitem from './Newsitem'
 import Loading from './Loading';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Navbar from './NewsNavbar';
 
 const GroupNews = (props) => {
     const [loading, setLoading] = useState(false)
@@ -25,6 +26,7 @@ const GroupNews = (props) => {
   }
     return (
         <>
+        <Navbar/>
             <div className='container my-5 '>
                 <h3 className='my-2' style={{ padding: "10px" }}><span style={{ color: "red", fontSize: "35px" }}>NDTV</span> -Top Headline</h3>
 

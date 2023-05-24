@@ -1,41 +1,25 @@
 
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import DailyNews from './News/News'
-// import Alarm from './alarm.js'
-import Myapp from './textUtilize/FirstApp';
 import App from './todo list/App';
-
-import Alert from './News/Alert.js'
-import Weather from './weather/weather.js';
+import Alarm from './alarm';
 
 import { Provider } from 'react-redux';
 import store from './Redux/store.js'
-import Advice from './Advice/Advice';
+import Profile from './portfolio/portfolio';
+
+
 
 const Hello = () => {
-  const [alert, setAlert] = useState(null)
-  const showAlert = (massage, type) => {
-    setAlert({
-      msg: massage,
-      type: type
-    })
-  }
-  setTimeout(() => {
-    setAlert(null)
-  }, 2000);
-
 
   return (<>
-    <Provider store={store}>
-      <Alert alert={alert} />
-      <Myapp showAlert={showAlert} />
-      {/* <Alarm/>   */}
-      {/* <DailyNews />  */}
-      {/* <App/> */}
-      {/* < Weather/> */}
 
-    {/* <Advice/> */}
+    <Provider store={store}>
+
+      <Profile />
+
+      {/* <App/> */}
+
     </Provider>
   </>
   )

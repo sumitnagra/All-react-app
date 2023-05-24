@@ -1,0 +1,58 @@
+.header{
+  padding-top: 50px;
+width: 80%;
+height:200px;
+}
+.header h2{
+text-align:center;
+}
+#myInput{
+  width: 50%;
+  margin-left: 19%;
+}
+.add{
+  display: flex;
+
+}
+
+#myUL{
+    width:60%;
+  border: solid black 1px;
+  border-radius: 5px;
+  height: auto;
+  background-color: whitesmoke;
+  position: relative;
+  left:206px;
+  font-size: 25px;
+
+}
+#myUL li{
+  padding:10px;
+
+}
+#myUL li i:nth-child(even){
+  position:absolute;
+  right:10px
+}
+#myUL li i:nth-child(odd){
+  position:absolute;
+  right:50px
+}
+
+#myUL li:hover{
+  cursor: pointer;
+  background-color: darkgrey;
+
+
+}
+ol li:nth-child(odd) {
+  background: #f9f9f9;
+}
+@media screen and (min-width:350px)  and (max-width:720px){
+  #myUL{
+    position: relative;
+  left:80px;
+  width: 65%;
+
+  }
+}

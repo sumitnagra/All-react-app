@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './todo.css'
 
 function App() {
   const [input, setInput] = useState('')
@@ -35,16 +36,26 @@ function App() {
     setInput(newInput[index])
     setIndex(index)
   }
+const style={
+  width:"70%"
+}
+const listyle={
+ 
+}
   return (
     <>
-      <div className="container mt-3">
-        <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Add item" />
-        <button className="btn btn-success mx-2" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'}</button>
-
-        <ol>
-          {newInput.map((item, index) => <div key={index}><li>{item} <button className="btn btn-secondary my-2" onClick={() => Edit(index)}>Edit</button>  <button className="btn btn-danger my-2" onClick={() => Delete(index)}>Delete</button></li>
-          </div>)}
-        </ol>
+      <div id="myDIV" className="header">
+        <h2>My To Do List</h2>
+        <div className="add">
+        <input type="text" id="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item" style={style}/>
+        <button className="btn btn-dark" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'}</button>
+</div>
+      </div>
+<div className="myUL">
+      <ol id="myUL">
+      {newInput.map((item, index) =><li key={index}>{item} <i className="fa-solid fa-pen-to-square mx-4" onClick={() => Edit(index)} style={listyle}>
+          </i><i className="fa-solid fa-trash right mx-4" onClick={() => Delete(index)}></i></li>) }
+      </ol>
       </div>
     </>
 
