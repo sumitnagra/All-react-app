@@ -2,7 +2,7 @@ import Footer from './footer'
 const Resume=()=>{
 return(<>
 <div className='container projectheading'>
- <h1 className='projectHeading' >Resume </h1>
+ <h1 className='projectHeading' >Resume</h1>
 <div className='firstProject padding' data-aos="fade-up"> 
      < div className='textsection skill'><h4>Skills </h4><h4> & Expertise</h4>
      <div>

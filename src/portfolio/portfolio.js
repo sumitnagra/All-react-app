@@ -19,7 +19,9 @@ import NoteState from "../Notebook/component/context/context.js"
 import AddNote from "../Notebook/component/Addnote.js";
 import Login from "../Notebook/component/context/login.js";
 import SignUP from "../Notebook/component/context/signup.js";
-
+import Items from '../shopingCart/item';
+import Cart from '../shopingCart/cart';
+import { ShopContextprovider } from '../shopingCart/shopContex';
 
 
 
@@ -43,7 +45,7 @@ const CompleteProfile = () => {
   return (<>
     <Router>
       <NoteState showAlert={showAlert}>
-
+<ShopContextprovider>
         <Navbar />
         <Alert alert={alert} />
 
@@ -56,6 +58,8 @@ const CompleteProfile = () => {
           <Route path="/advice/*" element={<Advice />} />
           <Route path="/alarm/*" element={<Alarm />} />
           <Route path="/app/*" element={<App/>} />
+          <Route path="/shop/*" element={<Items/>} />
+          <Route path="/cart/*" element={<Cart/>} />
 
           <Route path="/textUtils" element={<Myapp showAlert={showAlert} />} />
 
@@ -75,6 +79,7 @@ const CompleteProfile = () => {
 
 
         </Routes>
+        </ShopContextprovider>
       </NoteState>
     </Router>
 

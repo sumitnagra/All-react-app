@@ -1,6 +1,3 @@
-html{
-    scroll-behavior: smooth;
-}
 body {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +10,7 @@ body {
     width: 100%;
     position: fixed;
     z-index: 1;
-    
+
     display: flex;
     padding-top: 20px;
     flex-direction: row-reverse;
@@ -123,6 +120,7 @@ hr {
     font-weight: bold;
 
 
+
 }
 
 .footerItem {
@@ -142,13 +140,16 @@ hr {
     align-items: center;
     margin-bottom: 150px;
 }
-
 .projectHeading {
     position: relative;
     top: 150px;
     left: 50px;
     font-size: 45px;
     font-weight: bold;
+}
+
+.projectHeading button {
+    margin-left: 45%;
 }
 
 p {
@@ -194,16 +195,21 @@ p {
 
 .contactForm {
     width: 50%;
-    display:block
+    display: block
 }
-.Firstname,.email,.msg{
-    width:100%;
+
+.Firstname,
+.email,
+.msg {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
-.msg .circleItem1{
-    top:50px
+
+.msg .circleItem1 {
+    top: 50px
 }
+
 .contactForm p {
     font-weight: 350;
     position: relative;
@@ -217,7 +223,7 @@ input {
     background-color: whitesmoke;
 }
 
-textarea {
+.contactmsg {
     width: 300px;
     height: 150px;
     resize: none;
@@ -252,23 +258,44 @@ h4 {
 }
 
 .col-20 {
-    width: 1100px
-}
-.Firstname div{
-    padding: 20px;
-}
-.email div{
-    padding: 20px;
-}
-.msg textarea{
+    width: 100%;
+    height:200px;
+   resize: none;
 }
 
+.Firstname div {
+    padding: 20px;
+}
+
+.email div {
+    padding: 20px;
+}
+
+.cv {
+    position: absolute;
+    bottom: 20%;
+    left: 10%
+}
+.cardWidth{
+    color:black;
+    width: 18rem;
+}
+.cartItem{
+    width:100%
+}
 @media screen and (min-width:350px) and (max-width:720px) {
 
     body {
         box-sizing: border-box;
         margin: 0;
-        padding: 0;
+        padding: 0;   
+        background-size: cover;
+    }
+
+    .cv {
+        position: absolute;
+        bottom: 60%;
+        left: 11%
     }
 
     .name {
@@ -282,11 +309,12 @@ h4 {
     }
 
     .profileNav {
+        color: black;
         height: 60px;
-        width: 100vh;
+        width: 100%;
         position: fixed;
         z-index: 1;
-        left: 10px;
+        left: 0px;
         padding-top: 20px;
         flex-direction: row;
         background-color: whitesmoke;
@@ -331,10 +359,10 @@ h4 {
         padding-bottom: 20px;
     }
 
+
     hr {
         width: 100%;
     }
-
 
     .firstProject {
         position: relative;
@@ -354,8 +382,6 @@ h4 {
         font-size: 30px;
         font-weight: bold;
     }
-
-
 
     .contact {
         position: relative;
@@ -381,30 +407,35 @@ h4 {
         position: relative;
         top: 15px;
     }
-    .Firstname,.email,.msg,.subject{
-        width:90%;
-        margin:3%;
+
+    .Firstname,
+    .email,
+    .msg,
+    .subject {
+        width: 90%;
+        margin: 3%;
     }
+
     .contactdetail {
         width: 100%;
-        height:300px
+        height: 300px
     }
-    
-input {
-    border: solid black 1px;
-    width:80%;
-    height: 70px;
-    background-color: whitesmoke;
-}
 
-textarea {
-    margin-left:0px;
-    width: 80%;
-    height: 170px;
-    resize: none;
-    background-color: whitesmoke;
-}
+    input {
+        
+        border: solid black 1px;
+        width: 80%;
+        height: 70px;
+        background-color: whitesmoke;
+    }
 
+    .contactmsg {
+       border:solid black 1px;
+        width: 75%;
+        height: 170px;
+        resize: none;
+        background-color: whitesmoke;
+    }
 
     .Phone h4 {
         padding-top: 20px;
@@ -453,14 +484,29 @@ textarea {
         line-height: 50px;
     }
 
+    .Firstname,
+    .email,
+    .msg {
+        width: 100%;
+        display: block;
+    }
+.msg{
+    margin-left: 40px;
+}
 
-
-
-
-.Firstname,.email,.msg{
+.col-20 {
+    width: 90%;
+height:300px
+}
+.cardWidth{
+    color:black;
     width:100%;
-    display: block;
 }
-
+.cardWidth img{
+   
 }
-
+.col-md-3{
+    width: 50%;
+  
+}
+}

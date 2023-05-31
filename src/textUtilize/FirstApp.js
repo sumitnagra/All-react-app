@@ -9,7 +9,6 @@ const Myapp = (props) => {
     const data = useSelector(state => state.letter)
     useEffect(() => {
         setText(data)
-        console.log(data)
     }, [data])
     const toUpperCase = () => {
         dispatch(toUpper(text))

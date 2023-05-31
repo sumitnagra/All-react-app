@@ -7,7 +7,7 @@ const Login = (props) => {
   const [user, setUser] = useState({ email: "", password: "" })
   const navigate = useNavigate();
   const a = useContext(Notecontext);
-  const host = "http://localhost:8080"
+  const host = "https://sumitportfolio-5yqc.onrender.com"
 
   const login = async (user) => {
     const responce = await fetch(`${host}/login`, {

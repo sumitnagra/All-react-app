@@ -2,20 +2,23 @@ import { useState, useEffect } from 'react'
 import './weather.css'
 import Sun from '../images/23634-1-sun-hd.png'
 import Cloudy from '../images/23702-1-weather-transparent.png'
-import Haze from '../images/23793-9-weather-photos.png'
+import Haze from '../images/vecteezy_icon-cloud-with-sun_9267092_145.png'
 import Mist from '../images/Mist-Transparent-Background.png';
 import Smoke from '../images/pngfind.com-smoke-cloud-png-1762313.png'
+import Rain from '../images/vecteezy_cute-weather-cloud-temperature-cartoon_17257793_588.png'
 const Weather = () => {
 
   const [Articles, setArticles] = useState()
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
   const condition = {
-    Clouds: Cloudy,
+    Clouds:Cloudy,
     Haze: Haze,
     Clear: Sun,
     Mist:Mist,
-    Smoke:Smoke
+    Smoke:Smoke,
+    Rain:Rain,
+    Thunderstorm:Rain,
   }
   const Data = async () => {
     try {
@@ -48,8 +51,6 @@ const Weather = () => {
   const newWeather = () => {
     Data()
     const weatherCondition=info.main;
-
-console.log(weatherCondition)
   }
 
   let sec = info.sunset;
@@ -80,11 +81,10 @@ console.log(weatherCondition)
           <button className="btn btn-dark " onClick={newWeather}>search</button>
         </div>
         <div className="card" style={{ width: "35rem", height: "300px", display: "flex" }}>
-          <div style={{ height: "150px", width: "100%", padding: "5px" }}>
+          <div style={{ height: "150px", width: "100%", margin:"5px" }}>
 
             <span style={{ fontSize: "50px", padding: "10px" }}>{info.main}</span>
-            <img src={condition[info.main]} alt='img' style={{ height: "120px", width: "150px", padding: "10px" }} />
-
+            <img src={condition[info.main]}  alt='img' style={{ height: "120px", width: "150px", padding: "10px" }} />
           </div>
 
 

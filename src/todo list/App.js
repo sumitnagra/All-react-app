@@ -14,6 +14,7 @@ function App() {
       if (edit === 0) {
         setNewInput([...newInput, input])
         setInput('')
+       
       }
       else {
         let oldArr = newInput

@@ -6,10 +6,10 @@ const Textslice = createSlice({
 
     reducers: {
         toUpper: (state, action) => {
-            return JSON.stringify(action.payload);
+            return action.payload.toUpperCase();
         },
         toLower: (state, action) => {
-            return JSON.parse(action.payload);
+            return action.payload.toLowerCase();
         },
         toCopy: (state, action) => {
             navigator.clipboard.writeText(action.payload);

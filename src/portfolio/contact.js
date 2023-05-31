@@ -41,7 +41,7 @@ const Contact = () => {
                                 <div className='msg'>
                                 <div>
                                         <p>Massage</p>
-                                        <textarea></textarea>
+                                        <textarea className='contactmsg'></textarea>
                                 </div>
                                 <div className='circleItem1'>Submit</div>
                                 </div>
