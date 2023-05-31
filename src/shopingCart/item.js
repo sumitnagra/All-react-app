@@ -1,11 +1,11 @@
 import Shop from "./shop"
-import { useEffect, useState } from "react"
+
 import ShopingNav from "./shopingNav";
 import finalProduct from "./product";
-const Items = () => {
+const Items = (props) => {
        return (<>
         <ShopingNav />
-        <div className="d-flex row" >
+        <div className="d-flex row"  >
             {
                 finalProduct.map((element) =>
                     <div className="col-md-3" key={element.id}>

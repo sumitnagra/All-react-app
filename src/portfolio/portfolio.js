@@ -58,7 +58,7 @@ const CompleteProfile = () => {
           <Route path="/advice/*" element={<Advice />} />
           <Route path="/alarm/*" element={<Alarm />} />
           <Route path="/app/*" element={<App/>} />
-          <Route path="/shop/*" element={<Items/>} />
+          <Route path="/shop/*" element={<Items  />} />
           <Route path="/cart/*" element={<Cart/>} />
 
           <Route path="/textUtils" element={<Myapp showAlert={showAlert} />} />

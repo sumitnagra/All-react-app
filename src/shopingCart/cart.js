@@ -11,9 +11,10 @@ const Cart = (props) => {
         {
             finalProduct.map((element) => {
                 if (cartItem[element.id] !== 0) {
-                    return <div className="col-md-2 " key={element.id}>   <CartItem image={element.image} title={element.title} details={element.description} price={element.price} rating={element.rating} category={element.category} id={element.id} />
+                    return <div className="col-md-12 " key={element.id}>   <CartItem image={element.image} title={element.title} details={element.description} price={element.price} rating={element.rating} category={element.category} id={element.id} />
                     </div>
                 }
+              
             }
             )
         }
