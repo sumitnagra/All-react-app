@@ -6,6 +6,7 @@ import Project4 from "../images/Screenshot (30).png"
 import Project5 from "../images/Screenshot (32).png"
 import Project6 from "../images/Screenshot (33).png"
 import Project7 from '../images/Screenshot (34).png'
+import Project8 from '../images/Screenshot (35).png'
 import Footer from './footer'
 
 const Project=()=>{
@@ -45,8 +46,8 @@ const Project=()=>{
 <p> This small application help user to create a todo list of the day ,the user can add task ,delete task and capable in modify the existed task  </p><button className='btn btn-dark' onClick={()=>{navigate("/app")}}>Try It</button></div><img src={Project6} width={500} height={300} style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}/>
 </div>
 <div className='firstProject ' data-aos="fade-up">
-    <div className='textsection' ><h2>05 Todo List </h2>
-<p> This small application help user to create a todo list of the day ,the user can add task ,delete task and capable in modify the existed task  </p><button className='btn btn-dark' onClick={()=>{navigate("/shop")}}>Try It</button></div><img src={Project6} width={500} height={300} style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}/>
+    <div className='textsection' ><h2>08 Shoping Cart </h2>
+<p> The smart add to cart application in which you can choose different product from the list and buy whenever you want also you can remove the product from the list , great simple user interface . See the full details of the product after add to cart   </p><button className='btn btn-dark' onClick={()=>{navigate("/shop")}}>Try It</button></div><img src={Project8} width={500} height={300} style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}/>
 </div>
 </div>
 <Footer/>
