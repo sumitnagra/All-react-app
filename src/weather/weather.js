@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './weather.css'
 import Sun from '../images/23634-1-sun-hd.png'
+import moon from '../images/pngwing.com.png'
 import Cloudy from '../images/23702-1-weather-transparent.png'
 import Haze from '../images/vecteezy_icon-cloud-with-sun_9267092_145.png'
 import Mist from '../images/Mist-Transparent-Background.png';
@@ -8,13 +9,14 @@ import Smoke from '../images/pngfind.com-smoke-cloud-png-1762313.png'
 import Rain from '../images/vecteezy_cute-weather-cloud-temperature-cartoon_17257793_588.png'
 const Weather = () => {
 
-  const [Articles, setArticles] = useState()
+  const [Hour, setHour] = useState(0)
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
+
   const condition = {
     Clouds:Cloudy,
     Haze: Haze,
-    Clear: Sun,
+    Clear: Hour<19?moon:Sun,
     Mist:Mist,
     Smoke:Smoke,
     Rain:Rain,
@@ -41,6 +43,9 @@ const Weather = () => {
         name
       }
       setInfo(newInfo)
+      const Date = new Date();
+  const hour = Date.getHours();
+  setHour(hour)
     } catch (error) {
       console.log(error)
     }
