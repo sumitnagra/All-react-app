@@ -20,6 +20,7 @@ const Weather = () => {
     Smoke: Smoke,
     Rain: Rain,
     Thunderstorm: Rain,
+    Dust:Mist
   }
   const Data = async () => {
     try {

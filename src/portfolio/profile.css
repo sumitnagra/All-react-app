@@ -1,25 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    height:900px;
     overflow: scroll;
-    height:900px;
 
-    background-image: linear-gradient(
-  205deg,
-  hsl(240deg 83% 88%) 19%,
-  hsl(323deg 83% 89%) 59%,
-  hsl(6deg 100% 92%) 74%,
-  hsl(35deg 100% 93%) 83%,
-  hsl(48deg 100% 95%) 90%,
-  hsl(34deg 100% 96%) 94%,
-  hsl(18deg 91% 97%) 98%,
-  hsl(5deg 27% 96%) 100%,
-  hsl(2deg 100% 90%) 101%,
-  hsl(4deg 100% 79%) 101%,
-  hsl(5deg 100% 67%) 101%,
-  hsl(0deg 92% 50%) 100% 
- );    
+   
  
 }
 
@@ -469,17 +453,77 @@ h4 {
   }  
   .body-height-small {
     height:950px;
+    background-image: linear-gradient(
+        205deg,
+        hsl(240deg 83% 88%) 19%,
+        hsl(323deg 83% 89%) 59%,
+        hsl(6deg 100% 92%) 74%,
+        hsl(35deg 100% 93%) 83%,
+        hsl(48deg 100% 95%) 90%,
+        hsl(34deg 100% 96%) 94%,
+        hsl(18deg 91% 97%) 98%,
+        hsl(5deg 27% 96%) 100%,
+        hsl(2deg 100% 90%) 101%,
+        hsl(4deg 100% 79%) 101%,
+        hsl(5deg 100% 67%) 101%,
+        hsl(0deg 92% 50%) 100% 
+       );    
   }
   
   .body-height-medium {
     height: 1250px;
+    background-image: linear-gradient(
+        205deg,
+        hsl(240deg 83% 88%) 19%,
+        hsl(323deg 83% 89%) 59%,
+        hsl(6deg 100% 92%) 74%,
+        hsl(35deg 100% 93%) 83%,
+        hsl(48deg 100% 95%) 90%,
+        hsl(34deg 100% 96%) 94%,
+        hsl(18deg 91% 97%) 98%,
+        hsl(5deg 27% 96%) 100%,
+        hsl(2deg 100% 90%) 101%,
+        hsl(4deg 100% 79%) 101%,
+        hsl(5deg 100% 67%) 101%,
+        hsl(0deg 92% 50%) 100% 
+       );    
   }
   .body-height-medium2 {
     height: 935px;
+    background-image: linear-gradient(
+        205deg,
+        hsl(240deg 83% 88%) 19%,
+        hsl(323deg 83% 89%) 59%,
+        hsl(6deg 100% 92%) 74%,
+        hsl(35deg 100% 93%) 83%,
+        hsl(48deg 100% 95%) 90%,
+        hsl(34deg 100% 96%) 94%,
+        hsl(18deg 91% 97%) 98%,
+        hsl(5deg 27% 96%) 100%,
+        hsl(2deg 100% 90%) 101%,
+        hsl(4deg 100% 79%) 101%,
+        hsl(5deg 100% 67%) 101%,
+        hsl(0deg 92% 50%) 100% 
+       );    
   }
   
   .body-height-large {
     height: 4135px;
+    background-image: linear-gradient(
+        205deg,
+        hsl(240deg 83% 88%) 19%,
+        hsl(323deg 83% 89%) 59%,
+        hsl(6deg 100% 92%) 74%,
+        hsl(35deg 100% 93%) 83%,
+        hsl(48deg 100% 95%) 90%,
+        hsl(34deg 100% 96%) 94%,
+        hsl(18deg 91% 97%) 98%,
+        hsl(5deg 27% 96%) 100%,
+        hsl(2deg 100% 90%) 101%,
+        hsl(4deg 100% 79%) 101%,
+        hsl(5deg 100% 67%) 101%,
+        hsl(0deg 92% 50%) 100% 
+       );    
   }
   .expertise ul li{
     padding-top:10px
@@ -488,15 +532,60 @@ h4 {
 @media screen and (min-width:350px) and (max-width:720px) {
     .body-height-small {
         height:1500px;
+        background-image: linear-gradient(
+            205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100% 
+           );    
       }
       
       .body-height-medium {
         height: 2270px;
+        background-image: linear-gradient(
+            205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100% 
+           );    
       }
       
       
       .body-height-large {
         height: 8045px;
+        background-image: linear-gradient(
+            205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100% 
+           );    
       }
 .downloadbtn{
     font-size: 25px;
