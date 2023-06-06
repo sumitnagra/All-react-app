@@ -28,6 +28,7 @@ text-align:center;
 }
 #myUL li{
   padding:10px;
+  word-wrap: break-word;
 
 }
 #myUL li i:nth-child(even){
@@ -53,6 +54,8 @@ ol li:nth-child(odd) {
     position: relative;
   left:80px;
   width: 65%;
-
+  }
+  #myInput{
+    font-size: 30px;
   }
 }

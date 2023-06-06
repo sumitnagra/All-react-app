@@ -1,7 +1,7 @@
 
 const Footer=()=>{
 return(<>
-
+<div>
 <hr  style={{top:"15rem" }}/>
         <div className='footer'>
             <div className='footerItem'>Phone <div style={{ fontWeight: "200" }}><i className="fa-solid fa-phone"></i>  9991921024</div></div>
@@ -12,6 +12,7 @@ return(<>
                 <p style={{ fontSize: "15px", position: "relative", bottom: "20px" }}>Powered By LinkedIn </p>
 
             </div>
+        </div>
         </div>
 </>)
 }

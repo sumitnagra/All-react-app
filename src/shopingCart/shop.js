@@ -1,6 +1,7 @@
 import { useContext, useState } from "react"
 import { ShopContext } from "./shopContex"
 
+
 const Shop = (props) => {
   const { addTocart } = useContext(ShopContext);
   const [isClicked, setIsClicked] = useState(false);
@@ -21,12 +22,12 @@ const Shop = (props) => {
           <div className="card-text ">Count:{props.rating.count}</div>
 
           <button className={`cart-button ${isClicked ? 'clicked' : ''}`} onClick={adding}>
-            <span class="add-to-cart">Add to cart</span>
-            <span class="added">Added</span>
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-box"></i>
+            <span className="add-to-cart">Add to cart</span>
+            <span className="added">Added</span>
+            <i className="fas fa-shopping-cart"></i>
+            <i className="fas fa-box"></i>
           </button>
-          <span className="btn btn-warning  btnwidth">Buy Now</span>
+          <span className="btn btn-warning btnwidth">Buy Now</span>
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ const Project=()=>{
     </p><button className='btn btn-dark' onClick={()=>{navigate("/notebook")}}>Try It</button></div><img src={Project7} width={500} height={300} style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}/>
 </div>
 <div className='firstProject ' data-aos="fade-up">
-    <div className='textsection' ><h2>05 Todo List </h2>
+    <div className='textsection' ><h2>07 Todo List </h2>
 <p> This small application help user to create a todo list of the day ,the user can add task ,delete task and capable in modify the existed task  </p><button className='btn btn-dark' onClick={()=>{navigate("/app")}}>Try It</button></div><img src={Project6} width={500} height={300} style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}/>
 </div>
 <div className='firstProject ' data-aos="fade-up">

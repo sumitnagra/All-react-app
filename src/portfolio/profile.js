@@ -3,10 +3,13 @@ import Footer from './footer'
 
 
 const Profile = () => {
+
     return (
         <>
+        <div>
             <About />
             <Footer />
+            </div>
         </>
     )
 }

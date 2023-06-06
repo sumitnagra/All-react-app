@@ -1,20 +1,38 @@
 body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height:900px;
     overflow: scroll;
+    height:900px;
+
+    background-image: linear-gradient(
+  205deg,
+  hsl(240deg 83% 88%) 19%,
+  hsl(323deg 83% 89%) 59%,
+  hsl(6deg 100% 92%) 74%,
+  hsl(35deg 100% 93%) 83%,
+  hsl(48deg 100% 95%) 90%,
+  hsl(34deg 100% 96%) 94%,
+  hsl(18deg 91% 97%) 98%,
+  hsl(5deg 27% 96%) 100%,
+  hsl(2deg 100% 90%) 101%,
+  hsl(4deg 100% 79%) 101%,
+  hsl(5deg 100% 67%) 101%,
+  hsl(0deg 92% 50%) 100% 
+ );    
+ 
 }
 
 .profileNav {
     height: 60px;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     z-index: 1;
-
     display: flex;
-    padding-top: 20px;
+    padding-top: 10px;
     flex-direction: row-reverse;
-    background-color: whitesmoke;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .ProfilenavItem {
@@ -54,14 +72,14 @@ body {
     padding: 0;
     position: relative;
     top: 300px;
-    left: 100px;
-
+    left: 0px;
 }
 
 .about {
     position: relative;
-    bottom: 20px;
-    width: 50%
+    bottom: 132px;
+    left: 81px;
+    width: 50%;
 }
 
 .circleItem1,
@@ -79,6 +97,7 @@ body {
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
+    
 
 }
 
@@ -86,28 +105,34 @@ body {
     background-color: rgba(238, 163, 2, 255);
     transition: background-color 0.5s ease;
 
+
 }
 
 .circleItem2 {
     background-color: rgba(255, 59, 37, 255);
     transition: background-color 0.5s ease;
+
 }
 
 .circleItem3 {
     background-color: rgba(128, 216, 218, 255);
-    transition: background-color 0.5s ease;
+    transition:  background-color 0.5s ease;
 
 }
 
 .circleItem1:hover,
 .circleItem3:hover,
 .circleItem2:hover {
+    left:5px;
     background-color: whitesmoke;
+    border: solid 1px #555;
+
 }
+
 
 hr {
     position: relative;
-    top: 50px;
+    top: 150px;
 }
 
 .footer {
@@ -118,9 +143,6 @@ hr {
     justify-content: space-between;
     margin-left: 50px;
     font-weight: bold;
-
-
-
 }
 
 .footerItem {
@@ -142,7 +164,7 @@ hr {
 }
 .projectHeading {
     position: relative;
-    top: 150px;
+    top: 110px;
     left: 50px;
     font-size: 45px;
     font-weight: bold;
@@ -204,6 +226,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+
 }
 
 .msg .circleItem1 {
@@ -220,14 +243,16 @@ input {
     border: solid black 1px;
     width: 250px;
     height: 45px;
-    background-color: whitesmoke;
+    background-color: transparent;
+ 
 }
 
 .contactmsg {
     width: 300px;
     height: 150px;
     resize: none;
-    background-color: whitesmoke;
+    background-color: transparent;
+   
 }
 
 h4 {
@@ -248,8 +273,9 @@ h4 {
 
 .education {
     position: relative;
-    top: 80px;
-    left: 50px
+    top: 200px;
+    left: 50px;
+    height: 60%;
 }
 
 .education ul {
@@ -403,17 +429,90 @@ h4 {
     width: 90%;
     margin-left: 4%;
 }
+.downloadbtn{
+    position:absolute;
+    left:200px;
+    bottom:120px;
+}
+.animate {
+   height: 60px;
+   width:180px;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .animate:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+  }
+  
+  .animate:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .animate span {
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+   ;
+  }  
+  .body-height-small {
+    height:950px;
+  }
+  
+  .body-height-medium {
+    height: 1250px;
+  }
+  .body-height-medium2 {
+    height: 935px;
+  }
+  
+  .body-height-large {
+    height: 4135px;
+  }
+  .expertise ul li{
+    padding-top:10px
+  }
+  
 @media screen and (min-width:350px) and (max-width:720px) {
-
+    .body-height-small {
+        height:1500px;
+      }
+      
+      .body-height-medium {
+        height: 2270px;
+      }
+      
+      
+      .body-height-large {
+        height: 8045px;
+      }
+.downloadbtn{
+    font-size: 25px;
+    font-weight: bold;
+    width:40%;
+    height:10%;
+    position:absolute;
+    left:200px;
+    bottom:450px;
+}
     .cartImage{
     width: 40%;
     
         height:300px
     }
     body {
-        box-sizing: border-box;
-        margin: auto;
-        padding: 0;   
     }
 
     .cv {
@@ -436,9 +535,8 @@ h4 {
         color: black;
         height: 60px;
         width: 100%;
-        position: fixed;
+        font-size:20px;
         z-index: 1;
-        left: 0px;
         padding-top: 20px;
         flex-direction: row;
         background-color: whitesmoke;
@@ -451,8 +549,8 @@ h4 {
     }
 
     .profileImage img {
-        width: 400px;
-        height: 400px;
+        width:70%;
+        height:30%;
         position: relative;
         right: 50px
     }
@@ -460,9 +558,8 @@ h4 {
     .about {
         position: relative;
         width: 100%;
-        padding: 0;
-        margin: 0;
-        right: 70px
+        bottom: 30px;
+       left: 10px
     }
 
     .circleItem1,
@@ -471,7 +568,8 @@ h4 {
         width: 110px;
         height: 110px;
         margin-bottom: 40px;
-    }
+}
+    
 
     .footer {
         top: 16rem;
@@ -546,19 +644,21 @@ h4 {
     }
 
     input {
+    background-color: transparent;
         
         border: solid black 1px;
         width: 80%;
         height: 70px;
-        background-color: whitesmoke;
     }
 
     .contactmsg {
+    background-color: transparent;
+
        border:solid black 1px;
         width: 75%;
         height: 170px;
         resize: none;
-        background-color: whitesmoke;
+      
     }
 
     .Phone h4 {
@@ -629,6 +729,42 @@ height:300px
 
 .col-md-3{
     width: 50%;
-  
 }
+.group{
+    position: relative;
+    left:110px
+}
+.animate {
+     height: 60px;
+    width:180px;
+     border: 1px solid #91C9FF;
+     outline: none;
+     transition: 1s ease-in-out;
+   }
+   svg {
+     position: absolute;
+     left: 0;
+     top: 0;
+     fill: none;
+     stroke: #fff;
+     stroke-dasharray: 150 480;
+     stroke-dashoffset: 150;
+     transition: 1s ease-in-out;
+   }
+   
+   .animate:hover {
+     transition: 1s ease-in-out;
+     background: #4F95DA;
+   }
+   
+   .animate:hover svg {
+     stroke-dashoffset: -480;
+   }
+   
+   .animate span {
+     color:black;
+     font-weight: bold;
+     font-size: 18px;
+    ;
+   } 
 }

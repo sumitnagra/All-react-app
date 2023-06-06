@@ -13,17 +13,31 @@ const getDefaultcart = () => {
 }
 export const ShopContextprovider = (props) => {
     const [cartItem, setrCartItem] = useState(getDefaultcart())
+    const [filteredItems, setFilteredItems] = useState([]);
     const addTocart = (id) => {
         setrCartItem((prev) => ({ ...prev, [id]: prev[id] + 1 }))
     };
     const removeFromCart = (id) => {
         setrCartItem((prev) => ({ ...prev, [id]: prev[id] - 1 }))
     };
-   
-    console.log(cartItem)
+    const filterItemsByCategory = (category) => {
+        const filteredItems = finalProduct.filter((item) => item.category === category);
+        setFilteredItems(filteredItems);
+      };
+    
+      
+
     return (
 
-        <ShopContext.Provider value={{cartItem,addTocart,removeFromCart}}>{props.children}</ShopContext.Provider>
+        <ShopContext.Provider
+        value={{
+          cartItem,
+          addTocart,
+          removeFromCart,
+          filteredItems,
+        
+          filterItemsByCategory
+        }}>{props.children}</ShopContext.Provider>
     )
 
 }

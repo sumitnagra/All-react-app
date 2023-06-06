@@ -8,19 +8,18 @@ import Mist from '../images/Mist-Transparent-Background.png';
 import Smoke from '../images/pngfind.com-smoke-cloud-png-1762313.png'
 import Rain from '../images/vecteezy_cute-weather-cloud-temperature-cartoon_17257793_588.png'
 const Weather = () => {
-
-  const [Hour, setHour] = useState(0)
+  const [currentHour, setCurrentHour] =useState(new Date().getHours());
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
 
   const condition = {
-    Clouds:Cloudy,
+    Clouds: Cloudy,
     Haze: Haze,
-    Clear: Hour<19?moon:Sun,
-    Mist:Mist,
-    Smoke:Smoke,
-    Rain:Rain,
-    Thunderstorm:Rain,
+    Clear:currentHour > 19 ? moon :Sun,
+    Mist: Mist,
+    Smoke: Smoke,
+    Rain: Rain,
+    Thunderstorm: Rain,
   }
   const Data = async () => {
     try {
@@ -43,20 +42,25 @@ const Weather = () => {
         name
       }
       setInfo(newInfo)
-      const Date = new Date();
-  const hour = Date.getHours();
-  setHour(hour)
+
     } catch (error) {
       console.log(error)
     }
   }
   useEffect(() => {
     Data()
-  }, [], 0)
+  }, [], 1000)
   const newWeather = () => {
     Data()
-    const weatherCondition=info.main;
   }
+useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHour(new Date().getHours());
+    }, 60000);
+  
+    return () => clearInterval(interval);
+  }, []);
+  
 
   let sec = info.sunset;
   let date = new Date(sec * 1000);
@@ -82,14 +86,14 @@ const Weather = () => {
     <div data-aos="fade-up">
       <div className='mainDiv'>
         <div className='searchBtn'>
-          <input type="search"onChange={(e) => setCity(e.target.value)} placeholder='Search by city name' />
-          <button className="btn btn-dark " onClick={newWeather}>search</button>
+          <input type="search" onChange={(e) => setCity(e.target.value)} placeholder='Search by city name' />
+          <button className="btn btn-dark " onClick={newWeather}>Search</button>
         </div>
         <div className="card" style={{ width: "35rem", height: "300px", display: "flex" }}>
-          <div style={{ height: "150px", width: "100%", margin:"5px" }}>
+          <div style={{ height: "150px", width: "100%", margin: "5px" }}>
 
             <span style={{ fontSize: "50px", padding: "10px" }}>{info.main}</span>
-            <img src={condition[info.main]}  alt='img' style={{ height: "120px", width: "150px", padding: "10px" }} />
+            <img src={condition[info.main]} alt='img' style={{ height: "120px", width: "150px", padding: "10px" }} />
           </div>
 
 

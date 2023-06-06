@@ -41,7 +41,6 @@ const CompleteProfile = () => {
   }, 2000);
 
 
-
   return (<>
     <Router>
       <NoteState showAlert={showAlert}>
