@@ -23,7 +23,7 @@ return(<>
         <li><img height={25} src={express}/>Express js</li>
         <li><img src={mongodb} height={25}/>Mongodb</li>
         <li><img src={sql} height={25}/>Sql</li>
-        <li> <i class="fa-brands fa-sass fa-xl"></i>Saas</li>
+        <li> <i class="fa-brands fa-sass fa-xl"></i>Sass</li>
         <li> <i class="fa-brands fa-npm fa-xl"></i>Npm</li>
       </ul>
    </div>
