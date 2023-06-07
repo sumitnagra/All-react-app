@@ -8,7 +8,7 @@ const SignUP = (props) => {
   const [user, setUser] = useState({ name: "", email: "", password: "" })
   const navigate = useNavigate()
   const a = useContext(Notecontext);
-  const host="https://sumitportfolio-5yqc.onrender.com"
+  const host="https://sumitportfolio-u9sd.onrender.com"
   const signup = async (user) => {
     const responce = await fetch(`${host}/createuser`, {
       method: 'POST',

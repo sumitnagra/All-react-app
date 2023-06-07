@@ -3,7 +3,7 @@ import Notecontext from "./Notecontext";
 
 const NoteState = (props) => {
     const [state, setState] = useState([])
-    const host = "https://sumitportfolio-5yqc.onrender.com"
+    const host = "https://sumitportfolio-u9sd.onrender.com"
     const getAllnote = async () => {
         const responce = await fetch(`${host}/getallnotes`, {
             method: 'GET',
