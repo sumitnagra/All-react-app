@@ -17,7 +17,7 @@ const Navbar = () => {
                 break;
             case '/resume':
                 body.classList.remove('body-height-small', 'body-height-large');
-                body.classList.add('body-height-medium');
+                body.classList.add('body-height-medium2');
                 break;
             case '/contact':
                 body.classList.remove('body-height-small', 'body-height-medium');

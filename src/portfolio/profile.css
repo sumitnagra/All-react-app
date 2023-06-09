@@ -2,9 +2,6 @@ body {
     margin: 0;
     padding: 0;
     overflow: scroll;
-
-   
- 
 }
 
 .profileNav {
@@ -21,7 +18,7 @@ body {
 
 .ProfilenavItem {
     height: 30px;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: lighter;
     padding-right: 20px;
     padding-left: 20px;
@@ -43,7 +40,7 @@ body {
     font-weight: 500;
     top: 5px;
     position: relative;
-    right: 800px;
+    right:60%;
     font-size: 20px;
     display: flex;
     cursor: pointer;
@@ -60,6 +57,7 @@ body {
 }
 
 .about {
+    font-size: 25px;
     position: relative;
     bottom: 132px;
     left: 81px;
@@ -81,7 +79,7 @@ body {
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
-    
+
 
 }
 
@@ -100,14 +98,14 @@ body {
 
 .circleItem3 {
     background-color: rgba(128, 216, 218, 255);
-    transition:  background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 
 }
 
 .circleItem1:hover,
 .circleItem3:hover,
 .circleItem2:hover {
-    left:5px;
+    left: 5px;
     background-color: whitesmoke;
     border: solid 1px #555;
 
@@ -146,6 +144,7 @@ hr {
     align-items: center;
     margin-bottom: 150px;
 }
+
 .projectHeading {
     position: relative;
     top: 110px;
@@ -160,7 +159,7 @@ hr {
 
 p {
     font-weight: lighter;
-    font-size: 18px;
+    font-size: 20px;
     padding-right: 50px;
 }
 
@@ -228,7 +227,7 @@ input {
     width: 250px;
     height: 45px;
     background-color: transparent;
- 
+
 }
 
 .contactmsg {
@@ -236,7 +235,7 @@ input {
     height: 150px;
     resize: none;
     background-color: transparent;
-   
+
 }
 
 h4 {
@@ -269,8 +268,8 @@ h4 {
 
 .col-20 {
     width: 100%;
-    height:200px;
-   resize: none;
+    height: 200px;
+    resize: none;
 }
 
 .Firstname div {
@@ -286,146 +285,180 @@ h4 {
     bottom: 20%;
     left: 10%
 }
-.cardWidth{
-    color:black;
+
+.cardWidth {
+    color: black;
     width: 18rem;
 }
-.cartItem{
+
+.cartItem {
     margin: auto;
-        width:90%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     border-radius: 8px;
-    background-color:white;
-    box-shadow:  rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    ;
 }
-.cartImage{
+
+.cartImage {
     width: 20%;
     margin: 1%;
 }
+
 .cart-button {
-	position: relative;
-	padding: 5px;
-	width:90%;
+    position: relative;
+    padding: 5px;
+    width: 90%;
     margin: 10px;
-	height: 40px;
-	border: 0;
-	border-radius: 7px;
-	background-color: black;
-	outline: none;
-	cursor: pointer;
-	color: #fff;
-	transition: .3s ease-in-out;
-	overflow: hidden;
+    height: 40px;
+    border: 0;
+    border-radius: 7px;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease-in-out;
+    overflow: hidden;
 }
+
 .cart-button:hover {
-	background-color:black;
+    background-color: black;
 }
+
 .cart-button:active {
-	transform: scale(.9);
+    transform: scale(.9);
 }
 
 .cart-button .fa-shopping-cart {
-	position: absolute;
-	z-index: 2;
-	top: 50%;
-	left: -10%;
-	font-size: 2em;
-	transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -10%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
 }
+
 .cart-button .fa-box {
-	position: absolute;
-	z-index: 3;
-	top: -20%;
-	left: 52%;
-	font-size: 1.2em;
-	transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 3;
+    top: -20%;
+    left: 52%;
+    font-size: 1.2em;
+    transform: translate(-50%, -50%);
 }
+
 .cart-button span {
-	position: absolute;
-	z-index: 3;
-	left: 50%;
-	top: 50%;
-	font-size: 1.2em;
-	color: #fff;
-	transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    font-size: 1.2em;
+    color: #fff;
+    transform: translate(-50%, -50%);
 }
+
 .cart-button span.add-to-cart {
-	opacity: 1;
+    opacity: 1;
 }
+
 .cart-button span.added {
-	opacity: 0;
+    opacity: 0;
 }
 
 .cart-button.clicked .fa-shopping-cart {
-	animation: cart 1.5s ease-in-out forwards;
+    animation: cart 1.5s ease-in-out forwards;
 }
+
 .cart-button.clicked .fa-box {
-	animation: box 1.5s ease-in-out forwards;
+    animation: box 1.5s ease-in-out forwards;
 }
+
 .cart-button.clicked span.add-to-cart {
-	animation: txt1 1.5s ease-in-out forwards;
+    animation: txt1 1.5s ease-in-out forwards;
 }
+
 .cart-button.clicked span.added {
-	animation: txt2 1.5s ease-in-out forwards;
+    animation: txt2 1.5s ease-in-out forwards;
 }
+
 @keyframes cart {
-	0% {
-		left: -10%;
-	}
-	40%, 60% {
-		left: 50%;
-	}
-	100% {
-		left: 110%;
-	}
+    0% {
+        left: -10%;
+    }
+
+    40%,
+    60% {
+        left: 50%;
+    }
+
+    100% {
+        left: 110%;
+    }
 }
+
 @keyframes box {
-	0%, 40% {
-		top: -20%;
-	}
-	60% {
-		top: 40%;
-		left: 52%;
-	}
-	100% {
-		top: 40%;
-		left: 112%;
-	}
+
+    0%,
+    40% {
+        top: -20%;
+    }
+
+    60% {
+        top: 40%;
+        left: 52%;
+    }
+
+    100% {
+        top: 40%;
+        left: 112%;
+    }
 }
+
 @keyframes txt1 {
-	0% {
-		opacity: 1;
-	}
-	20%, 100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+
+    20%,
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes txt2 {
-	0%, 80% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+
+    0%,
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
-.btnwidth{
+
+.btnwidth {
     width: 90%;
     margin-left: 4%;
 }
-.downloadbtn{
-    position:absolute;
-    left:200px;
-    bottom:120px;
+
+.downloadbtn {
+    position: absolute;
+    left: 200px;
+    bottom: 120px;
 }
+
 .animate {
-   height: 60px;
-   width:180px;
+    height: 60px;
+    width: 180px;
     border: 1px solid #91C9FF;
     outline: none;
     transition: 1s ease-in-out;
-  }
-  svg {
+}
+
+svg {
     position: absolute;
     left: 0;
     top: 0;
@@ -434,175 +467,180 @@ h4 {
     stroke-dasharray: 150 480;
     stroke-dashoffset: 150;
     transition: 1s ease-in-out;
-  }
-  
-  .animate:hover {
+}
+
+.animate:hover {
     transition: 1s ease-in-out;
     background: #4F95DA;
-  }
-  
-  .animate:hover svg {
+}
+
+.animate:hover svg {
     stroke-dashoffset: -480;
-  }
-  
-  .animate span {
-    color:black;
+}
+
+.animate span {
+    color: black;
     font-weight: bold;
     font-size: 18px;
-   ;
-  }  
-  .body-height-small {
-    height:950px;
-    background-image: linear-gradient(
-        205deg,
-        hsl(240deg 83% 88%) 19%,
-        hsl(323deg 83% 89%) 59%,
-        hsl(6deg 100% 92%) 74%,
-        hsl(35deg 100% 93%) 83%,
-        hsl(48deg 100% 95%) 90%,
-        hsl(34deg 100% 96%) 94%,
-        hsl(18deg 91% 97%) 98%,
-        hsl(5deg 27% 96%) 100%,
-        hsl(2deg 100% 90%) 101%,
-        hsl(4deg 100% 79%) 101%,
-        hsl(5deg 100% 67%) 101%,
-        hsl(0deg 92% 50%) 100% 
-       );    
-  }
-  
-  .body-height-medium {
-    height: 1250px;
-    background-image: linear-gradient(
-        205deg,
-        hsl(240deg 83% 88%) 19%,
-        hsl(323deg 83% 89%) 59%,
-        hsl(6deg 100% 92%) 74%,
-        hsl(35deg 100% 93%) 83%,
-        hsl(48deg 100% 95%) 90%,
-        hsl(34deg 100% 96%) 94%,
-        hsl(18deg 91% 97%) 98%,
-        hsl(5deg 27% 96%) 100%,
-        hsl(2deg 100% 90%) 101%,
-        hsl(4deg 100% 79%) 101%,
-        hsl(5deg 100% 67%) 101%,
-        hsl(0deg 92% 50%) 100% 
-       );    
-  }
-  .body-height-medium2 {
-    height: 935px;
-    background-image: linear-gradient(
-        205deg,
-        hsl(240deg 83% 88%) 19%,
-        hsl(323deg 83% 89%) 59%,
-        hsl(6deg 100% 92%) 74%,
-        hsl(35deg 100% 93%) 83%,
-        hsl(48deg 100% 95%) 90%,
-        hsl(34deg 100% 96%) 94%,
-        hsl(18deg 91% 97%) 98%,
-        hsl(5deg 27% 96%) 100%,
-        hsl(2deg 100% 90%) 101%,
-        hsl(4deg 100% 79%) 101%,
-        hsl(5deg 100% 67%) 101%,
-        hsl(0deg 92% 50%) 100% 
-       );    
-  }
-  
-  .body-height-large {
-    height: 4135px;
-    background-image: linear-gradient(
-        205deg,
-        hsl(240deg 83% 88%) 19%,
-        hsl(323deg 83% 89%) 59%,
-        hsl(6deg 100% 92%) 74%,
-        hsl(35deg 100% 93%) 83%,
-        hsl(48deg 100% 95%) 90%,
-        hsl(34deg 100% 96%) 94%,
-        hsl(18deg 91% 97%) 98%,
-        hsl(5deg 27% 96%) 100%,
-        hsl(2deg 100% 90%) 101%,
-        hsl(4deg 100% 79%) 101%,
-        hsl(5deg 100% 67%) 101%,
-        hsl(0deg 92% 50%) 100% 
-       );    
-  }
-  .expertise ul li{
-    padding-top:10px
-  }
-  
-@media screen and (min-width:350px) and (max-width:720px) {
-    .body-height-small {
-        height:1500px;
-        background-image: linear-gradient(
-            205deg,
-            hsl(240deg 83% 88%) 19%,
-            hsl(323deg 83% 89%) 59%,
-            hsl(6deg 100% 92%) 74%,
-            hsl(35deg 100% 93%) 83%,
-            hsl(48deg 100% 95%) 90%,
-            hsl(34deg 100% 96%) 94%,
-            hsl(18deg 91% 97%) 98%,
-            hsl(5deg 27% 96%) 100%,
-            hsl(2deg 100% 90%) 101%,
-            hsl(4deg 100% 79%) 101%,
-            hsl(5deg 100% 67%) 101%,
-            hsl(0deg 92% 50%) 100% 
-           );    
-      }
-      
-      .body-height-medium {
-        height: 2270px;
-        background-image: linear-gradient(
-            205deg,
-            hsl(240deg 83% 88%) 19%,
-            hsl(323deg 83% 89%) 59%,
-            hsl(6deg 100% 92%) 74%,
-            hsl(35deg 100% 93%) 83%,
-            hsl(48deg 100% 95%) 90%,
-            hsl(34deg 100% 96%) 94%,
-            hsl(18deg 91% 97%) 98%,
-            hsl(5deg 27% 96%) 100%,
-            hsl(2deg 100% 90%) 101%,
-            hsl(4deg 100% 79%) 101%,
-            hsl(5deg 100% 67%) 101%,
-            hsl(0deg 92% 50%) 100% 
-           );    
-      }
-      
-      
-      .body-height-large {
-        height: 8045px;
-        background-image: linear-gradient(
-            205deg,
-            hsl(240deg 83% 88%) 19%,
-            hsl(323deg 83% 89%) 59%,
-            hsl(6deg 100% 92%) 74%,
-            hsl(35deg 100% 93%) 83%,
-            hsl(48deg 100% 95%) 90%,
-            hsl(34deg 100% 96%) 94%,
-            hsl(18deg 91% 97%) 98%,
-            hsl(5deg 27% 96%) 100%,
-            hsl(2deg 100% 90%) 101%,
-            hsl(4deg 100% 79%) 101%,
-            hsl(5deg 100% 67%) 101%,
-            hsl(0deg 92% 50%) 100% 
-           );    
-      }
-.downloadbtn{
-    font-size: 25px;
-    font-weight: bold;
-    width:40%;
-    height:10%;
-    position:absolute;
-    left:200px;
-    bottom:450px;
+    ;
 }
-    .cartImage{
-    width: 40%;
-    
-        height:300px
+
+.body-height-small {
+    height: 150vh;
+    background-image: linear-gradient(205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100%);
+}
+
+.body-height-medium {
+    height: 1250px;
+    background-image: linear-gradient(205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100%);
+}
+
+.body-height-medium2 {
+    height: 200vh;
+    background-image: linear-gradient(205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100%);
+}
+
+.body-height-large {
+    height:670vh;
+    background-image: linear-gradient(205deg,
+            hsl(240deg 83% 88%) 19%,
+            hsl(323deg 83% 89%) 59%,
+            hsl(6deg 100% 92%) 74%,
+            hsl(35deg 100% 93%) 83%,
+            hsl(48deg 100% 95%) 90%,
+            hsl(34deg 100% 96%) 94%,
+            hsl(18deg 91% 97%) 98%,
+            hsl(5deg 27% 96%) 100%,
+            hsl(2deg 100% 90%) 101%,
+            hsl(4deg 100% 79%) 101%,
+            hsl(5deg 100% 67%) 101%,
+            hsl(0deg 92% 50%) 100%);
+}
+
+.expertise ul li {
+    padding-top: 10px
+}
+
+@media  screen and (min-width:300px) and (max-width:720px){
+    .body-height-small {
+        height: 300vh;
+
+        background-image: linear-gradient(205deg,
+                hsl(240deg 83% 88%) 19%,
+                hsl(323deg 83% 89%) 59%,
+                hsl(6deg 100% 92%) 74%,
+                hsl(35deg 100% 93%) 83%,
+                hsl(48deg 100% 95%) 90%,
+                hsl(34deg 100% 96%) 94%,
+                hsl(18deg 91% 97%) 98%,
+                hsl(5deg 27% 96%) 100%,
+                hsl(2deg 100% 90%) 101%,
+                hsl(4deg 100% 79%) 101%,
+                hsl(5deg 100% 67%) 101%,
+                hsl(0deg 92% 50%) 100%);
     }
-    body {
+
+    .body-height-medium {
+        height: 423vh;
+        background-image: linear-gradient(205deg,
+                hsl(240deg 83% 88%) 19%,
+                hsl(323deg 83% 89%) 59%,
+                hsl(6deg 100% 92%) 74%,
+                hsl(35deg 100% 93%) 83%,
+                hsl(48deg 100% 95%) 90%,
+                hsl(34deg 100% 96%) 94%,
+                hsl(18deg 91% 97%) 98%,
+                hsl(5deg 27% 96%) 100%,
+                hsl(2deg 100% 90%) 101%,
+                hsl(4deg 100% 79%) 101%,
+                hsl(5deg 100% 67%) 101%,
+                hsl(0deg 92% 50%) 100%);
     }
+    .body-height-medium2 {
+        height: 2705px;
+        background-image: linear-gradient(205deg,
+                hsl(240deg 83% 88%) 19%,
+                hsl(323deg 83% 89%) 59%,
+                hsl(6deg 100% 92%) 74%,
+                hsl(35deg 100% 93%) 83%,
+                hsl(48deg 100% 95%) 90%,
+                hsl(34deg 100% 96%) 94%,
+                hsl(18deg 91% 97%) 98%,
+                hsl(5deg 27% 96%) 100%,
+                hsl(2deg 100% 90%) 101%,
+                hsl(4deg 100% 79%) 101%,
+                hsl(5deg 100% 67%) 101%,
+                hsl(0deg 92% 50%) 100%);
+    }
+
+    .body-height-large {
+        height:1611vh;
+        background-image: linear-gradient(205deg,
+                hsl(240deg 83% 88%) 19%,
+                hsl(323deg 83% 89%) 59%,
+                hsl(6deg 100% 92%) 74%,
+                hsl(35deg 100% 93%) 83%,
+                hsl(48deg 100% 95%) 90%,
+                hsl(34deg 100% 96%) 94%,
+                hsl(18deg 91% 97%) 98%,
+                hsl(5deg 27% 96%) 100%,
+                hsl(2deg 100% 90%) 101%,
+                hsl(4deg 100% 79%) 101%,
+                hsl(5deg 100% 67%) 101%,
+                hsl(0deg 92% 50%) 100%);
+    }
+
+    .downloadbtn {
+        font-size: 18px;
+        font-weight: bold;
+        width: 40%;
+        height: 10%;
+        position: absolute;
+        left: 200px;
+        top: 350px;
+    }
+
+    .cartImage {
+        width: 40%;
+        height: 300px
+    }
+
 
     .cv {
         position: absolute;
@@ -623,8 +661,8 @@ h4 {
     .profileNav {
         color: black;
         height: 60px;
-        width: 100%;
-        font-size:20px;
+        width: 115vh;
+        font-size: 20px;
         z-index: 1;
         padding-top: 20px;
         flex-direction: row;
@@ -638,17 +676,18 @@ h4 {
     }
 
     .profileImage img {
-        width:70%;
-        height:30%;
+        width: 90vh;
+        height: 90vh;
         position: relative;
-        right: 50px
+        right: 500px
     }
 
     .about {
+        font-size: 18px;
         position: relative;
-        width: 100%;
+        width: 180%;
         bottom: 30px;
-       left: 10px
+        left: 10px
     }
 
     .circleItem1,
@@ -657,8 +696,8 @@ h4 {
         width: 110px;
         height: 110px;
         margin-bottom: 40px;
-}
-    
+    }
+
 
     .footer {
         top: 16rem;
@@ -672,20 +711,19 @@ h4 {
 
 
     hr {
-        width: 100%;
+        width: 196%;
     }
 
     .firstProject {
         position: relative;
         display: block;
-        width: 100vh;
+        width: 113vh;
         height: auto;
         top: 200px;
         margin-bottom: 50px;
     }
 
     .textsection p {
-        padding: 0;
         font-size: 25px;
     }
 
@@ -714,7 +752,7 @@ h4 {
 
     .contactForm p {
         font-weight: 350;
-        font-size: 25px;
+        font-size: 18px;
         position: relative;
         top: 15px;
     }
@@ -733,21 +771,21 @@ h4 {
     }
 
     input {
-    background-color: transparent;
-        
+        background-color: transparent;
+
         border: solid black 1px;
         width: 80%;
         height: 70px;
     }
 
     .contactmsg {
-    background-color: transparent;
+        background-color: transparent;
 
-       border:solid black 1px;
+        border: solid black 1px;
         width: 75%;
         height: 170px;
         resize: none;
-      
+
     }
 
     .Phone h4 {
@@ -760,7 +798,7 @@ h4 {
     }
 
     .looking {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .projectheading {
@@ -773,6 +811,9 @@ h4 {
         left: 50px;
         margin-bottom: 50px;
         width: auto;
+    }
+    .education{
+        width:100%
     }
 
     .education ul {
@@ -803,57 +844,62 @@ h4 {
         width: 100%;
         display: block;
     }
-.msg{
-    margin-left: 40px;
-}
 
-.col-20 {
-    width: 90%;
-height:300px
-}
-.cardWidth{
-    color:black;
-    width:100%;
-}
+    .msg {
+        margin-left: 40px;
+    }
 
-.col-md-3{
-    width: 50%;
-}
-.group{
-    position: relative;
-    left:110px
-}
-.animate {
-     height: 60px;
-    width:180px;
-     border: 1px solid #91C9FF;
-     outline: none;
-     transition: 1s ease-in-out;
-   }
-   svg {
-     position: absolute;
-     left: 0;
-     top: 0;
-     fill: none;
-     stroke: #fff;
-     stroke-dasharray: 150 480;
-     stroke-dashoffset: 150;
-     transition: 1s ease-in-out;
-   }
-   
-   .animate:hover {
-     transition: 1s ease-in-out;
-     background: #4F95DA;
-   }
-   
-   .animate:hover svg {
-     stroke-dashoffset: -480;
-   }
-   
-   .animate span {
-     color:black;
-     font-weight: bold;
-     font-size: 18px;
-    ;
-   } 
+    .col-20 {
+        width: 90%;
+        height: 300px
+    }
+
+    .cardWidth {
+        color: black;
+        width: 100%;
+    }
+
+    .col-md-3 {
+        width: 50%;
+    }
+
+    .group {
+        position: relative;
+        left: 110px
+    }
+
+    .animate {
+        height: 60px;
+        width: 180px;
+        border: 1px solid #91C9FF;
+        outline: none;
+        transition: 1s ease-in-out;
+    }
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        fill: none;
+        stroke: #fff;
+        stroke-dasharray: 150 480;
+        stroke-dashoffset: 150;
+        transition: 1s ease-in-out;
+    }
+
+    .animate:hover {
+        transition: 1s ease-in-out;
+        background: #4F95DA;
+    }
+
+    .animate:hover svg {
+        stroke-dashoffset: -480;
+    }
+
+    .animate span {
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        ;
+    }
 }
