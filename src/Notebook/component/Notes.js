@@ -12,7 +12,7 @@ const Notes = (props) => {
     return (
         <>
             {localStorage.getItem('auth-token') ?
-                <div className="row  row-cols-lg-3 container" style={{ marginTop: "55px" }}>
+                <div className="row  row-cols-lg-3" style={{ marginTop: "55px" }}>
 
                     {state.length === 0 && <h1> You have no todo list for today </h1>}
                     {

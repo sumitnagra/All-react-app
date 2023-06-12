@@ -1,53 +1,181 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
 
-@import  url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
-.body{
+.body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
-     width: 100%;
-      height:640px;
+    width: 100%;
+    height: 640px;
 }
-.mainDiv{
-    color:black;
-padding: 100px 0px 150px 200px;
-width:100%;
-height: 100vh;
-background-image: linear-gradient(#007991, #78FFD6);
+
+.mainDiv {
+    color: black;
+    padding: 100px 0px 150px 200px;
+    width: 100%;
+    height: 100vh;
 
 }
-.searchBtn{
+
+.card {
+    width: 35rem;
+    height: 300px;
+    display: flex
+}
+
+.searchBtn {
     padding-left: 20px;
     padding-bottom: 20px;
-    display: flex;}
-    .searchBtn input{
-        padding: 4px;
-         width: 400px;
-          height: 36px;
-         border-bottom: solid 1px black
-          }
+    display: flex;
+}
 
-@media  screen and (min-width:350px) and (max-width:720px) {
-    body{
-     width: 100vh;
-     height: auto;
+.searchBtn input {
+    padding: 4px;
+    width: 400px;
+    height: 36px;
+    border-bottom: solid 1px black
+}
 
+.card23 {
+    height: 140px;
+    width: 100%;
+}
+.condition {
+    font-size: 50px;
+    padding: 10px;
+}
+
+.map {
+    height: 70px;
+    display: flex;
+}
+
+.weatherdetails {
+    padding: 10px;
+    display: flex;
+}
+
+.weatherdetails div {
+    display: flex;
+}
+
+.conditionImg {
+    height: 120px;
+    width: 150px;
+    padding: 10px
+}
+.tempDiv{
+padding: 5px;
+ background-color: black; width: 60%;
+  height: 100%; 
+  color:white;
+   font-size: 45px ;
+   font-weight: lighter;
+   display: flex;
+}
+.sunrise{
+ padding: 10px;
+ color: white;
+  background-color: skyblue;
+   height: "100%";
+   width: 40%;
+    font-size:18px; 
+}
+.contry{
+ margin-bottom:10px;
+  padding:10px;
+  font-size:15px;
+}
+.city{
+     font-size: 30px;
+      padding:10px;
+}
+@media screen and (min-width:300px) and (max-width:720px) {
+
+
+    .mainDiv {
+        padding: 0;
+        width: 100%;
     }
-    .mainDiv{
-        padding: 100px 0px 150px 40px;
-        width:104%;
-        height:945px
-        }
-        .searchBtn{
-            padding-left: 20px;
-            padding-bottom: 20px;
-            display: flex;
+
+    .searchBtn {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        display: flex;
+    }
+
+    .searchBtn input {
+        font-size: 15px;
+        padding: 3px;
+        width: 68%;
+        height: 37px;
+        border-radius: 5px;
+        border: solid black 1px;
+    }
+
+    .card {
+        margin: auto;
+        width: 90%;
+        height: auto;
+        display: block
+    }
+
+    .card23 {
+        display: flex;
+    }
+
+    .card23 img {
+        height: 100px;
+    }
+
+    .weatherdetails {
+        padding: 10px;
+        display: block;
+    }
+
+    .weatherdetails div {
+        display: block;
+    }
+
+    .condition {
+        font-size: 40px;
+        padding-top: 30px;
+        font-weight: bold
+    }
+
+    .conditionImg {
+        height: 120px;
+        width: 120px;
+        padding: 10px
+    }
+    .map {
+        height: 100px;
+        display: flex;
+    }
+    .tempDiv{padding-left: 10px;
+         background-color: black;
+          width: 60%;
+          height: 100%; 
+          color:white;
+           font-size: 30px ;
+           font-weight: lighter;
+   display: block;
+
+             }
+        .sunrise{
+            padding: 10px;
+            color: white;
+             background-color: skyblue;
+              height: "100%";
+              width: 40%;
+               font-size:17px;
            }
-           .searchBtn input{
+           .contry{
+            margin-bottom:10px;
+             padding:10px;
+             font-size: 17px
+           }
+           .city{
             font-size: 30px;
-         padding: 4px;
-          width: 80%;
-           height: 58px;
-          border-bottom: solid 1px black
-           }
+             padding:10px;
+       }
 }

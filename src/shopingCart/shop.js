@@ -12,8 +12,8 @@ const Shop = (props) => {
   }
 
   return (<>
-    <div className="container my-5" data-aos="fade-up">
-      <div className="card cardWidth">
+    <div className="container my-5 " data-aos="fade-up">
+      <div className="card" style={{width: "18rem",height:"auto"}}>
         <img src={props.image} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>

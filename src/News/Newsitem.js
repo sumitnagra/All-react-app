@@ -6,7 +6,7 @@ const Newsitem = (props) => {
   return (
     <>
 
-      <div className="card my-3 mx-4 cardWidth" >{props.key}
+      <div className="card my-3 mx-4 " style={{width: "18rem",height:"auto"}} >{props.key}
         <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{ left: "88%", padding: "6px",zindex:"1" }}>{props.source}</span>
         <img src={props.imageUrl} className="card-img-top" alt="loading" />
         <div className="card-body">

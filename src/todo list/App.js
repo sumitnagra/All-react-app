@@ -37,9 +37,7 @@ function App() {
     setInput(newInput[index])
     setIndex(index)
   }
-const style={
-  width:"70%"
-}
+
 const listyle={
  
 }
@@ -48,7 +46,7 @@ const listyle={
       <div id="myDIV" className="header">
         <h2>My To Do List</h2>
         <div className="add">
-        <input type="text" id="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item" style={style}/>
+        <input type="text" className="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item"/>
         <button className="btn btn-dark" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'}</button>
 </div>
       </div>

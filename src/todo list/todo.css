@@ -6,13 +6,12 @@ height:200px;
 .header h2{
 text-align:center;
 }
-#myInput{
-  width: 50%;
+.myInput{
+  width:70%;
   margin-left: 19%;
 }
 .add{
   display: flex;
-
 }
 
 #myUL{
@@ -29,7 +28,6 @@ text-align:center;
 #myUL li{
   padding:10px;
   word-wrap: break-word;
-
 }
 #myUL li i:nth-child(even){
   position:absolute;
@@ -49,13 +47,26 @@ text-align:center;
 ol li:nth-child(odd) {
   background: #f9f9f9;
 }
-@media screen and (min-width:350px)  and (max-width:720px){
+@media screen and (min-width:300px)  and (max-width:720px){
   #myUL{
     position: relative;
-  left:80px;
-  width: 65%;
+  left:10px;
+  width: 90%;
   }
-  #myInput{
-    font-size: 30px;
+  .myInput{
+    font-size: 20px;
+    width:90%;
+    margin-left: 5%;
   }
+  .header{
+    padding-top: 50px;
+    width: 90%;
+    margin-left:0;
+  }
+  
+#myUL li{
+  font-size: 17px;
+  padding:10px;
+  word-wrap: break-word;
+}
 }

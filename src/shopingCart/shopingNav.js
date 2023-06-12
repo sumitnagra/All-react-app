@@ -13,6 +13,7 @@ const ShopingNav = () => {
   }
   useEffect(() => {
     filterItemsByCategory(selectcategory);
+    window.scrollTo(0,0)
   }, [selectcategory])
   const location = useLocation()
   return (<>
@@ -30,6 +31,7 @@ const ShopingNav = () => {
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" role="button" aria-expanded="false">Category</a>
         <select className="dropdown-menu" value={selectcategory} onChange={onchange}>
+          <option className="dropdown-item" value={"all"} >All</option>
           <option className="dropdown-item" value={"electronics"} >Electronics</option>
           <option className="dropdown-item" value={"men's clothing"}>Men's Clothing</option>
           <option className="dropdown-item" value={"jewelery"}>Jewelery</option>

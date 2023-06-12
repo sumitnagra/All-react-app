@@ -1,4 +1,5 @@
 body {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     overflow: scroll;
@@ -40,10 +41,19 @@ body {
     font-weight: 500;
     top: 5px;
     position: relative;
-    right:60%;
+    right: 60%;
     font-size: 20px;
     display: flex;
     cursor: pointer;
+}
+
+.name img {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
 }
 
 .profileImage {
@@ -56,12 +66,36 @@ body {
     left: 0px;
 }
 
+.profileImage img {
+    width: 450;
+    height: 450;
+    border-radius: 50%;
+    position: relative;
+    bottom: 200px;
+    left: 65px;
+}
+
+
 .about {
     font-size: 25px;
     position: relative;
     bottom: 132px;
     left: 81px;
     width: 50%;
+}
+
+.about p {
+    padding: 20px
+}
+
+.span2 {
+    padding-left: 18px;
+    font-size: 30px;
+}
+
+.span1 {
+    font-size: 70px;
+    font-weight: 700
 }
 
 .circleItem1,
@@ -110,8 +144,6 @@ body {
     border: solid 1px #555;
 
 }
-
-
 hr {
     position: relative;
     top: 150px;
@@ -132,11 +164,15 @@ hr {
     font-size: 18px;
 }
 
+.follow {
+    font-size: 18px
+}
+
 .firstProject {
     position: relative;
     display: flex;
-    width: 100%;
-    margin: 20px;
+    width: 90%;
+    margin: auto;
     height: 300px;
     padding: 50px;
     top: 200px;
@@ -145,10 +181,17 @@ hr {
     margin-bottom: 150px;
 }
 
+.firstProject img {
+    width: 500px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+}
+
 .projectHeading {
+    width: 90%;
     position: relative;
     top: 110px;
-    left: 50px;
+    left: 100px;
     font-size: 45px;
     font-weight: bold;
 }
@@ -246,12 +289,17 @@ h4 {
 .skill {
     display: flex;
     width: 70%;
-    bottom: 10px
+    top: 20px
 }
 
 .skill ul {
     position: relative;
     left: 500px;
+}
+.skill ul li img{
+    height:25px;
+    width:25px;
+    box-shadow: none;
 }
 
 .education {
@@ -289,6 +337,7 @@ h4 {
 .cardWidth {
     color: black;
     width: 18rem;
+    height: auto
 }
 
 .cartItem {
@@ -296,6 +345,7 @@ h4 {
     width: 90%;
     display: flex;
     flex-direction: row;
+    margin-bottom:30px ;
     border-radius: 8px;
     background-color: white;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -486,7 +536,7 @@ svg {
 }
 
 .body-height-small {
-    height: 150vh;
+    height: 160vh;
     background-image: linear-gradient(205deg,
             hsl(240deg 83% 88%) 19%,
             hsl(323deg 83% 89%) 59%,
@@ -537,7 +587,7 @@ svg {
 }
 
 .body-height-large {
-    height:670vh;
+    height: 670vh;
     background-image: linear-gradient(205deg,
             hsl(240deg 83% 88%) 19%,
             hsl(323deg 83% 89%) 59%,
@@ -557,285 +607,238 @@ svg {
     padding-top: 10px
 }
 
-@media  screen and (min-width:300px) and (max-width:720px){
+.textutils {
+    width: 90%
+}
+
+
+@media screen and (min-width:300px)and (max-width:720px) {
     .body-height-small {
-        height: 300vh;
-
-        background-image: linear-gradient(205deg,
-                hsl(240deg 83% 88%) 19%,
-                hsl(323deg 83% 89%) 59%,
-                hsl(6deg 100% 92%) 74%,
-                hsl(35deg 100% 93%) 83%,
-                hsl(48deg 100% 95%) 90%,
-                hsl(34deg 100% 96%) 94%,
-                hsl(18deg 91% 97%) 98%,
-                hsl(5deg 27% 96%) 100%,
-                hsl(2deg 100% 90%) 101%,
-                hsl(4deg 100% 79%) 101%,
-                hsl(5deg 100% 67%) 101%,
-                hsl(0deg 92% 50%) 100%);
-    }
-
-    .body-height-medium {
-        height: 423vh;
-        background-image: linear-gradient(205deg,
-                hsl(240deg 83% 88%) 19%,
-                hsl(323deg 83% 89%) 59%,
-                hsl(6deg 100% 92%) 74%,
-                hsl(35deg 100% 93%) 83%,
-                hsl(48deg 100% 95%) 90%,
-                hsl(34deg 100% 96%) 94%,
-                hsl(18deg 91% 97%) 98%,
-                hsl(5deg 27% 96%) 100%,
-                hsl(2deg 100% 90%) 101%,
-                hsl(4deg 100% 79%) 101%,
-                hsl(5deg 100% 67%) 101%,
-                hsl(0deg 92% 50%) 100%);
-    }
-    .body-height-medium2 {
-        height: 2705px;
-        background-image: linear-gradient(205deg,
-                hsl(240deg 83% 88%) 19%,
-                hsl(323deg 83% 89%) 59%,
-                hsl(6deg 100% 92%) 74%,
-                hsl(35deg 100% 93%) 83%,
-                hsl(48deg 100% 95%) 90%,
-                hsl(34deg 100% 96%) 94%,
-                hsl(18deg 91% 97%) 98%,
-                hsl(5deg 27% 96%) 100%,
-                hsl(2deg 100% 90%) 101%,
-                hsl(4deg 100% 79%) 101%,
-                hsl(5deg 100% 67%) 101%,
-                hsl(0deg 92% 50%) 100%);
+        height: 246vh;
     }
 
     .body-height-large {
-        height:1611vh;
-        background-image: linear-gradient(205deg,
-                hsl(240deg 83% 88%) 19%,
-                hsl(323deg 83% 89%) 59%,
-                hsl(6deg 100% 92%) 74%,
-                hsl(35deg 100% 93%) 83%,
-                hsl(48deg 100% 95%) 90%,
-                hsl(34deg 100% 96%) 94%,
-                hsl(18deg 91% 97%) 98%,
-                hsl(5deg 27% 96%) 100%,
-                hsl(2deg 100% 90%) 101%,
-                hsl(4deg 100% 79%) 101%,
-                hsl(5deg 100% 67%) 101%,
-                hsl(0deg 92% 50%) 100%);
+        height: 1042vh;
     }
 
-    .downloadbtn {
-        font-size: 18px;
-        font-weight: bold;
-        width: 40%;
-        height: 10%;
-        position: absolute;
-        left: 200px;
-        top: 350px;
+    .body-height-medium {
+        height: 310vh;
     }
 
-    .cartImage {
-        width: 40%;
-        height: 300px
+    .body-height-medium2 {
+        height: 325vh;
+
     }
 
+    .profileNav {
+        height: 40px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        padding-top: 10px;
+        flex-direction: row-reverse;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
 
-    .cv {
-        position: absolute;
-        bottom: 60%;
-        left: 11%
+    .ProfilenavItem {
+        height: 20px;
+        font-size: 15px;
+        font-weight: lighter;
+        padding-right: 10px;
+        padding-left: 10px;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
     }
 
     .name {
         font-weight: 500;
-        top: 0px;
-        position: relative;
-        left: 70px;
-        font-size: 20px;
+        top: 5px;
+        position: absolute;
+        font-size: 12px;
         display: flex;
+        left: 20px;
         cursor: pointer;
     }
 
-    .profileNav {
-        color: black;
-        height: 60px;
-        width: 115vh;
-        font-size: 20px;
-        z-index: 1;
-        padding-top: 20px;
-        flex-direction: row;
-        background-color: whitesmoke;
+    .name span {
+        display: none;
+    }
+
+    .name img {
+        width: 27px;
+        height: 27px
     }
 
     .profileImage {
         display: block;
-        width: 100%;
-        justify-content: center;
+        width: 97%;
+        position: relative;
+        top: 80px;
     }
 
     .profileImage img {
-        width: 90vh;
-        height: 90vh;
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
         position: relative;
-        right: 500px
+        bottom: 30px;
+        left: 20px
     }
 
     .about {
-        font-size: 18px;
+        display: block;
         position: relative;
-        width: 180%;
-        bottom: 30px;
-        left: 10px
+        bottom: 0px;
+        left: 10px;
+        width: 100%;
+    }
+
+    .about p {
+        padding-left: 10px;
+        font-size: 18px;
+    }
+
+    .span2 {
+        padding-left: 10px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .span1 {
+        padding-left: 10px;
+        font-size: 50px;
     }
 
     .circleItem1,
     .circleItem2,
     .circleItem3 {
-        width: 110px;
-        height: 110px;
-        margin-bottom: 40px;
+        position: relative;
+        border: solid black 1px;
+        height: 90px;
+        width: 90px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+        font-size: 20px;
     }
 
+    .downloadbtn {
+        position: absolute;
+        left: 70px;
+        bottom: -110px
+    }
 
     .footer {
-        top: 16rem;
+        padding: 0;
+        width: 80%;
+        position: relative;
+        top: 15rem;
         display: block;
-        margin-right: 0;
+        font-weight: bold;
     }
 
     .footerItem {
-        padding-bottom: 20px;
+        padding-top: 10px;
+        display: block;
+        font-size: 15px;
     }
 
-
-    hr {
-        width: 196%;
+    .follow {
+        padding-top: 10px;
+        font-size: 15px;
     }
 
     .firstProject {
         position: relative;
         display: block;
-        width: 113vh;
+        width: 99%;
         height: auto;
-        top: 200px;
-        margin-bottom: 50px;
+        margin: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+        top: 100px;
+        right: 0;
+        align-items: center;
+        margin-bottom: 10px;
     }
 
-    .textsection p {
-        font-size: 25px;
+    .projectHeading {
+        position: relative;
+        top: 50px;
+        left: 10px;
+        padding: 0;
+        width: 60%;
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+
+    .projectHeading button {
+        margin-left: 15%;
+    }
+
+    p {
+        font-weight: lighter;
+        font-size: 15px;
+        padding-right: 0px;
+    }
+
+    .textsection {
+        position: relative;
+        bottom: 10px;
     }
 
     .textsection h2 {
-        font-size: 30px;
         font-weight: bold;
+    }
+
+    .firstProject img {
+        width: 100%;
+        height: 180px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    }
+
+    .container {
+        margin: 0;
     }
 
     .contact {
         position: relative;
-        top: 200px;
-        width: 100vh;
-        margin-bottom: 300px;
-        display: block;
-        left: 10px;
-        justify-content: center;
-        height: auto;
-    }
-
-    .contactForm {
-        width: 100vh;
-        display: block;
-        position: relative;
-        top: 100px;
-    }
-
-    .contactForm p {
-        font-weight: 350;
-        font-size: 18px;
-        position: relative;
-        top: 15px;
-    }
-
-    .Firstname,
-    .email,
-    .msg,
-    .subject {
-        width: 90%;
-        margin: 3%;
-    }
-
-    .contactdetail {
+        top: 50px;
         width: 100%;
-        height: 300px
-    }
-
-    input {
-        background-color: transparent;
-
-        border: solid black 1px;
-        width: 80%;
-        height: 70px;
-    }
-
-    .contactmsg {
-        background-color: transparent;
-
-        border: solid black 1px;
-        width: 75%;
-        height: 170px;
-        resize: none;
+        display: block;
+        right: 0px;
+        margin: auto;
+        justify-content: center;
 
     }
 
-    .Phone h4 {
-        padding-top: 20px;
+    .looking {
+        font-weight: lighter;
+        font-size: 18px;
+
     }
 
     .contactheading {
         font-size: 50px;
-        font-weight: bold
+        font-weight: 800;
     }
 
-    .looking {
-        font-size: 18px;
+    .Phone {
+        position: relative;
+        top: 40px;
+        padding-left: 20px;
+        margin-bottom: 30px;
     }
 
-    .projectheading {
+    .contactdetail {
+        width: 100%
+    }
+
+    .contactForm {
         width: 100%;
-    }
-
-    .skill ul {
-        font-size: 2rem;
-        position: relative;
-        left: 50px;
-        margin-bottom: 50px;
-        width: auto;
-    }
-    .education{
-        width:100%
-    }
-
-    .education ul {
-        width: auto;
-        position: relative;
-        left: 50px;
-        height: auto;
-        font-weight: bold;
-    }
-
-    .education ul h5 {
-        font-size: 2rem;
-
-    }
-
-    .skill {
-        display: block;
-    }
-
-    .skill h4 {
-        font-size: 2.5rem;
-        line-height: 50px;
+        display: block
     }
 
     .Firstname,
@@ -843,63 +846,106 @@ svg {
     .msg {
         width: 100%;
         display: block;
+
     }
 
-    .msg {
-        margin-left: 40px;
+    .msg .circleItem1 {
+        top: 50px;
+        margin-left: 20px;
     }
+
+    .contactForm p {
+        font-weight: 350;
+        position: relative;
+        top: 15px;
+    }
+
+    .contactmsg {
+        width: 86%;
+        height: 150px;
+        position: relative;
+        left: 20px;
+        resize: none;
+        background-color: transparent;
+    }
+
+    .msg p {
+        padding-left: 20px;
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: bolder;
+        line-height: 20px;
+    }
+
+    .skill {
+        display: block;
+        width: 100%;
+        bottom: 10px;
+        margin-bottom: 0px;
+    }
+
+    .skill ul {
+        position: relative;
+        left: 0px;
+        font-size: 20px;
+    }
+
+    .skill ul img {
+        height: 21px;
+        width: 21px;
+        box-shadow: none;
+    }
+    .expertise{
+        margin-bottom: 20px;
+    }
+
+    .education {
+        position: relative;
+        top: 100px;
+        left: 20px;
+        height: auto;
+        width: 90%;
+    }
+
+    .education ul {
+        position: relative;
+        left: 0px;
+    }
+
+    .container hr {
+        position: relative;
+        top: 50px
+    }
+   
 
     .col-20 {
-        width: 90%;
-        height: 300px
-    }
-
-    .cardWidth {
-        color: black;
         width: 100%;
+        height: 200px;
+        resize: none;
     }
 
-    .col-md-3 {
-        width: 50%;
-    }
-
-    .group {
-        position: relative;
-        left: 110px
-    }
-
-    .animate {
-        height: 60px;
-        width: 180px;
-        border: 1px solid #91C9FF;
-        outline: none;
-        transition: 1s ease-in-out;
-    }
-
-    svg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        fill: none;
-        stroke: #fff;
-        stroke-dasharray: 150 480;
-        stroke-dashoffset: 150;
-        transition: 1s ease-in-out;
-    }
-
-    .animate:hover {
-        transition: 1s ease-in-out;
-        background: #4F95DA;
-    }
-
-    .animate:hover svg {
-        stroke-dashoffset: -480;
-    }
-
-    .animate span {
+    .cartItem {
         color: black;
-        font-weight: bold;
-        font-size: 18px;
-        ;
+        padding: 20px;
+        margin: auto;
+        width: 90%;
+        display: block;
+        height: auto;
+        font-size: 13px;
+        margin-bottom: 20px;
     }
+
+    .cartItem img {
+        width: 150px;
+        height: auto;
+        align-self: center;
+    }
+
+    .cartItem .button {
+        width: 75%;
+margin-left: 8px;
+    }
+
 }

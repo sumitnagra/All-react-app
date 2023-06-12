@@ -33,18 +33,12 @@ const About = (props) => {
     return (<>
         <div className='profileImage'>
             <div>
-                <img data-aos="fade-up" src={profieImage} alt='profile Image' width={450} height={450} style={{
-
-                    borderRadius: "50%",
-                    position: "relative",
-                    bottom: "200px",
-                    left: "65px"
-                }} />
+                <img data-aos="fade-up" src={profieImage} alt='profile Image' />
                 <DownloadButton />
             </div>
 
-            <div className='about'><span style={{ paddingLeft: "18px", fontSize: "30px", fontWeight: "700" }} data-aos="fade-up" ><span style={{ fontSize: "70px" }}>I'm Sumit</span> React Developer</span>
-                <p style={{ padding: "20px" }} data-aos="fade-up">Passionate React developer seeking opportunities to utilize skills in developing responsive web applications. Eager to learn and contribute to a dynamic team, enhancing expertise in the field.</p>
+            <div className='about'><span className="span1" data-aos="fade-up" >I'm Sumit</span> <span></span><span className="span2">React Developer</span>
+                <p  data-aos="fade-up">Passionate React developer seeking opportunities to utilize skills in developing responsive web applications. Eager to learn and contribute to a dynamic team, enhancing expertise in the field.</p>
                 <div className='group' style={{ display: "inline-flex" }} data-aos="fade-up" >
                     <div className='circleItem1' onClick={() => { navigate("/project") }}>Project</div>
                     <div className='circleItem2' onClick={() => { navigate("/resume") }}>Resume</div>

@@ -49,7 +49,7 @@ const Myapp = (props) => {
 
     return (
         <>
-            <div className="container mx-5 " style={{ position: "relative", top: "100px" }}>
+            <div className="textutils mx-4 " style={{}}>
                 <h1>Enter text Here</h1>
                 <textarea id="myBox" className="col-20" value={text} onChange={(event) => setText(event.target.value)}></textarea>
                 <button className="btn btn-primary mx-2 my-2  " disabled={text.length === 0} onClick={toUpperCase}>Uppercase</button>

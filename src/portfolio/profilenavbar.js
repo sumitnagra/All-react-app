@@ -50,7 +50,7 @@ const Navbar = () => {
             <span className='ProfilenavItem' onClick={navigateContact}>Contact</span>
             <span className="spanProject ProfilenavItem" onClick={navigateProject}>Projects</span>
             <span className='ProfilenavItem' onClick={() => { navigate("/resume") }}>Resume </span>
-            <div className="name" onClick={() => { navigate("/") }}><img src={brand} style={{ width: "29px", height: "29px", borderRadius: "50%", marginRight: "10px", position: "relative", top: "2px" }}/><span>Sumit Nagra</span></div>
+            <div className="name" onClick={() => { navigate("/") }}><img src={brand} /><span>Sumit Nagra</span></div>
         </div>
     </>)
 }

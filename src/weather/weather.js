@@ -8,19 +8,19 @@ import Mist from '../images/Mist-Transparent-Background.png';
 import Smoke from '../images/pngfind.com-smoke-cloud-png-1762313.png'
 import Rain from '../images/vecteezy_cute-weather-cloud-temperature-cartoon_17257793_588.png'
 const Weather = () => {
-  const [currentHour, setCurrentHour] =useState(new Date().getHours());
+  const [currentHour, setCurrentHour] = useState(new Date().getHours());
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
 
   const condition = {
     Clouds: Cloudy,
     Haze: Haze,
-    Clear:currentHour > 19 ? moon :Sun,
+    Clear: currentHour > 19 ? moon : Sun,
     Mist: Mist,
     Smoke: Smoke,
     Rain: Rain,
     Thunderstorm: Rain,
-    Dust:Mist
+    Dust: Mist
   }
   const Data = async () => {
     try {
@@ -54,14 +54,14 @@ const Weather = () => {
   const newWeather = () => {
     Data()
   }
-useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHour(new Date().getHours());
     }, 60000);
-  
+
     return () => clearInterval(interval);
   }, []);
-  
+
 
   let sec = info.sunset;
   let date = new Date(sec * 1000);
@@ -77,7 +77,7 @@ useEffect(() => {
   let year = dates.getFullYear()
   let today = `${day}/${month + 1}/${year}`;
   const style = {
-    padding: "20px 10px 20px 10px"
+    padding: "30px 10px 30px 10px"
   }
   const boder = {
     borderRight: "solid skyblue 2px",
@@ -90,37 +90,45 @@ useEffect(() => {
           <input type="search" onChange={(e) => setCity(e.target.value)} placeholder='Search by city name' />
           <button className="btn btn-dark " onClick={newWeather}>Search</button>
         </div>
-        <div className="card" style={{ width: "35rem", height: "300px", display: "flex" }}>
-          <div style={{ height: "150px", width: "100%", margin: "5px" }}>
+        <div className="card" >
+          <div className='card23'>
 
-            <span style={{ fontSize: "50px", padding: "10px" }}>{info.main}</span>
-            <img src={condition[info.main]} alt='img' style={{ height: "120px", width: "150px", padding: "10px" }} />
+            <span className='condition'>{info.main}</span>
+            <img src={condition[info.main]} alt='img' className='conditionImg' />
           </div>
 
 
-          <div style={{ height: "70px", display: "flex" }} className='map'>
-            <div style={{ padding: "5px", backgroundColor: "black", width: "60%", height: "100%", color: "white", fontSize: "45px", fontWeight: "lighter" }}>{info.temp}&deg;<span style={{ fontSize: "30px", padding: "10px" }}>{info.name}<span style={{ marginBottom: "50px", padding: "10px", fontSize: "15px" }}>{info.country}</span></span></div>
-            <div style={{ padding: "10px", color: "white", backgroundColor: "skyblue", height: "100%", width: "40%", fontSize: "18px" }}>
+          <div className='map'>
+            <div className='tempDiv'>{info.temp}&deg;<div> <span style={{ fontSize: "30px", padding:"" }}>{info.name}<span className='contry'>{info.country}</span></span>
+            </div></div>
+            <div className='sunrise'>
               <div> Sunrise {Sunrise} AM</div>
               <div>{today}</div>
             </div>
           </div>
-          <div style={{ padding: "10px", display: "flex" }}>
-            <i className="fa-regular fa-sun fa-2xl" style={style} ></i>
-            <div style={boder}>{sun} PM
-              <div>Sunset</div></div>
-            <i className="fa-solid fa-water fa-2xl" style={style}></i>
-            <div style={boder}>{info.humidity}% <div>humidity</div></div>
-            <i className="fa-solid fa-smog fa-2xl" style={style}></i>
-            <div style={boder}> pressure <div>{info.pressure} mm</div> </div>
-            <i className="fa-solid fa-wind fa-2xl" style={style}></i>
-            <div>wind speed<div>{info.speed}</div>
+          <div className='weatherdetails'>
+            <div>
+              <i className="fa-regular fa-sun fa-2xl" style={style} ></i>
+              <span style={boder}>{sun} PM
+                <span> Sunset</span></span></div>
+            <div>
+              <i className="fa-solid fa-water fa-2xl" style={style}></i>
+              <span style={boder}>{info.humidity}% <span>humidity</span></span>
+              </div>
+              <div>
+              <i className="fa-solid fa-smog fa-2xl" style={style}></i>
+              <span style={boder}> pressure <span>{info.pressure} mm</span> </span>
+              </div>
+              <div>
+              <i className="fa-solid fa-wind fa-2xl" style={style}></i>
+              <span>wind speed<span>{info.speed}</span>
+              </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </>)
+    </>)
 }
 
-export default Weather;
+    export default Weather;
