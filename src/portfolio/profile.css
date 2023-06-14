@@ -2,7 +2,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    overflow: scroll;
+    overflow: -moz-hidden-unscrollable;
 }
 
 .profileNav {
@@ -46,7 +46,10 @@ body {
     display: flex;
     cursor: pointer;
 }
-
+.flex{
+    display: flex;
+    align-items: baseline;
+}
 .name img {
     width: 29px;
     height: 29px;
@@ -614,7 +617,8 @@ svg {
 
 @media screen and (min-width:300px)and (max-width:720px) {
     .body-height-small {
-        height: 246vh;
+        height: 250vh;
+        overflow: auto;
     }
 
     .body-height-large {
@@ -660,9 +664,11 @@ svg {
         left: 20px;
         cursor: pointer;
     }
-
+    .flex{
+        display: block;
+    }
     .name span {
-        display: none;
+        display:none;
     }
 
     .name img {
@@ -687,7 +693,7 @@ svg {
     }
 
     .about {
-        display: block;
+        display:inline-block;
         position: relative;
         bottom: 0px;
         left: 10px;

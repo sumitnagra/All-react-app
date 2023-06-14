@@ -37,7 +37,7 @@ const About = (props) => {
                 <DownloadButton />
             </div>
 
-            <div className='about'><span className="span1" data-aos="fade-up" >I'm Sumit</span> <span></span><span className="span2">React Developer</span>
+            <div className='about'><div className='flex'><div className="span1" data-aos="fade-up" >I'm Sumit</div> <div className="span2" data-aos="fade-up">React Developer</div></div>
                 <p  data-aos="fade-up">Passionate React developer seeking opportunities to utilize skills in developing responsive web applications. Eager to learn and contribute to a dynamic team, enhancing expertise in the field.</p>
                 <div className='group' style={{ display: "inline-flex" }} data-aos="fade-up" >
                     <div className='circleItem1' onClick={() => { navigate("/project") }}>Project</div>
