@@ -2,9 +2,11 @@ import React, { useState, useContext } from 'react'
 import Notecontext from './Notecontext';
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../Navbar';
+import Spinner from './spinner';
 
 const Login = (props) => {
   const [user, setUser] = useState({ email: "", password: "" })
+  const [Loading ,setLoading]=useState(false)
   const navigate = useNavigate();
   const a = useContext(Notecontext);
   const host = "https://sumitportfolio-u9sd.onrender.com"
@@ -29,8 +31,11 @@ const Login = (props) => {
 
   }
   const handlesubmit = async (e) => {
+    setLoading(true)
     e.preventDefault()
-    login(user)
+    await login(user)
+    setLoading(false)
+
   }
   const onChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value })
@@ -38,7 +43,8 @@ const Login = (props) => {
   return (
     <>
     <Navbar/>
-    <div className="container my-3"><h3> Login to continue using iNOTEBook</h3></div>
+   <div className="container my-3"><h3> Login to continue using iNOTEBook</h3></div>
+   {Loading?<Spinner/>:
       <form style={{ marginTop: "20px" }} className="container" onSubmit={handlesubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -54,8 +60,7 @@ const Login = (props) => {
         <span className='mx-5'>
            Don't have account <span><Link to="/signup">Create Account.</Link></span></span>
       </form>
-    
-
+}
     </>
   )
 }
