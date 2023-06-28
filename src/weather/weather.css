@@ -29,6 +29,8 @@
 }
 
 .searchBtn input {
+    color: black;
+    
     padding: 4px;
     width: 400px;
     height: 36px;

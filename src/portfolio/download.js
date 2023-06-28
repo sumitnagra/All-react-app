@@ -19,12 +19,7 @@ const DownloadButton = () => {
 
   return (
   
-      <button class="animate downloadbtn" onClick={handleDownload}>
-        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-        </svg>
-        <span>Download CV</span>
+      <button class="circleItem4" onClick={handleDownload}><i className="fa-solid fa-download" style={{color: "#fffdeb",paddingRight:"5px"}}></i> CV
       </button>
 
   );

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Project1 from "../images/Screenshot (27).png"
 import Project2 from "../images/Screenshot (28).png"
 import Project3 from "../images/Screenshot (29).png"
@@ -7,6 +7,7 @@ import Project5 from "../images/Screenshot (32).png"
 import Project6 from "../images/Screenshot (33).png"
 import Project7 from '../images/Screenshot (34).png'
 import Project8 from '../images/Screenshot (35).png'
+import Project9 from '../images/Screenshot (41).png'
 import Footer from './footer'
 
 const Project=()=>{
@@ -47,6 +48,10 @@ window.scrollTo(0,110);document.title="Weather"}}>Try It</button></div><img src=
 <div className='firstProject ' data-aos="fade-up">
     <div className='textsection' ><h2>08 Shoping Cart </h2>
 <p> The smart add to cart application in which you can choose different product from the list and buy whenever you want also you can remove the product from the list , great simple user interface . See the full details of the product after add to cart   </p><button className='btn btn-dark' onClick={()=>{navigate("/shop");window.scrollTo(0,110);document.title="Shoping cart"}}>Try It</button></div><img src={Project8}/>
+</div>
+<div className='firstProject ' data-aos="fade-up">
+    <div className='textsection' ><h2>09 Text to speech</h2>
+<p> A cutting-edge text-to-speech app built with React! With a sleek interface and powerful functionality, it transforms written text into clear, natural-sounding audio.Having different kind of voices from different counteries. Experience the fusion of technology and creativity as words come to life. Discover the power of communication through my innovative TTS app. </p><button className='btn btn-dark' onClick={()=>{navigate("/speech");window.scrollTo(0,110);document.title="Text To Speech "}}>Try It</button></div><img src={Project9}/>
 </div>
 <Footer/>
     </>)

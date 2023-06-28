@@ -14,8 +14,8 @@ const Notes = (props) => {
             {localStorage.getItem('auth-token') ?
                 <div className="row  row-cols-lg-3" style={{ marginTop: "55px" }}>
 
-                    {state.length === 0 && <h1> You have no todo list for today </h1>}
-                    {
+                    {state.length === 0 ? <h1> You have no todo list for today </h1>:
+                    
                         state.map((element) => {
                             return (
                                 <div key={element._id}>

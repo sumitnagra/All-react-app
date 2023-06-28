@@ -19,31 +19,31 @@ const Contact = () => {
                         </div>
                         <div className='contactForm'>
                                 <div className='Firstname'>
-                                <div >
-                                        <p>First Name <span style={{color:"red"}}>*</span></p>
-                                        <input type='text' value={text} />
-                                </div>
-                                <div>
-                                        <p>Last Name <span style={{color:"red"}}>*</span></p>
-                                        <input type='text' value={text} />
-                                </div>
+                                        <div >
+                                                <p>First Name <span style={{ color: "red" }}>*</span></p>
+                                                <input type='text' value={text} />
+                                        </div>
+                                        <div>
+                                                <p>Last Name <span style={{ color: "red" }}>*</span></p>
+                                                <input type='text' value={text} />
+                                        </div>
                                 </div>
                                 <div className='email'>
-                                <div>
-                                        <p>Email <span style={{color:"red"}}>*</span></p>
-                                        <input type='email' value={text} />
-                                </div>
-                                <div>
-                                        <p>Subject <span style={{color:"red"}}>*</span></p>
-                                        <input type='text' value={text} />
-                                </div>
+                                        <div>
+                                                <p>Email <span style={{ color: "red" }}>*</span></p>
+                                                <input type='email' value={text} />
+                                        </div>
+                                        <div>
+                                                <p>Subject <span style={{ color: "red" }}>*</span></p>
+                                                <input type='text' value={text} />
+                                        </div>
                                 </div>
                                 <div className='msg'>
-                                <div>
-                                        <p>Massage <span style={{color:"red"}}>*</span></p>
-                                        <textarea className='contactmsg'></textarea>
-                                </div>
-                                <div className='circleItem1'>Submit</div>
+                                        <div>
+                                                <p>Massage <span style={{ color: "red" }}>*</span></p>
+                                                <textarea className='contactmsg'></textarea>
+                                        </div>
+                                        <div className='circleItem1'>Submit</div>
                                 </div>
                         </div>
                 </div>

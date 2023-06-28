@@ -113,15 +113,15 @@ const Weather = () => {
                 <span> Sunset</span></span></div>
             <div>
               <i className="fa-solid fa-water fa-2xl" style={style}></i>
-              <span style={boder}>{info.humidity}% <span>humidity</span></span>
+              <span style={boder}>{info.humidity}% <span>Humidity</span></span>
               </div>
               <div>
               <i className="fa-solid fa-smog fa-2xl" style={style}></i>
-              <span style={boder}> pressure <span>{info.pressure} mm</span> </span>
+              <span style={boder}> Pressure <span>{info.pressure} mm</span> </span>
               </div>
               <div>
               <i className="fa-solid fa-wind fa-2xl" style={style}></i>
-              <span>wind speed<span>{info.speed}</span>
+              <span>Wind speed<span> {info.speed} km/h</span>
               </span>
               </div>
             </div>

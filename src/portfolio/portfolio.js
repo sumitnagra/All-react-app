@@ -22,7 +22,7 @@ import SignUP from "../Notebook/component/context/signup.js";
 import Items from '../shopingCart/item';
 import Cart from '../shopingCart/cart';
 import { ShopContextprovider } from '../shopingCart/shopContex';
-
+import Speech from '../text to speech/speech'
 
 
 
@@ -59,6 +59,7 @@ const CompleteProfile = () => {
           <Route path="/app/*" element={<App/>} />
           <Route path="/shop/*" element={<Items  />} />
           <Route path="/cart/*" element={<Cart/>} />
+          <Route path="/speech/*" element={<Speech/>} />
 
           <Route path="/textUtils" element={<Myapp showAlert={showAlert} />} />
 
