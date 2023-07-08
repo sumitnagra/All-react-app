@@ -10,7 +10,7 @@ import Weather from '../weather/weather';
 import Myapp from '../textUtilize/FirstApp';
 import Alert from '../News/Alert'
 import GroupNews from '../News/Newsinrow';
-import Alarm from '../alarm'
+import Alarm from '../alarm/alarm'
 import Advice from '../Advice/Advice'
 import App from '../todo list/App';
 import React, { useState } from "react";

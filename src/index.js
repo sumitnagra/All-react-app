@@ -1,8 +1,6 @@
 
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './todo list/App';
-import Alarm from './alarm';
 
 import { Provider } from 'react-redux';
 import store from './Redux/store.js'
@@ -18,7 +16,6 @@ const Hello = () => {
     <Provider store={store}>
 
       <Profile />
-      {/* <App/> */}
 
     </Provider>
   </>

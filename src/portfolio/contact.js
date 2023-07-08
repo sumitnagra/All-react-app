@@ -2,8 +2,12 @@ import './profile.css'
 import Footer from './footer'
 import { useState } from 'react'
 const Contact = () => {
+
         const [text, settext] = useState('')
         return (<>
+
+
+        <video  className='myVedio' src="https://youtu.be/aEDfrsI5S8k"/>
                 <div className="container contact" data-aos="fade-up">
                         <div className='contactdetail'>
                                 <h1 className="contactheading">Contact</h1>

@@ -19,7 +19,7 @@ const DownloadButton = () => {
 
   return (
   
-      <button class="circleItem4" onClick={handleDownload}><i className="fa-solid fa-download" style={{color: "#fffdeb",paddingRight:"5px"}}></i> CV
+      <button className="circleItem4" onClick={handleDownload}><i className="fa-solid fa-download" style={{color: "#fffdeb",paddingRight:"5px"}}></i> CV
       </button>
 
   );

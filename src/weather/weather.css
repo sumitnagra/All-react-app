@@ -123,6 +123,9 @@ padding: 5px;
 
     .card23 {
         display: flex;
+        flex-wrap: wrap;
+       height: auto;
+       justify-content: center;
     }
 
     .card23 img {

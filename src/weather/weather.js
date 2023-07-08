@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Spinner from '../Notebook/component/context/spinner'
 import './weather.css'
 import Sun from '../images/23634-1-sun-hd.png'
 import moon from '../images/pngwing.com.png'
@@ -11,6 +12,7 @@ const Weather = () => {
   const [currentHour, setCurrentHour] = useState(new Date().getHours());
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
+  const [loading, setloading] = useState(false)
 
   const condition = {
     Clouds: Cloudy,
@@ -24,6 +26,7 @@ const Weather = () => {
   }
   const Data = async () => {
     try {
+      setloading(true)
       const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=363902cae52b6ee6848bc923b7e7feea`)
       const parseData = await weather.json();
       const { main } = parseData.weather[0];
@@ -43,9 +46,11 @@ const Weather = () => {
         name
       }
       setInfo(newInfo)
-
+      setloading(false)
     } catch (error) {
+    alert("Something went wrong check or city name")
       console.log(error)
+      setloading(false)
     }
   }
   useEffect(() => {
@@ -88,18 +93,17 @@ const Weather = () => {
       <div className='mainDiv'>
         <div className='searchBtn'>
           <input type="search" onChange={(e) => setCity(e.target.value)} placeholder='Search by city name' />
-          <button className="btn btn-dark " onClick={newWeather}>Search</button>
+          <button className="btn btn-dark " onKeyDown={newWeather} onClick={newWeather}>Search</button>
         </div>
         <div className="card" >
           <div className='card23'>
-
-            <span className='condition'>{info.main}</span>
-            <img src={condition[info.main]} alt='img' className='conditionImg' />
+          {loading?<Spinner/>:<><span className='condition'>{info.main}</span>
+            <img src={condition[info.main]} alt='img' className='conditionImg' /></>}
           </div>
 
 
           <div className='map'>
-            <div className='tempDiv'>{info.temp}&deg;<div> <span style={{ fontSize: "30px", padding:"" }}>{info.name}<span className='contry'>{info.country}</span></span>
+            <div className='tempDiv'>{info.temp}&deg;<div> <span style={{ fontSize: "30px", padding: "" }}>{info.name}<span className='contry'>{info.country}</span></span>
             </div></div>
             <div className='sunrise'>
               <div> Sunrise {Sunrise} AM</div>
@@ -114,21 +118,21 @@ const Weather = () => {
             <div>
               <i className="fa-solid fa-water fa-2xl" style={style}></i>
               <span style={boder}>{info.humidity}% <span>Humidity</span></span>
-              </div>
-              <div>
+            </div>
+            <div>
               <i className="fa-solid fa-smog fa-2xl" style={style}></i>
               <span style={boder}> Pressure <span>{info.pressure} mm</span> </span>
-              </div>
-              <div>
+            </div>
+            <div>
               <i className="fa-solid fa-wind fa-2xl" style={style}></i>
               <span>Wind speed<span> {info.speed} km/h</span>
               </span>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </>)
+    </div>
+  </>)
 }
 
-    export default Weather;
+export default Weather;

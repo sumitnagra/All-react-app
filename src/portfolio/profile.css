@@ -169,6 +169,9 @@ hr {
 .follow {
     font-size: 18px
 }
+.follow i{
+    padding-right: 15px;
+}
 
 .firstProject {
     position: relative;
@@ -186,7 +189,7 @@ hr {
 .firstProject img {
     width: 500px;
     height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    box-shadow: rgba(194, 190, 190, 0) 0px 5px 15px
 }
 
 .projectHeading {
@@ -729,7 +732,7 @@ svg {
     }
 
     .follow {
-        padding-top: 10px;
+             padding-top: 10px;
         font-size: 15px;
     }
 

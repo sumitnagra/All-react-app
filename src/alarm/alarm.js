@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import audio from './images/loud_alarm.mp3'
+import audio from '../images/loud_alarm.mp3'
 import './alarm.css'
 
 const Alarm = () => {
