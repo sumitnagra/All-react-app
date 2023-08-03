@@ -1,11 +1,14 @@
 import './speech.css'
 import { useState, useEffect } from 'react';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+
 
 const Speech = () => {
     const [speechText, setText] = useState('');
     const [voices, setVoices] = useState([]);
     const [selectedVoice, setSelectedVoice] = useState();
     const [voicesLoaded, setVoicesLoaded] = useState(false);
+    const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition()
 
     useEffect(() => {
         getVoices();
@@ -40,11 +43,10 @@ const Speech = () => {
         }
     };
 
-    const pauseSpeech = () => {
-        if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
-            window.speechSynthesis.pause();
-        }
-    };
+    const speechTotext = () => {
+SpeechRecognition.startListening();
+setText(transcript)
+    }
 
     return (
         <>
@@ -55,7 +57,7 @@ const Speech = () => {
                     </h1>
                     <textarea
                         placeholder="Enter Text Here"
-                        value={speechText}
+                        value={transcript}
                         onChange={handleText}
                     ></textarea>
                     <div className="drop">
@@ -73,8 +75,8 @@ const Speech = () => {
                         <button className="listen" onClick={startSpeaking}>
                             Listen
                         </button>
-                        <button className="stop" onClick={pauseSpeech}>
-                            Stop
+                        <button className="stop" onClick={speechTotext}>
+                            Speeck
                         </button>
                     </div>
                 </div>

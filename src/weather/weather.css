@@ -1,186 +1,192 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
-
-.body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 640px;
+.Body{
+    display: flex;
 }
-
-.mainDiv {
-    color: black;
-    padding: 100px 0px 150px 200px;
-    width: 100%;
-    height: 100vh;
-
+.iconCircle{padding:5px;
+    align-self: center;
+    width: 40px;
+    height:40px;
+    background-color: whitesmoke;
+    border-radius: 50%;
 }
-
-.card {
-    width: 35rem;
+.weatherBox,.weatherBox2 {
+    color:white;
+    width: 33%;
     height: 300px;
-    display: flex
+    border-radius: 20px;
+    background-size: 100% 100%;
+    margin:5%;
 }
-
-.searchBtn {
-    padding-left: 20px;
-    padding-bottom: 20px;
+.Topnavbar{
+    height:80px;
     display: flex;
-}
-
-.searchBtn input {
-    color: black;
     
-    padding: 4px;
-    width: 400px;
-    height: 36px;
-    border-bottom: solid 1px black
 }
-
-.card23 {
-    height: 140px;
-    width: 100%;
-}
-.condition {
-    font-size: 50px;
-    padding: 10px;
-}
-
-.map {
-    height: 70px;
+.search{
+    border-radius: 15px;
+    position:relative;
+    left:30%;
+    background-color: white;
+    color:black;
+    width:23%;
+    padding: 5px;
     display: flex;
+    justify-content:flex-end;
+    background-repeat: no-repeat;
+}
+.search:focus{
+    border: none;
+}
+.character{
+  width: 50px; 
+  height:50px; 
+  border-radius:50%;
+  margin: 0% 1% 0% 5%;
+
+}
+.charactername{
+    font-weight: 800;
+    font-size:1rem;
+    font-family:'DM Sans';
+    margin: 0;
+} 
+.charactername~div{
+    font-size:2rem;
+    font-family:'DM Sans';
+
+
+}
+.sunny{
+    background-image: url("../images/weather/evening.jpg");
+}
+.clear{
+    background-image: url("../images/weather/sunny.jpg");
+}
+.moon{
+    background-image: url("../images/weather/moon.jpg");
+}
+.mist{
+    background-image: url("../images/weather/mist.jpg");
+}
+.thunderstorm{
+    background-image: url("../images/weather/thunderstorm.jpg");
+}
+.rain{
+    
+    background-image: url("../images/weather/dayRain.jpg");
+}
+.nightRain{
+   
+    background-image: url("../images/weather/nightRain.jpg");
+}
+.cloud{
+  
+    background-image: url("../images/weather/cloud.jpg");
+}
+.haze{
+   
+    background-image: url("../images/weather/haze.jpg");
+}
+.nighthaze{
+    background-image: url("../images//weather//nighthaze.jpg");
+}
+.nightSmoke{
+    background-image: url("../images/weather/nightSmoke.jpg");
+}
+.smoke{
+    background-image: url("../images/weather/smoke.jpg");
+}   
+.dust{
+    background-image: url("../images/weather/dust.jpg");
+}
+.nightmist{
+    background-image: url("../images/weather/nightmist.jpg");
+}
+.feelsLike,.aq{
+    width:100px;
+    height:50px;
+    color:black;
+    border-radius: 10px;
+    font-size: 15px;
+    text-shadow: none;
+    padding:5px 10px 5px 10px;
+}
+.feelsLike{
+    background-color: whitesmoke;
+}
+.aq{
+    background-color: #CBE464;
+    
 }
 
-.weatherdetails {
-    padding: 10px;
+
+.Weatherinfo {
+    padding:4% 0% 0% 2%;
     display: flex;
+    gap:3%;
+    justify-content: baseline;
+    color: white;
 }
-
-.weatherdetails div {
+.Weatherinfo h4{
+    padding-top: 20px;
+    text-shadow: 2px 2px 2px black;
+}
+.temp{
+    text-shadow: 2px 2px 2px black;
+    padding:3% 0% 0% 3%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.weatherDetails{
     display: flex;
+    justify-content: space-around;
 }
-
-.conditionImg {
-    height: 120px;
-    width: 150px;
-    padding: 10px
+.pressure,.humidity,.visibility{
+    padding:10px;
+    text-align: center;
+    width:6rem;
+    height:5rem;
+    border-radius: 20px;
+    margin-top: 10%;
+    font-weight:600;
 }
-.tempDiv{
-padding: 5px;
- background-color: black; width: 60%;
-  height: 100%; 
-  color:white;
-   font-size: 45px ;
-   font-weight: lighter;
-   display: flex;
+.pressure div,.humidity div ,.visibility div{
+font-family:'DM Sans', sans-serif;
+font-size:15px
 }
-.sunrise{
- padding: 10px;
- color: white;
-  background-color: skyblue;
-   height: "100%";
-   width: 40%;
-    font-size:18px; 
+.pressure{
+    background-color: #1A2940;
+    color:white;
+
 }
-.contry{
- margin-bottom:10px;
-  padding:10px;
-  font-size:15px;
+.visibility{
+    color: black;
+    background-color: #CBE464;
 }
-.city{
-     font-size: 30px;
-      padding:10px;
+.humidity{
+color: black;
+    background-color: #FEFEFE;
 }
-@media screen and (min-width:300px) and (max-width:720px) {
-
-
-    .mainDiv {
-        padding: 0;
-        width: 100%;
+.airQuality{
+    background-image: url("../images/weather/airevening.jpg");
     }
-
-    .searchBtn {
-        padding-left: 20px;
-        padding-bottom: 20px;
-        display: flex;
+    .airQualityevening{
+        background-image:url('../images//weather/airevening.jpg');
     }
+    .airQuality h4{
+        text-shadow: 2px 2px 2px black;
 
-    .searchBtn input {
-        font-size: 15px;
-        padding: 3px;
-        width: 68%;
-        height: 37px;
-        border-radius: 5px;
-        border: solid black 1px;
-    }
 
-    .card {
-        margin: auto;
-        width: 90%;
-        height: auto;
-        display: block
     }
-
-    .card23 {
-        display: flex;
-        flex-wrap: wrap;
-       height: auto;
-       justify-content: center;
+    .weatherBox2 p{
+        color: white;
+        padding-left: 15%;
+        text-shadow: 1px 1px 1px black;
     }
-
-    .card23 img {
-        height: 100px;
+    .weatherBox2 h1{
+        padding-left: 5%;
+        color: white;
+        text-shadow: 1px 1px 1px black;
     }
-
-    .weatherdetails {
-        padding: 10px;
-        display: block;
+    .weatherBox2 .wind{padding-left: 5%;
+        font-size: 1rem;
+        
     }
-
-    .weatherdetails div {
-        display: block;
-    }
-
-    .condition {
-        font-size: 40px;
-        padding-top: 30px;
-        font-weight: bold
-    }
-
-    .conditionImg {
-        height: 120px;
-        width: 120px;
-        padding: 10px
-    }
-    .map {
-        height: 100px;
-        display: flex;
-    }
-    .tempDiv{padding-left: 10px;
-         background-color: black;
-          width: 60%;
-          height: 100%; 
-          color:white;
-           font-size: 30px ;
-           font-weight: lighter;
-   display: block;
-
-             }
-        .sunrise{
-            padding: 10px;
-            color: white;
-             background-color: skyblue;
-              height: "100%";
-              width: 40%;
-               font-size:17px;
-           }
-           .contry{
-            margin-bottom:10px;
-             padding:10px;
-             font-size: 17px
-           }
-           .city{
-            font-size: 30px;
-             padding:10px;
-       }
-}

@@ -50,7 +50,7 @@ const Navbar = () => {
           </ul>
         </li>
             </ul>
-            
+            <h5 class="me-5">22°C Clouds </h5>
           </div>
         </div>
       </nav>

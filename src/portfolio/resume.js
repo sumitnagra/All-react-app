@@ -5,6 +5,7 @@ import express from '../images/expressjs_logo_icon_169185.png'
 import mongodb from '../images/icons8-mongodb-a-cross-platform-document-oriented-database-program-24.png'
 import sql from '../images/icons8-sql-80.png'
 const Resume=()=>{
+  document.title="Resume";
 return(<>
 <div className='container projectheading'>
  <h1 className='projectHeading' >Resume</h1>

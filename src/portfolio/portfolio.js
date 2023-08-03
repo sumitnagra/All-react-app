@@ -24,10 +24,6 @@ import Cart from '../shopingCart/cart';
 import { ShopContextprovider } from '../shopingCart/shopContex';
 import Speech from '../text to speech/speech'
 
-
-
-
-
 const CompleteProfile = () => {
   const [alert, setAlert] = useState(null)
   const showAlert = (massage, type) => {
@@ -44,41 +40,39 @@ const CompleteProfile = () => {
   return (<>
     <Router>
       <NoteState showAlert={showAlert}>
-<ShopContextprovider>
-        <Navbar />
-        <Alert alert={alert} />
+        <ShopContextprovider>
+          <Navbar />
+          <Alert alert={alert} />
 
-        <Routes>
-          <Route path="/" element={<Profile />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/weather" element={<Weather />} />
-          <Route path="/advice/*" element={<Advice />} />
-          <Route path="/alarm/*" element={<Alarm />} />
-          <Route path="/app/*" element={<App/>} />
-          <Route path="/shop/*" element={<Items  />} />
-          <Route path="/cart/*" element={<Cart/>} />
-          <Route path="/speech/*" element={<Speech/>} />
+          <Routes>
+            <Route path="/" element={<Profile />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/weather" element={<Weather />} />
+            <Route path="/advice/*" element={<Advice />} />
+            <Route path="/alarm/*" element={<Alarm />} />
+            <Route path="/app/*" element={<App />} />
+            <Route path="/shop/*" element={<Items />} />
+            <Route path="/cart/*" element={<Cart />} />
+            <Route path="/speech/*" element={<Speech />} />
 
-          <Route path="/textUtils" element={<Myapp showAlert={showAlert} />} />
+            <Route path="/textUtils" element={<Myapp showAlert={showAlert} />} />
 
-          <Route path="/home" element={<GroupNews catagory="general" />} />
-          <Route path="/sports" element={<GroupNews catagory="sports" />} />
-          <Route path="/technology" element={<GroupNews catagory="technology" />} />
-          <Route path="/business" element={<GroupNews catagory="business" />} />
-          <Route path="/entertainment" element={<GroupNews catagory="entertainment" />} />
-          <Route path="/health" element={<GroupNews catagory="health" />} />
-          <Route path="/science" element={<GroupNews catagory="science" />} />
+            <Route path="/home" element={<GroupNews catagory="general" />} />
+            <Route path="/sports" element={<GroupNews catagory="sports" />} />
+            <Route path="/technology" element={<GroupNews catagory="technology" />} />
+            <Route path="/business" element={<GroupNews catagory="business" />} />
+            <Route path="/entertainment" element={<GroupNews catagory="entertainment" />} />
+            <Route path="/health" element={<GroupNews catagory="health" />} />
+            <Route path="/science" element={<GroupNews catagory="science" />} />
 
-          <Route exact path="/notebook" element={<Home showAlert={showAlert} />}></Route>
-          <Route exact path="/addnote" element={<AddNote showAlert={showAlert} />}></Route>
-          <Route exact path="/signup" element={<SignUP showAlert={showAlert} />}></Route>
-          <Route exact path="/login" element={<Login showAlert={showAlert} />}></Route>
+            <Route exact path="/notebook" element={<Home showAlert={showAlert} />}></Route>
+            <Route exact path="/addnote" element={<AddNote showAlert={showAlert} />}></Route>
+            <Route exact path="/signup" element={<SignUP showAlert={showAlert} />}></Route>
+            <Route exact path="/login" element={<Login showAlert={showAlert} />}></Route>
 
-
-
-        </Routes>
+          </Routes>
         </ShopContextprovider>
       </NoteState>
     </Router>
