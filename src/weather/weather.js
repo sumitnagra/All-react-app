@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import Spinner from '../Notebook/component/context/spinner'
 import './weather.css'
 import character from '../images/weather/character.jpg'
+import LoadingBar from 'react-top-loading-bar'
 
 const Weather = () => {
   const [currentHour, setCurrentHour] = useState(new Date().getHours());
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
   const [value, setValue] = useState("delhi")
-  const [loading, setloading] = useState(false)
+  const [progress,setProgress]=useState(0)
 
 
   let weatherCondition = '';
@@ -68,7 +68,7 @@ const Weather = () => {
 
   const Data = async () => {
     try {
-      setloading(true)
+      setProgress(30)
       const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=363902cae52b6ee6848bc923b7e7feea`)
       const parseData = await weather.json();
       const { main } = parseData.weather[0];
@@ -77,6 +77,7 @@ const Weather = () => {
       const { country, sunset, sunrise } = parseData.sys;
       const { name } = parseData;
       const { visibility } = parseData;
+      setProgress(50)
       const newInfo = {
         main,
         temp,
@@ -92,14 +93,14 @@ const Weather = () => {
         visibility,
       }
       setInfo(newInfo)
-      setloading(false)
+      setProgress(100)
     } catch (error) {
       if (!navigator.onLine) {
         alert("Cheack your internet connection")
       } else {
 
         console.log(error)
-        setloading(false)
+        setProgress(100)
       }
     }
   }
@@ -113,7 +114,6 @@ const Weather = () => {
     if (event.key === 'Enter') {
       setCity(value)
       Data()
-      console.log(info.deg)
     }
   };
 
@@ -141,7 +141,13 @@ const Weather = () => {
   let today = `${day}/${month + 1}/${year}`;
 
   return (<>
+   
     <div className='Topnavbar'>
+    <LoadingBar
+        color='#f11946'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
       <img className="character" src={character} />
       <div >
         <div className='charactername'>Hello</div>
@@ -156,7 +162,7 @@ const Weather = () => {
           <span className='iconCircle'><i className="fa-solid fa-cloud fa-lg" style={{ color: "orange" }}></i></span>
           <h4>Weather</h4>
         </div>
-        <h1 className='temp'>{info.temp}°C <span style={{"fontWeight":"lighter" ,"fontSize":"2 0px"}}>Feels like </span><span className='feelsLike'> {info.feels_like}°C</span></h1>
+        <h1 className='temp'>{info.temp}°C <span style={{"fontWeight":"lighter" ,"fontSize":"18px"}}>Feels like </span><span className='feelsLike'> {info.feels_like}°C</span></h1>
         <h4 className='temp'>{info.main}</h4>
         <div className='weatherDetails'>
           <div className='pressure'><div >Pressure</div>
