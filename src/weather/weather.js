@@ -46,16 +46,16 @@ const Weather = () => {
   let x = info.deg;
   switch (true) {
     case x >= 0 && x < 90:
-      windDirection =`${info.deg}° East`;
+      windDirection =' East';
       break;
     case x >= 90 && x < 180:
-      windDirection =`${info.deg}° South`;
+      windDirection ='South';
       break;
     case x >= 180 && x < 270:
-     windDirection= `${info.deg}° West`;
+     windDirection='West';
       break;
     case x >= 270 && x < 360:
-     windDirection= `${info.deg}° North`;
+     windDirection=' North';
       break;
     default:
       windDirection = "No "
@@ -166,7 +166,7 @@ const Weather = () => {
         <h4 className='temp'>{info.main}</h4>
         <div className='weatherDetails'>
           <div className='pressure'><div >Pressure</div>
-            {info.pressure}mb</div>
+            {info.pressure} mb</div>
           <div className='visibility'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Visibility</div>{(info.visibility) / 1000} km</div>
           <div className='humidity'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Humadity</div>{info.humidity}%</div>
         </div>
@@ -178,7 +178,7 @@ const Weather = () => {
         </div>
         <p>Main Polution : PM 2.5</p>
         <h1>390 <span className='aq'>AQ</span></h1>
-        <p className='wind'>{windDirection}</p>
+        <p className='wind'>{windDirection} Wind</p>
         <div className=''></div>
       </div>
     </div>

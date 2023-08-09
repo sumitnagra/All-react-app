@@ -8,7 +8,8 @@ function App() {
   const [edit, setEdit] = useState(0)
   const [index, setIndex] = useState(null)
 
-  const Add = () => {
+  const Add = (event) => {
+    if(event.key==="Enter"){
     if (input === '') { }
     else {
       if (edit === 0) {
@@ -25,6 +26,7 @@ function App() {
       }
     }
   }
+}
 
   const Delete = (index) => {
     let oldArr = newInput
@@ -38,21 +40,19 @@ function App() {
     setIndex(index)
   }
 
-const listyle={
- 
-}
+
   return (
     <>
       <div id="myDIV" className="header">
         <h2>My To Do List</h2>
         <div className="add">
-        <input type="text" className="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item"/>
+        <input type="text" className="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item" onKeyDown={Add}/>
         <button className="btn btn-dark" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'}</button>
 </div>
       </div>
 <div className="myUL">
       <ol id="myUL">
-      {newInput.map((item, index) =><li key={index}>{item} <i className="fa-solid fa-pen-to-square mx-4" onClick={() => Edit(index)} style={listyle}>
+      {newInput.map((item, index) =><li key={index}>{item} <i className="fa-solid fa-pen-to-square mx-4" onClick={() => Edit(index)} >
           </i><i className="fa-solid fa-trash right mx-4" onClick={() => Delete(index)}></i></li>) }
       </ol>
       </div>
