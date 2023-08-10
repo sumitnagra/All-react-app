@@ -47,7 +47,7 @@ function App() {
         <h2>My To Do List</h2>
         <div className="add">
         <input type="text" className="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item" onKeyDown={Add}/>
-        <button className="btn btn-dark" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'}</button>
+        <button className="btn btn-dark" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'} </button>
 </div>
       </div>
 <div className="myUL">
