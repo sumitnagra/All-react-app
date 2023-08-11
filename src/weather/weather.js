@@ -7,9 +7,9 @@ const Weather = () => {
   const [currentHour, setCurrentHour] = useState(new Date().getHours());
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
-  const [value, setValue] = useState("delhi")
-  const [progress,setProgress]=useState(0)
-
+  const [value, setValue] = useState("")
+  const [progress, setProgress] = useState(0)
+const Day=["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"]
 
   let weatherCondition = '';
   // Determine the className based on the weather condition
@@ -46,16 +46,16 @@ const Weather = () => {
   let x = info.deg;
   switch (true) {
     case x >= 0 && x < 90:
-      windDirection =' East';
+      windDirection = ' East';
       break;
     case x >= 90 && x < 180:
-      windDirection ='South';
+      windDirection = 'South';
       break;
     case x >= 180 && x < 270:
-     windDirection='West';
+      windDirection = 'West';
       break;
     case x >= 270 && x < 360:
-     windDirection=' North';
+      windDirection = ' North';
       break;
     default:
       windDirection = "No "
@@ -63,7 +63,6 @@ const Weather = () => {
 
   const handleInput = (e) => {
     setValue(e.target.value)
-    console.log(currentHour)
   }
 
   const Data = async () => {
@@ -106,13 +105,15 @@ const Weather = () => {
   }
   useEffect(() => {
     Data()
-
   }, [city], 1000)
-
+const onclickHandle=()=>{
+  setCity(value)
+  Data()
+}
 
   const newWeather = (event) => {
     if (event.key === 'Enter') {
-      setCity(value)
+      setCity(event.target.value)
       Data()
     }
   };
@@ -141,45 +142,82 @@ const Weather = () => {
   let today = `${day}/${month + 1}/${year}`;
 
   return (<>
-   
-    <div className='Topnavbar'>
-    <LoadingBar
-        color='#f11946'
-        progress={progress}
-        onLoaderFinished={() => setProgress(0)}
-      />
-      <img className="character" src={character} />
-      <div >
-        <div className='charactername'>Hello</div>
-        <div>Jack Grealish</div>
-      </div>
-      <input type='search' className='search' value={value} onChange={handleInput} onKeyDown={newWeather} />
+    <div style={{ "display": "flex" ,"backgroundColor":"white"}}>
+      <div className='leftside'>
+        <div className='Topnavbar'>
+          <LoadingBar
+            color='#f11946'
+            progress={progress}
+            onLoaderFinished={() => setProgress(0)}
+          />
+          <img className="character" src={character} />
+          <div >
+            <div className='charactername'>Hello</div>
+            <div>Jack Grealish</div>
+          </div>
+          <input type='text' className='search' value={value} onChange={handleInput} onKeyDown={newWeather} placeholder='Search by city name'/>
+          <i className="fa-solid fa-magnifying-glass fa-xl" style={{"color":"darkorange","right":"30%","top":"19.5%"}} onClick={onclickHandle}></i>
+          <i className="fa-regular fa-bell fa-xl"></i>
+        </div>
+        <div className='Body'>
+          <div className={`weatherBox ${weatherCondition}`}  >
+            <div className='Weatherinfo'>
+              <span className='iconCircle'><i className="fa-solid fa-cloud fa-lg" style={{ color: "orange" }}></i></span>
+              <h4>Weather</h4>
+            </div>
+            <h1 className='temp'>{info.temp}°C <span style={{ "fontWeight": "lighter", "fontSize": "18px" }}>Feels like </span><span className='feelsLike'> {info.feels_like}°C</span></h1>
+            <h4 className='temp'>{info.main}</h4>
+            <div className='weatherDetails'>
+              <div className='pressure'><div >Pressure</div>
+                {info.pressure} mb</div>
+              <div className='visibility'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Visibility</div>{(info.visibility) / 1000} km</div>
+              <div className='humidity'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Humadity</div>{info.humidity}%</div>
+            </div>
+          </div>
+          <div className="weatherBox2 airQuality">
+            <div className='Weatherinfo'>
+              <span className='iconCircle'><i className="fa-solid fa-wind fa-xl" style={{ color: "orange" }}></i></span>
+              <h4>Air Quality</h4>
+            </div>
+            <p>Main Polution : PM 2.5</p>
+            <h1>390 <span className='aq'>AQ</span></h1>
+            <p className='wind'>{windDirection} Wind</p>
 
-    </div>
-    <div className='Body'>
-      <div className={`weatherBox ${weatherCondition}`}  >
-        <div className='Weatherinfo'>
-          <span className='iconCircle'><i className="fa-solid fa-cloud fa-lg" style={{ color: "orange" }}></i></span>
-          <h4>Weather</h4>
+          </div>
         </div>
-        <h1 className='temp'>{info.temp}°C <span style={{"fontWeight":"lighter" ,"fontSize":"18px"}}>Feels like </span><span className='feelsLike'> {info.feels_like}°C</span></h1>
-        <h4 className='temp'>{info.main}</h4>
-        <div className='weatherDetails'>
-          <div className='pressure'><div >Pressure</div>
-            {info.pressure} mb</div>
-          <div className='visibility'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Visibility</div>{(info.visibility) / 1000} km</div>
-          <div className='humidity'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Humadity</div>{info.humidity}%</div>
+        <div>
+          <div className='temprature'>
+            <h1>How's the temprature today ?</h1>
+            <div className='icon'><i className="fa-solid fa-temperature-low fa-xl"></i></div>
+            <div className='icon'><i className="fa-solid fa-umbrella fa-xl"></i></div>
+            <div className='icon'><i className="fa-solid fa-wind fa-xl"></i></div>
+            <div className='tomorrow'>
+            </div>
+
+          </div>
+          <div className='tempGraph'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
       </div>
-      <div className="weatherBox2 airQuality">
-        <div className='Weatherinfo'>
-          <span className='iconCircle'><i className="fa-solid fa-wind fa-xl" style={{ color: "orange" }}></i></span>
-          <h4>Air Quality</h4>
+      <div className='rightside'>
+        <div className='location'>
+          <div>
+            <h4>{Day[dates.getDay()]}</h4>
+            <p>{info.name}, {info.country}</p>
+          </div>
+          <h2>{info.temp}°C</h2>
         </div>
-        <p>Main Polution : PM 2.5</p>
-        <h1>390 <span className='aq'>AQ</span></h1>
-        <p className='wind'>{windDirection} Wind</p>
-        <div className=''></div>
+        <div className='uv'>
+        <i class="fa-regular fa-sun fa-2xl" style={{"color":"darkorange","paddingTop":"15px"}}></i>
+        <div>
+          <h4>20 UVl <span className='aq'>Moderate</span></h4>
+          <p>Moderate risk of from UV rays</p>
+        </div>
+        </div>
       </div>
     </div>
   </>)
