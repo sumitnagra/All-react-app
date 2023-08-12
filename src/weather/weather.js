@@ -3,13 +3,14 @@ import './weather.css'
 import character from '../images/weather/character.jpg'
 import LoadingBar from 'react-top-loading-bar'
 
+
 const Weather = () => {
   const [currentHour, setCurrentHour] = useState(new Date().getHours());
   const [city, setCity] = useState("delhi")
   const [info, setInfo] = useState({})
   const [value, setValue] = useState("")
   const [progress, setProgress] = useState(0)
-const Day=["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"]
+  const Day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
 
   let weatherCondition = '';
   // Determine the className based on the weather condition
@@ -106,10 +107,10 @@ const Day=["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday
   useEffect(() => {
     Data()
   }, [city], 1000)
-const onclickHandle=()=>{
-  setCity(value)
-  Data()
-}
+  const onclickHandle = () => {
+    setCity(value)
+    Data()
+  }
 
   const newWeather = (event) => {
     if (event.key === 'Enter') {
@@ -142,7 +143,7 @@ const onclickHandle=()=>{
   let today = `${day}/${month + 1}/${year}`;
 
   return (<>
-    <div style={{ "display": "flex" ,"backgroundColor":"white"}}>
+    <div style={{ "display": "flex", "backgroundColor": "white" }}>
       <div className='leftside'>
         <div className='Topnavbar'>
           <LoadingBar
@@ -155,8 +156,8 @@ const onclickHandle=()=>{
             <div className='charactername'>Hello</div>
             <div>Jack Grealish</div>
           </div>
-          <input type='text' className='search' value={value} onChange={handleInput} onKeyDown={newWeather} placeholder='Search by city name'/>
-          <i className="fa-solid fa-magnifying-glass fa-xl" style={{"color":"darkorange","right":"30%","top":"19.5%"}} onClick={onclickHandle}></i>
+          <input type='text' className='search' value={value} onChange={handleInput} onKeyDown={newWeather} placeholder='Search by city name' />
+          <i className="fa-solid fa-magnifying-glass fa-xl" style={{ "color": "darkorange", "right": "30%", "top": "19.5%" }} onClick={onclickHandle}></i>
           <i className="fa-regular fa-bell fa-xl"></i>
         </div>
         <div className='Body'>
@@ -187,19 +188,19 @@ const onclickHandle=()=>{
         </div>
         <div>
           <div className='temprature'>
-            <h1>How's the temprature today ?</h1>
-            <div className='icon'><i className="fa-solid fa-temperature-low fa-xl"></i></div>
-            <div className='icon'><i className="fa-solid fa-umbrella fa-xl"></i></div>
-            <div className='icon'><i className="fa-solid fa-wind fa-xl"></i></div>
-            <div className='tomorrow'>
+            <div style={{ "display": "flex" }}>
+              <h1>How's the temprature today ?</h1>
+              <div className='icon'><i className="fa-solid fa-temperature-low fa-xl"></i></div>
+              <div className='icon'><i className="fa-solid fa-umbrella fa-xl"></i></div>
+              <div className='icon'><i className="fa-solid fa-wind fa-xl"></i></div>
             </div>
-
-          </div>
-          <div className='tempGraph'>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+              <div className='tempGraph'>
+                <div className='graph'></div>
+                <div className='graph'></div>
+                <div className='graph'></div>
+                <div className='graph'></div>
+            <div className='tomorrow'></div>
+              </div>
           </div>
         </div>
       </div>
@@ -212,12 +213,33 @@ const onclickHandle=()=>{
           <h2>{info.temp}°C</h2>
         </div>
         <div className='uv'>
-        <i class="fa-regular fa-sun fa-2xl" style={{"color":"darkorange","paddingTop":"15px"}}></i>
-        <div>
-          <h4>20 UVl <span className='aq'>Moderate</span></h4>
-          <p>Moderate risk of from UV rays</p>
+          <i class="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange", "paddingTop": "15px" }}></i>
+          <div>
+            <h4>20 UVl <span className='aq'>Moderate</span></h4>
+            <p>Moderate risk of from UV rays</p>
+          </div>
         </div>
+        <div className='weatherPridiction'>
+          <h2>Weather Predicton</h2>
+          <div className='nextdays'>
+            <i className="fa-solid fa-cloud fa-2xl" style={{ "color": "darkgray" }} ></i>
+            <i className="fa-solid fa-cloud fa-xl" style={{ "color": "darkgray", "position": "relative", "right": "35px", "top": "5px", "boxShadow": " 0px 20px 20px rgba(0, 0, 0, 0.1)" }} ></i>
+            <div>
+              <div>Nov 10</div>
+              <h6>Cloudy</h6>
+            </div>
+            <h5>26°/29°</h5>
+          </div>
+          <div className='nextdays'>
+            <i className="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange"}}></i>
+            <div>
+              <div>Nov 11</div>
+              <h6>Bright</h6>
+            </div>
+            <h5>30°/35°</h5>
+          </div>
         </div>
+        <button className='icon prediction'><h6><i class="fa-solid fa-calendar-days"></i> Next 5 days</h6></button>
       </div>
     </div>
   </>)
