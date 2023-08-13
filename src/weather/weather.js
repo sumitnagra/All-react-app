@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import './weather.css'
 import character from '../images/weather/character.jpg'
 import LoadingBar from 'react-top-loading-bar'
+import Temprature from './temprature'
+import Rightside from './rightside'
+import WeatherCondition from './weatherConditoin'
 
 
 const Weather = () => {
@@ -10,7 +13,6 @@ const Weather = () => {
   const [info, setInfo] = useState({})
   const [value, setValue] = useState("")
   const [progress, setProgress] = useState(0)
-  const Day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
 
   let weatherCondition = '';
   // Determine the className based on the weather condition
@@ -160,87 +162,12 @@ const Weather = () => {
           <i className="fa-solid fa-magnifying-glass fa-xl" style={{ "color": "darkorange", "right": "30%", "top": "19.5%" }} onClick={onclickHandle}></i>
           <i className="fa-regular fa-bell fa-xl"></i>
         </div>
-        <div className='Body'>
-          <div className={`weatherBox ${weatherCondition}`}  >
-            <div className='Weatherinfo'>
-              <span className='iconCircle'><i className="fa-solid fa-cloud fa-lg" style={{ color: "orange" }}></i></span>
-              <h4>Weather</h4>
-            </div>
-            <h1 className='temp'>{info.temp}°C <span style={{ "fontWeight": "lighter", "fontSize": "18px" }}>Feels like </span><span className='feelsLike'> {info.feels_like}°C</span></h1>
-            <h4 className='temp'>{info.main}</h4>
-            <div className='weatherDetails'>
-              <div className='pressure'><div >Pressure</div>
-                {info.pressure} mb</div>
-              <div className='visibility'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Visibility</div>{(info.visibility) / 1000} km</div>
-              <div className='humidity'><div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px" }}>Humadity</div>{info.humidity}%</div>
-            </div>
-          </div>
-          <div className="weatherBox2 airQuality">
-            <div className='Weatherinfo'>
-              <span className='iconCircle'><i className="fa-solid fa-wind fa-xl" style={{ color: "orange" }}></i></span>
-              <h4>Air Quality</h4>
-            </div>
-            <p>Main Polution : PM 2.5</p>
-            <h1>390 <span className='aq'>AQ</span></h1>
-            <p className='wind'>{windDirection} Wind</p>
-
-          </div>
-        </div>
+        <WeatherCondition info={info} weatherCondition={weatherCondition} windDirection={windDirection} />
         <div>
-          <div className='temprature'>
-            <div style={{ "display": "flex" }}>
-              <h1>How's the temprature today ?</h1>
-              <div className='icon'><i className="fa-solid fa-temperature-low fa-xl"></i></div>
-              <div className='icon'><i className="fa-solid fa-umbrella fa-xl"></i></div>
-              <div className='icon'><i className="fa-solid fa-wind fa-xl"></i></div>
-            </div>
-              <div className='tempGraph'>
-                <div className='graph'></div>
-                <div className='graph'></div>
-                <div className='graph'></div>
-                <div className='graph'></div>
-            <div className='tomorrow'></div>
-              </div>
-          </div>
+          <Temprature />
         </div>
       </div>
-      <div className='rightside'>
-        <div className='location'>
-          <div>
-            <h4>{Day[dates.getDay()]}</h4>
-            <p>{info.name}, {info.country}</p>
-          </div>
-          <h2>{info.temp}°C</h2>
-        </div>
-        <div className='uv'>
-          <i class="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange", "paddingTop": "15px" }}></i>
-          <div>
-            <h4>20 UVl <span className='aq'>Moderate</span></h4>
-            <p>Moderate risk of from UV rays</p>
-          </div>
-        </div>
-        <div className='weatherPridiction'>
-          <h2>Weather Predicton</h2>
-          <div className='nextdays'>
-            <i className="fa-solid fa-cloud fa-2xl" style={{ "color": "darkgray" }} ></i>
-            <i className="fa-solid fa-cloud fa-xl" style={{ "color": "darkgray", "position": "relative", "right": "35px", "top": "5px", "boxShadow": " 0px 20px 20px rgba(0, 0, 0, 0.1)" }} ></i>
-            <div>
-              <div>Nov 10</div>
-              <h6>Cloudy</h6>
-            </div>
-            <h5>26°/29°</h5>
-          </div>
-          <div className='nextdays'>
-            <i className="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange"}}></i>
-            <div>
-              <div>Nov 11</div>
-              <h6>Bright</h6>
-            </div>
-            <h5>30°/35°</h5>
-          </div>
-        </div>
-        <button className='icon prediction'><h6><i class="fa-solid fa-calendar-days"></i> Next 5 days</h6></button>
-      </div>
+      <Rightside dates={dates} info={info} />
     </div>
   </>)
 }

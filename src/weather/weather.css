@@ -266,21 +266,23 @@ body {
 }
 
 .rightside {
+    border-radius: 15px;
     width: 25%;
-    height: 100vh;
+    height: 107vh;
     background-color: whitesmoke;
 }
 
 .temprature {
-    font-family: 'DM Sans', sans-serif;
     width: 98%;
-    height: 300px;
+    height: auto;
     border-radius: 20px;
     margin: 1%;
     background-color: white;
 }
 
 .temprature h1 {
+    font-family: 'DM Sans', sans-serif;
+margin: 0;
     padding: 10px;
     font-weight: 900;
 }
@@ -316,11 +318,26 @@ body {
 }
 .graph{
     height:96%;
-    width:200px
+    width:200px;
+display: grid;
+justify-content: space-around;
+align-content: space-around;
+justify-items: center;
 }
-.graph:nth-child(2),.graph:nth-child(3){
+
+.graph:nth-child(2){
     border-left: solid lightgray 1px;
     border-right: solid lightgray 1px;
+}
+.graph:nth-child(3){
+    border-right: solid lightgray 1px;
+}
+.graph h4{
+    font-weight: 700;
+}
+.graph p{
+    font-family: 'DM Sans', sans-serif;
+font-weight: 600;
 }
 
 .location {
@@ -400,6 +417,17 @@ padding-left:5%;
 }
 .prediction{
     border: none;
-    position: relative;
-    left:45%;
+   margin-left: 47%;
+   background-color: white;
 }
+svg {
+    position: relative;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+@import url("./mobileview.css");
