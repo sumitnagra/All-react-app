@@ -1,4 +1,4 @@
-const Temprature = () => {
+const Temprature = (props) => {
   return (<>
     <div className='temprature'>
       <div style={{ "display": "flex" }}>
@@ -11,12 +11,11 @@ const Temprature = () => {
         <div className='graph'><div>
           <i className="fa-solid fa-cloud fa-2xl" style={{ "color": "darkgray" }} ></i>
         </div>
-        <svg width="100%" height="80%">
-  <circle cx="0" cy="10" r="5" fill="red" />
-  <path d="M0 10 C50 50, 150 50, 200 100 S350 150, 400 100 S550 50 , 600 100" fill="none" stroke="black" stroke-width="2" />
- </svg>
+        <svg width="100%" height="60%">
+          <circle cx="5" cy="5" stroke="red" r="5"/>
+        <path d="M0  0 L100 50" stroke="black"/>
 
-        
+</svg>
           <h4>20°</h4><p>Morning</p></div>
         <div className='graph'><div></div><div></div></div>
         <div className='graph'><div></div><div></div></div>

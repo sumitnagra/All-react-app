@@ -13,7 +13,7 @@ const Rightside=(props)=>{
           <h2>{info.temp}°C</h2>
         </div>
         <div className='uv'>
-          <i class="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange", "paddingTop": "15px" }}></i>
+          <i className="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange", "paddingTop": "15px" }}></i>
           <div>
             <h4>20 UVl <span className='aq'>Moderate</span></h4>
             <p>Moderate risk of from UV rays</p>
@@ -39,7 +39,7 @@ const Rightside=(props)=>{
             <h5>30°/35°</h5>
           </div>
         </div>
-        <button className='icon prediction'><h6><i class="fa-solid fa-calendar-days"></i> Next 5 days</h6></button>
+        <button className='icon prediction'><h6><i className="fa-solid fa-calendar-days"></i> Next 5 days</h6></button>
       </div>
         </>
 

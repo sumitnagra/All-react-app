@@ -164,7 +164,7 @@ const Weather = () => {
         </div>
         <WeatherCondition info={info} weatherCondition={weatherCondition} windDirection={windDirection} />
         <div>
-          <Temprature />
+          <Temprature  />
         </div>
       </div>
       <Rightside dates={dates} info={info} />
