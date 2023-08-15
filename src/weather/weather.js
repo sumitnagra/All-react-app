@@ -74,11 +74,13 @@ const Weather = () => {
       const weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=363902cae52b6ee6848bc923b7e7feea`)
       const parseData = await weather.json();
       const { main } = parseData.weather[0];
-      const { temp, pressure, humidity, feels_like } = parseData.main;
+      const { temp, pressure, humidity, feels_like  , temp_min, temp_max} = parseData.main;
       let { speed, deg } = parseData.wind;
       const { country, sunset, sunrise } = parseData.sys;
       const { name } = parseData;
       const { visibility } = parseData;
+      const {timezone}=parseData;
+      const{dt}=parseData;
       setProgress(50)
       const newInfo = {
         main,
@@ -93,6 +95,10 @@ const Weather = () => {
         sunrise,
         name,
         visibility,
+        temp_min,
+        temp_max,
+        timezone,
+        dt
       }
       setInfo(newInfo)
       setProgress(100)
@@ -164,7 +170,7 @@ const Weather = () => {
         </div>
         <WeatherCondition info={info} weatherCondition={weatherCondition} windDirection={windDirection} />
         <div>
-          <Temprature  />
+          <Temprature info={info} />
         </div>
       </div>
       <Rightside dates={dates} info={info} />
