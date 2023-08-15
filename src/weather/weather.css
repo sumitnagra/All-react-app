@@ -320,6 +320,10 @@ margin: 0;
     height:96%;
     width:20%;
 }
+.graph i{
+    margin-left: 40%;
+
+}
 
 .graph:nth-child(2){
     border-left: solid lightgray 1px;
@@ -329,9 +333,12 @@ margin: 0;
     border-right: solid lightgray 1px;
 }
 .graph h4{
+    margin-left: 40%;
     font-weight: 700;
 }
 .graph p{
+    margin-left: 40%;
+
     font-family: 'DM Sans', sans-serif;
 font-weight: 600;
 }
@@ -422,6 +429,11 @@ svg {
     position: relative;
     left: 0;
     top: 0;
+    fill: none;
+    stroke:darkorange;
+    stroke-width:4;
+    stroke-dasharray: 0 0;
+    stroke-dashoffset: 0;
     transition: 1s ease-in-out;
 }
 
