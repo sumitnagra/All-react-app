@@ -10,7 +10,7 @@ const Temprature = (props) => {
       </div>
       <div className='tempGraph'>
         <div className='graph'><div>
-          <i className="fa-solid fa-cloud fa-2xl" style={{ "color": "darkgray" }} ></i>
+          <i className="fa-solid fa-cloud fa-2xl" style={{ "color": "black" }} ></i>
         </div>
           <svg width="100%" height="60%">
             <defs>
@@ -29,7 +29,7 @@ const Temprature = (props) => {
           </svg>
           <h4>{props.info.temp_min}°</h4><p>Morning</p></div>
         <div className='graph'><div>
-          <i className="fa-solid fa-sun fa-2xl" style={{ "color": "darkorange" }} ></i>
+          <i className="fa-solid fa-sun fa-2xl" style={{ "color": "black" }} ></i>
         </div>
           <svg width="100%" height="60%">
             <circle cx="95" cy="29" r="4"
@@ -39,7 +39,7 @@ const Temprature = (props) => {
           </svg>
           <h4>{props.info.temp_max}°</h4><p>Afternoon</p></div>
         <div className='graph'><div>
-          <i className="fa-solid fa-cloud-sun fa-2xl" style={{ "color": "darkgray" }} ></i>
+          <i className="fa-solid fa-cloud-sun fa-2xl" style={{ "color": "black" }} ></i>
         </div>
           <svg width="100%" height="60%">
             <circle cx="95" cy="82" r="4"

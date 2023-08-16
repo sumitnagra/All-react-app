@@ -1,0 +1,117 @@
+@media screen and (min-width:300px) and (max-width:720px) {
+
+    #main {
+        display: block;
+        background-color: white
+    }
+
+    .Body {
+        display: block;
+        background-color: white;
+        box-sizing: border-box;
+    }
+
+    .weatherBox,
+    .weatherBox2 {
+        width: 98%;
+    }
+
+    .polutionCondition .tooltiptext {
+        position: absolute;
+        width: 100px;
+        padding: 12px;
+        border-radius: 15px;
+        height: auto;
+        bottom: -25%;
+        left: 52%;
+        opacity: 0;
+        background-color: #1A2940;
+    }
+
+    .polutionCondition div h5 {
+        font-size: 15px;
+    }
+
+    .leftside {
+        width: 100%;
+        margin: auto;
+    }
+
+    .search {
+        position: absolute;
+        right: 11%;
+        padding: 8px;
+    }
+
+    .search:focus {
+        width: 40%;
+    }
+
+    .search:not(:focus) {
+        width: 30%;
+        transition: width ease-in-out 0.4s;
+    }
+
+    .Topnavbar #magnify {
+        visibility: hidden;
+    }
+
+    .charactername~div {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'DM Sans';
+    }
+
+    .Topnavbar #bell {
+        position: absolute;
+        right: 2%;
+        top: 21%;
+        margin: 1%;
+    }
+
+    .rightside {
+        width: 98%;
+    }
+
+    .icon {
+        height: 60px;
+        margin: 0%;
+    }
+
+    .tomorrow {
+        width: 0;
+        height: 0;
+    }
+
+    .tempGraph {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        width: 102%;
+    }
+
+    .graph {
+        height: 96%;
+        width: 25%;
+    }
+
+    .graph i {
+        margin-left: 30%;
+    }
+
+    .graph h4 {
+        font-size: 20px;
+        margin-left: 20%;
+        font-weight: 700;
+    }
+
+    .graph p {
+        margin-left: 20%;
+    }
+
+    .prediction {
+        border: none;
+        margin-left: 50%;
+        background-color: white;
+    }
+}

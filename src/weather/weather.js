@@ -67,7 +67,6 @@ const Weather = () => {
   const handleInput = (e) => {
     setValue(e.target.value)
   }
-
   const Data = async () => {
     try {
       setProgress(30)
@@ -151,7 +150,7 @@ const Weather = () => {
   let today = `${day}/${month + 1}/${year}`;
 
   return (<>
-    <div style={{ "display": "flex", "backgroundColor": "white" }}>
+    <div id='main'>
       <div className='leftside'>
         <div className='Topnavbar'>
           <LoadingBar
@@ -165,8 +164,8 @@ const Weather = () => {
             <div>Jack Grealish</div>
           </div>
           <input type='text' className='search' value={value} onChange={handleInput} onKeyDown={newWeather} placeholder='Search by city name' />
-          <i className="fa-solid fa-magnifying-glass fa-xl" style={{ "color": "darkorange", "right": "30%", "top": "19.5%" }} onClick={onclickHandle}></i>
-          <i className="fa-regular fa-bell fa-xl"></i>
+          <i className="fa-solid fa-magnifying-glass fa-xl" id='magnify' onClick={onclickHandle}></i>
+          <i className="fa-regular fa-bell fa-xl" id='bell'></i>
         </div>
         <WeatherCondition info={info} weatherCondition={weatherCondition} windDirection={windDirection} />
         <div>

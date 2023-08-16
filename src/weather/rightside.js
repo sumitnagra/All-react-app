@@ -1,16 +1,18 @@
 const Rightside = (props) => {
   const Day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
 
-  const { dates, info} = props;
-  const timestamp=info.sunrise+info.timezone;
-  const riseTime=new Date(timestamp*1000);
-  const riseHour=riseTime.getUTCHours();
-  const riseMinute=riseTime.getUTCMinutes();
-  const timestamp2=info.sunset+info.timezone;
-  const setTime=new Date(timestamp2*1000);
-  const setHour=setTime.getUTCHours();
-  const setMinute=setTime.getUTCMinutes();
-  const currentHour=new Date((info.dt+info.timezone)*1000).getUTCHours();
+  const { dates, info } = props;
+  const timestamp = info.sunrise + info.timezone;
+  const riseTime = new Date(timestamp * 1000);
+  const riseHour = riseTime.getUTCHours();
+  const riseMinute = riseTime.getUTCMinutes();
+  const timestamp2 = info.sunset + info.timezone;
+  const setTime = new Date(timestamp2 * 1000);
+  const setHour = setTime.getUTCHours();
+  const setMinute = setTime.getUTCMinutes();
+  const currentHour = new Date((info.dt + info.timezone) * 1000).getUTCHours();
+  const currentMinute = new Date((info.dt + info.timezone) * 1000).getUTCMinutes();
+  const daylight=setHour-riseHour
   return (
     <>
       <div className='rightside'>
@@ -22,16 +24,17 @@ const Rightside = (props) => {
           <h2>{info.temp}°C</h2>
         </div>
         <div className="sunset">
+          <h6 className="tooltiptext"style={{"left":`${currentHour*5}%`}}>{currentHour>12?currentHour%12:currentHour}:{currentMinute < 9 ? `0${currentMinute}` : currentMinute} {currentHour>12?"PM":"AM"}</h6>
           <svg height="80%" width="100%">
-          <circle cx={`${currentHour*14}`} cy="20"  r="13"stroke="darkorange" fill="darkorange"/>
+            <circle cx={`${currentHour*14}`} cy="20" r="13" stroke="darkorange" fill="darkorange" />
 
-            <circle cx="40" cy="150"  r="5"stroke="darkorange" fill="darkorange" />
-            <circle cx={`${currentHour*14}`} cy="150"  r="5" stroke="darkorange" fill="darkorange"/>
+            <circle cx={`${(currentHour*14)}`} cy="150" r="5" stroke="darkorange" fill="darkorange" />
+            <circle cx={`${riseHour * 12.5-30}`} cy="150" r="5" stroke="darkorange" fill="darkorange" />
 
-            <path d="M40,150 A100,100 0 0,1 265,150" fill="" strokeDasharray="5,5" stroke="orange" strokeWidth="1" />
-            
+            <path d={`M${riseHour * 12.5-30},150 A100,100 0 0,1 ${setHour*13+5},150`} fill="" strokeDasharray="5,5" stroke="orange" strokeWidth="1" />
+
             <path d="M0 150 L310 150" />
-            <circle cx="265" cy="150"  r="5"stroke="black" fill="black"/>
+            <circle cx={`${setHour*12.5+15}`} cy="150" r="5" stroke="black" fill="black" />
           </svg>
           <div style={{ "display": "flex", "justifyContent": "space-between" }}>
             <div>
@@ -40,7 +43,7 @@ const Rightside = (props) => {
             </div>
             <div>
               <h5>Sunset</h5>
-              <div>{setHour>12?setHour%12:setHour}:{setMinute<=9?`0${setMinute}`:setMinute} PM</div>
+              <div>{setHour > 12 ? setHour % 12 : setHour}:{setMinute <= 9 ? `0${setMinute}` : setMinute} PM</div>
             </div>
 
           </div>
