@@ -1,4 +1,6 @@
 const Temprature = (props) => {
+  const svgWidth=100;
+  const svgHeight=60;
 
   return (<>
     <div className='temprature'>
@@ -12,12 +14,12 @@ const Temprature = (props) => {
         <div className='graph'><div>
           <i className="fa-solid fa-cloud fa-2xl" style={{ "color": "black" }} ></i>
         </div>
-          <svg width="100%" height="60%">
+          <svg width={`${svgWidth}%`} height={`${svgHeight}%`}>
             <defs>
 
               <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="70%" y2="0%">
-                <stop offset="0%" stopColor="white" stop-opacity="1" />
-                <stop offset="100%" stopColor="white" stop-opacity="0" />
+                <stop offset="0%" stopColor="white" stopOpacity="1" />
+                <stop offset="100%" stopColor="white" stopOpacity="0" />
               </linearGradient>
             </defs>
 
@@ -52,13 +54,11 @@ const Temprature = (props) => {
           <i className="fa-solid fa-moon fa-2xl" style={{ "color": "black" }} ></i>
         </div>
           <svg width="100%" height="60%">
-
-
-          <defs>
+              <defs>
     
     <linearGradient id="fadeGradientk" x1="40%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stopColor="white" stop-opacity="0" />
-      <stop offset="100%" stopColor="white" stop-opacity="1" />
+      <stop offset="0%" stopColor="white" stopOpacity="0" />
+      <stop offset="100%" stopColor="white" stopOpacity="1" />
     </linearGradient>
   </defs>
   

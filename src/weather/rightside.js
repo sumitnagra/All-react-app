@@ -12,7 +12,6 @@ const Rightside = (props) => {
   const setMinute = setTime.getUTCMinutes();
   const currentHour = new Date((info.dt + info.timezone) * 1000).getUTCHours();
   const currentMinute = new Date((info.dt + info.timezone) * 1000).getUTCMinutes();
-  const daylight=setHour-riseHour
   return (
     <>
       <div className='rightside'>
@@ -24,17 +23,17 @@ const Rightside = (props) => {
           <h2>{info.temp}°C</h2>
         </div>
         <div className="sunset">
-          <h6 className="tooltiptext"style={{"left":`${currentHour*5}%`}}>{currentHour>12?currentHour%12:currentHour}:{currentMinute < 9 ? `0${currentMinute}` : currentMinute} {currentHour>12?"PM":"AM"}</h6>
+          <h6 className="tooltiptext" style={{ "left": `${currentHour * 5}%` }}>{currentHour > 12 ? currentHour % 12 : currentHour}:{currentMinute < 9 ? `0${currentMinute}` : currentMinute} {currentHour > 12 ? "PM" : "AM"}</h6>
           <svg height="80%" width="100%">
-            <circle cx={`${currentHour*14}`} cy="20" r="13" stroke="darkorange" fill="darkorange" />
+            <circle cx={`${currentHour * 14}`} cy="20" r="13" stroke="darkorange" fill="darkorange" />
 
-            <circle cx={`${(currentHour*14)}`} cy="150" r="5" stroke="darkorange" fill="darkorange" />
-            <circle cx={`${riseHour * 12.5-30}`} cy="150" r="5" stroke="darkorange" fill="darkorange" />
+            <circle cx={`${(currentHour * 14)}`} cy="150" r="5" stroke="darkorange" fill="darkorange" />
+            <circle cx={`${riseHour * 12.5 - 30}`} cy="150" r="5" stroke="darkorange" fill="darkorange" />
 
-            <path d={`M${riseHour * 12.5-30},150 A100,100 0 0,1 ${setHour*13+5},150`} fill="" strokeDasharray="5,5" stroke="orange" strokeWidth="1" />
+            <path d={`M${riseHour * 12.5 - 30},150 A100,100 0 0,1 ${setHour * 13 + 5},150`} fill="" strokeDasharray="5,5" stroke="orange" strokeWidth="1" />
 
             <path d="M0 150 L310 150" />
-            <circle cx={`${setHour*12.5+15}`} cy="150" r="5" stroke="black" fill="black" />
+            <circle cx={`${setHour * 12.5 + 15}`} cy="150" r="5" stroke="black" fill="black" />
           </svg>
           <div style={{ "display": "flex", "justifyContent": "space-between" }}>
             <div>

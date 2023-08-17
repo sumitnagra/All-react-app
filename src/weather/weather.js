@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './weather.css'
+import "./mobileview.css"
 import character from '../images/weather/character.jpg'
 import LoadingBar from 'react-top-loading-bar'
 import Temprature from './temprature'
@@ -126,10 +127,11 @@ const Weather = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect (() => {
     const interval = setInterval(() => {
-      setCurrentHour(new Date().getHours());
-    }, 60000);
+  const current = new Date((info.dt + info.timezone) * 1000).getUTCHours()
+  setCurrentHour(current);
+    }, [city]);
 
     return () => clearInterval(interval);
   }, []);

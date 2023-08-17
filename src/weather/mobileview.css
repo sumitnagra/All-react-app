@@ -15,6 +15,9 @@
     .weatherBox2 {
         width: 98%;
     }
+    .polutionCondition{
+        width:90%
+    }
 
     .polutionCondition .tooltiptext {
         position: absolute;
@@ -33,7 +36,7 @@
     }
 
     .leftside {
-        width: 100%;
+        width: 98%;
         margin: auto;
     }
 
@@ -51,7 +54,9 @@
         width: 30%;
         transition: width ease-in-out 0.4s;
     }
-
+.search::placeholder{
+    font-size: 15px;
+}
     .Topnavbar #magnify {
         visibility: hidden;
     }
@@ -71,6 +76,7 @@
 
     .rightside {
         width: 98%;
+        margin: 0;
     }
 
     .icon {
@@ -113,5 +119,8 @@
         border: none;
         margin-left: 50%;
         background-color: white;
+    }
+   .graph svg{
+        visibility: collapse;
     }
 }
