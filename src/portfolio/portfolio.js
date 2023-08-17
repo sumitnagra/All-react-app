@@ -1,7 +1,8 @@
 
 import './profile.css'
 import Navbar from './profilenavbar';
-import Project from './project'
+// import Project from './project'
+import Project2 from './project2'
 import Profile from './profile';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Contact from './contact';
@@ -46,7 +47,8 @@ const CompleteProfile = () => {
 
           <Routes>
             <Route path="/" element={<Profile />} />
-            <Route path="/project" element={<Project />} />
+            <Route path="/project" element={<Project2 />} />
+            {/* <Route path="/project" element={<Project />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/weather" element={<Weather />} />
