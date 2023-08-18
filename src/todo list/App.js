@@ -27,6 +27,24 @@ function App() {
     }
   }
 }
+const Add2= (event) => {
+  if (input === '') { }
+  else {
+    if (edit === 0) {
+      setNewInput([...newInput, input])
+      setInput('')
+     
+    }
+    else {
+      let oldArr = newInput
+      oldArr.splice(index, 1, input)
+      setNewInput([...oldArr])
+      setInput('')
+      setEdit(0)
+    }
+  }
+
+}
 
   const Delete = (index) => {
     let oldArr = newInput
@@ -47,7 +65,7 @@ function App() {
         <h2>My To Do List</h2>
         <div className="add">
         <input type="text" className="myInput" value={input} onChange={(e) => setInput(e.target.value) } placeholder="Add item" onKeyDown={Add}/>
-        <button className="btn btn-dark" onClick={Add}>{edit === 0 ? 'Add' : 'Edit'} </button>
+        <button className="btn btn-dark" onClick={Add2}>{edit === 0 ? 'Add' : 'Edit'} </button>
 </div>
       </div>
 <div className="myUL">

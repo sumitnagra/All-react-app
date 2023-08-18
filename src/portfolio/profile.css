@@ -541,7 +541,7 @@ svg {
 }
 
 .body-height-large {
-    
+    background-color: whitesmoke;
     height: 100vh;
 
 }
@@ -635,8 +635,6 @@ svg {
     }
 
     .name {
-    
-
         font-weight: 500;
         top: 5px;
         position: absolute;
@@ -954,4 +952,14 @@ svg {
         margin-left: 8px;
     }
 
+}
+
+@media screen and (max-width:300px) {
+    .footer {
+        display: block;
+    }
+    .footerhr{
+        top:20vh;
+    }
+    
 }

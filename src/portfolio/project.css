@@ -1,32 +1,65 @@
-
-body{
+body {
     background-color: whitesmoke;
 }
-.projectContainer{
-    width:92%;
+
+.projectContainer {
+    width: 92%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
-.projectCard{
+
+.projectCard {
     text-align: center;
-    margin:1%;
+    margin: 1%;
     align-items: center;
     background-color: white;
-    color:black;
-    height:400px;
-    width:23%;
-transition: all 0.2s ease-in;
+    color: black;
+    height:60vh;
+    width: 23%;
+    transition: all 0.2s ease-in;
 }
-.projectCard:hover{
+
+.projectCard:hover {
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px)
 }
-.projectCard img{
-    width:100%;
-    height:40%
-}
-.projectCard h5{
+
+.projectCard p{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:400;
+    margin: 1%;}
+
+.projectCard h4 {
     font-size: large;
-    margin: 5%;
+    margin: 2%;
 }
+
+@media screen and (min-width:500px) and (max-width:1000px) {
+    .projectCard {
+        text-align: center;
+        margin: 1%;
+        align-items: center;
+        background-color: white;
+        color: black;
+        height:78vh;
+        width: 46%;
+        transition: all 0.2s ease-in;
+    }
+}
+@media screen and (min-width:300px) and (max-width:500px) {
+
+    .projectCard {
+        text-align: center;
+        margin: 3%;
+        align-items: center;
+        background-color: white;
+        color: black;
+        height:70vh;
+        width: 95%;
+        transition: all 0.2s ease-in;
+    }
+  
+  
+}
+
