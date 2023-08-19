@@ -31,7 +31,17 @@ const AddNote = (props) => {
                 <input type="text" className="form-control" id="tag" name='tag' onChange={onChange} />
                 <button type="submit" className="btn btn-warning my-2" onClick={handleClick}>Add Note</button>
             </form>
-        </div> :<div className='container' ><h1> Please Login to add notes</h1></div>}
+        </div> :<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="fw-light">Please login to continue with iNotebook</h1>
+        <p class="lead">secure your thought, todo list and notes</p>
+      </div>
+    </div>
+  </div>
+</header>
+}
 </>
     )
 }

@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
-import  Notecontext  from './context/Notecontext.js'
-
+import Notecontext from './context/Notecontext.js'
+import './notesitem.css'
 
 const NoteItem = (props) => {
     const a = useContext(Notecontext);
     const { deleteNote } = a;
-const  {showAlert}=props;
+    const { showAlert } = props;
     return (
         <>
-            <div className="card  col-md-4  my-2" style={{ width: "18rem" }}>
+             <div className="card  col-md-4  my-2" style={{ width: "18rem" }}>
                 <div className="card-body">
                     <h3 className="card-text"> Tag:{props.tag}</h3>
                     <h5 className="card-title">Title:{props.title}</h5>
@@ -20,7 +20,10 @@ const  {showAlert}=props;
                     </button>
                     <button type="submit" className="btn btn-sm" onClick={()=>{deleteNote(props.id)}}><i className="fa-solid fa-trash" ></i></button>
                 </div>
-            </div>
+            </div> 
+
+
+
         </>
     )
 }
