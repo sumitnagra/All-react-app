@@ -92,13 +92,12 @@ const Project2 = () => {
             link: "/speech"
         },
     ]
+    var storedArray = JSON.parse(sessionStorage.getItem('myArray')) || [];
 
-
-const session=sessionStorage.getItem("visited");
     return (<>
         <div className='projectContainer'>
             {ProjectData.map((item, index) => {
-                return <div key={index} className='projectCard'>
+                return <div key={index} className='projectCard' >
                     <lord-icon
                         src={item.src}
                         trigger={item.trigger}
@@ -106,7 +105,7 @@ const session=sessionStorage.getItem("visited");
                         state={item.state}
                         style={{ "width": "40%", "height": "40%" }}>
                     </lord-icon>
-                    {session===item.Name ? <lord-icon
+                    {storedArray.includes(item.Name)? <lord-icon
                         src="https://cdn.lordicon.com/ivayzoru.json"
                         trigger="hover"
                         colors="outline:#16c72e,primary:#ffffff,secondary:#16c72e"
@@ -114,7 +113,10 @@ const session=sessionStorage.getItem("visited");
                     </lord-icon> : ""}
                     <h4> {item.Name}</h4>
                     <p>{item.description}</p>
-                    <button className='btn btn-dark' onClick={()=>{sessionStorage.setItem("visited",[...item.Name]);navigate(item.link)}}>try it</button>
+                    <button className='btn btn-dark my-1' onClick={()=>
+                        {storedArray.push(`${item.Name}`) ;
+                        sessionStorage.setItem("myArray",JSON.stringify(storedArray))
+                        navigate(item.link)}}>Try it</button>
                 </div>
             })}
         </div>

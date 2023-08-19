@@ -162,6 +162,9 @@ scroll-behavior:smooth ;
 .nightmist {
     background-image: url("../images/weather/nightmist.jpg");
 }
+.drizzling {
+    background-image: url("../images/weather/drizzlin.jpg");
+}
 
 .feelsLike,
 .aq {

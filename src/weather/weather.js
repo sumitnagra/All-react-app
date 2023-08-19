@@ -42,6 +42,9 @@ const Weather = () => {
     case 'Dust':
       weatherCondition = 'dust';
       break;
+    case 'Drizzle':
+      weatherCondition = 'drizzling';
+      break;
     // Add more cases for other weather conditions
     default:
       weatherCondition = 'clear';

@@ -1,7 +1,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
 
 body {
-    
+
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
@@ -98,8 +98,8 @@ body {
 }
 
 .about p {
-    font-weight:100;
-    font-size:23px;
+    font-weight: 100;
+    font-size: 23px;
     padding: 20px
 }
 
@@ -163,7 +163,9 @@ hr {
     margin-left: 50px;
     font-weight: bold;
 }
-.footerhr{top:15rem
+
+.footerhr {
+    top: 15rem
 }
 
 .footerItem {
@@ -174,7 +176,8 @@ hr {
 .follow {
     font-size: 18px
 }
-.follow i{
+
+.follow i {
     padding-right: 15px;
 }
 
@@ -520,8 +523,8 @@ svg {
 
 
 .body-height-small {
-    background-color:black;
-    color:whitesmoke;
+    background-color: black;
+    color: whitesmoke;
     height: 100vh;
 
 }
@@ -529,7 +532,7 @@ svg {
 
 .body-height-medium2 {
     color: black;
-    background-color: whitesmoke;
+background-color: whitesmoke;
     height: 100vh;
 
 }
@@ -711,25 +714,27 @@ svg {
         font-size: 20px;
     }
 
-.group{
-    flex-wrap: wrap;
-    gap: 10px;
-}
+    .group {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
 
     .footer {
         padding: 0;
-        width:100%;
+        width: 100%;
         position: relative;
         top: 10rem;
         display: block;
         font-weight: bold;
         margin-left: 0;
-        padding-left:10%;
+        padding-left: 10%;
     }
-.footerhr{
-    top:20vh;
-}
+
+    .footerhr {
+        top: 20vh;
+    }
+
     .footerItem {
         padding-top: 10px;
         display: block;
@@ -737,12 +742,12 @@ svg {
     }
 
     .follow {
-             padding-top: 10px;
+        padding-top: 10px;
         font-size: 15px;
     }
 
     .firstProject {
-        
+
         position: relative;
         display: block;
         width: 99%;
@@ -958,8 +963,9 @@ svg {
     .footer {
         display: block;
     }
-    .footerhr{
-        top:20vh;
+
+    .footerhr {
+        top: 20vh;
     }
-    
+
 }
