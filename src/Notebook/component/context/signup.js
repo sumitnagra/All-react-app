@@ -100,7 +100,7 @@ const [progress, setProgress] = useState(0)
               <div>
                 <h2>Sign up</h2>
                 <p>Please create an account if you are the first time visiter on iNotebook, if you already have an account plese login instead of Signup.</p>
-                <button type="button" className="btn btn-primary active mt-3">Register Now!</button>
+                <button type="button" className="btn btn-primary active mt-3" onClick={handlesubmit}>Register Now!</button>
               </div>
             </div>
           </div>

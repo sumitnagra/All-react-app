@@ -107,8 +107,8 @@ const [progress, setProgress] = useState(0)
             <div className="card-body text-center">
               <div>
                 <h2>Login</h2>
-                <p>You have successfully created your account, Now you can log in into your iNotebook account.</p>
-                <button type="button" className="btn btn-primary active mt-3">Register Now!</button>
+                <p>  If you already registered, you can log in into your iNotebook account. If not please register </p>
+                <button type="button" className="btn btn-primary active mt-3" onClick={()=>navigate("/signup")}>Register Now!</button>
               </div>
             </div>
           </div>
