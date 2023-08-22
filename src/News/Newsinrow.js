@@ -20,6 +20,7 @@ const GroupNews = (props) => {
             setProgress(100)
         setLoading(false)
     }
+  
     useEffect(() => {
         Update()
     }, [props.catagory])

@@ -40,17 +40,9 @@ const Navbar = () => {
           <a className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Country
           </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link className="dropdown-item" to="#">India</Link></li>
-            <li><Link className="dropdown-item" to="#">America</Link></li>
-            <li><Link className="dropdown-item" to="#">Dubai</Link></li>
-            <li><Link className="dropdown-item" to="#">Australia</Link></li>
-            <li><Link className="dropdown-item" to="#">England</Link></li>
-
-          </ul>
+         
         </li>
             </ul>
-            <h5 class="me-5">22°C Clouds </h5>
           </div>
         </div>
       </nav>

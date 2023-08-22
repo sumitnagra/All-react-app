@@ -30,11 +30,12 @@ const [progress, setProgress] = useState(0)
       localStorage.setItem('auth-token',json.jwtData)
       navigate('/notebook')
       props.showAlert("login successfully",'success')
-    setProgress(80)
+    setProgress(100)
 
     }
     else {
     props.showAlert("Email and password is incorrect",'danger')
+    setProgress(100)
     }
 
   }

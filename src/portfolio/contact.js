@@ -2,9 +2,14 @@ import './profile.css'
 import Footer from './footer'
 import { useState } from 'react'
 const Contact = () => {
-document.title="Contact"
+        document.title = "Contact"
         const [text, settext] = useState('')
-        
+
+        const onchangeHandle = (e) => {
+                settext(e.target.value)
+
+        }
+
         return (<>
                 <div className="container contact" data-aos="fade-up">
                         <div className='contactdetail'>
@@ -23,21 +28,21 @@ document.title="Contact"
                                 <div className='Firstname'>
                                         <div >
                                                 <p>First Name <span style={{ color: "red" }}>*</span></p>
-                                                <input type='text' value={text} />
+                                                <input type='text' name='firstname' onChange={onchangeHandle} />
                                         </div>
                                         <div>
                                                 <p>Last Name <span style={{ color: "red" }}>*</span></p>
-                                                <input type='text' value={text} />
+                                                <input type='text' name='lastname' onChange={onchangeHandle} />
                                         </div>
                                 </div>
                                 <div className='email'>
                                         <div>
                                                 <p>Email <span style={{ color: "red" }}>*</span></p>
-                                                <input type='email' value={text} />
+                                                <input type='email' name='email' onChange={onchangeHandle} />
                                         </div>
                                         <div>
                                                 <p>Subject <span style={{ color: "red" }}>*</span></p>
-                                                <input type='text' value={text} />
+                                                <input type='text' name='subject' onChange={onchangeHandle} />
                                         </div>
                                 </div>
                                 <div className='msg'>

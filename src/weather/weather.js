@@ -14,30 +14,31 @@ const Weather = () => {
   const [info, setInfo] = useState({})
   const [value, setValue] = useState("")
   const [progress, setProgress] = useState(0)
+  const current = new Date((info.dt + info.timezone) * 1000).getUTCHours()
 
   let weatherCondition = '';
   // Determine the className based on the weather condition
   switch (info.main) {
     case 'Rain':
-      weatherCondition = currentHour > 20 ? 'nightRain' : 'rain';
+      weatherCondition = current > 20 ? 'nightRain' : 'rain';
       break;
     case 'Clear':
-      weatherCondition = currentHour > 19 ? 'moon' : 'clear';
+      weatherCondition = current > 19 ? 'moon' : 'clear';
       break;
     case 'Clouds':
       weatherCondition = 'cloud';
       break;
     case 'Mist':
-      weatherCondition = currentHour > 19 ? "nightmist" : "mist";
+      weatherCondition = current > 19 ? "nightmist" : "mist";
       break;
     case 'Thunderstorm':
       weatherCondition = 'thunderstorm';
       break;
     case 'Haze':
-      weatherCondition = currentHour > 19 ? 'nighthaze' : 'haze';
+      weatherCondition = current > 19 ? 'nighthaze' : 'haze';
       break;
     case 'Smoke':
-      weatherCondition = currentHour > 19 ? 'nightSmoke' : 'smoke';
+      weatherCondition = current > 19 ? 'nightSmoke' : 'smoke';
       break;
     case 'Dust':
       weatherCondition = 'dust';
@@ -132,8 +133,6 @@ const Weather = () => {
 
   useEffect (() => {
     const interval = setInterval(() => {
-  const current = new Date((info.dt + info.timezone) * 1000).getUTCHours()
-  setCurrentHour(current);
     }, [city]);
 
     return () => clearInterval(interval);

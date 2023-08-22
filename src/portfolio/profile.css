@@ -524,7 +524,7 @@ svg {
 
 .body-height-small {
     background-color: black;
-    color: whitesmoke;
+    color: white;
     height: 100vh;
 
 }
@@ -544,7 +544,7 @@ background-color: whitesmoke;
 }
 
 .body-height-large {
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     height: 100vh;
 
 }
