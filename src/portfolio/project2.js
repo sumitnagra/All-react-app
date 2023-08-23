@@ -95,9 +95,9 @@ const Project2 = () => {
     var storedArray = JSON.parse(sessionStorage.getItem('myArray')) || [];
 
     return (<>
-        <div className='projectContainer'>
+        <div className='projectContainer' >
             {ProjectData.map((item, index) => {
-                return <div key={index} className='projectCard' >
+                return <div key={index} className='projectCard'  >
                     <lord-icon
                         src={item.src}
                         trigger={item.trigger}
@@ -120,7 +120,6 @@ const Project2 = () => {
                 </div>
             })}
         </div>
-        <Footer />
     </>)
 
 }
