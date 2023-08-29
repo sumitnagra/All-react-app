@@ -24,6 +24,7 @@ import Items from '../shopingCart/item';
 import Cart from '../shopingCart/cart';
 import { ShopContextprovider } from '../shopingCart/shopContex';
 import Speech from '../text to speech/speech'
+import Resume2 from './resume2';
 
 const CompleteProfile = () => {
   const [alert, setAlert] = useState(null)
@@ -50,7 +51,8 @@ const CompleteProfile = () => {
             <Route path="/project" element={<Project2 />} />
             {/* <Route path="/project" element={<Project />} /> */}
             <Route path="/contact" element={<Contact />} />
-            <Route path="/resume" element={<Resume />} />
+            {/* <Route path="/resume" element={<Resume />} /> */}
+            <Route path="/resume" element={<Resume2 />} />
             <Route path="/weather" element={<Weather />} />
             <Route path="/advice/*" element={<Advice />} />
             <Route path="/alarm/*" element={<Alarm />} />

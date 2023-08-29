@@ -1,16 +1,15 @@
-import { Link, useNavigate } from 'react-router-dom'
-import Image1 from "../images/Screenshot (27).png"
-import Image2 from "../images/Screenshot (28).png"
-import Image3 from "../images/Screenshot (29).png"
-import Image4 from "../images/Screenshot (30).png"
-import Image5 from "../images/Screenshot (32).png"
-import Image6 from "../images/Screenshot (33).png"
-import Image7 from '../images/Screenshot (34).png'
-import Image8 from '../images/Screenshot (35).png'
-import Image9 from '../images/Screenshot (41).png'
-import Footer from './footer'
+import { useNavigate } from 'react-router-dom'
+// import Image1 from "../images/Screenshot (27).png"
+// import Image2 from "../images/Screenshot (28).png"
+// import Image3 from "../images/Screenshot (29).png"
+// import Image4 from "../images/Screenshot (30).png"
+// import Image5 from "../images/Screenshot (32).png"
+// import Image6 from "../images/Screenshot (33).png"
+// import Image7 from '../images/Screenshot (34).png'
+// import Image8 from '../images/Screenshot (35).png'
+// import Image9 from '../images/Screenshot (41).png'
+// import Footer from './footer'
 import './project.css'
-import { useEffect } from 'react'
 const Project2 = () => {
     const navigate = useNavigate()
     const ProjectData = [

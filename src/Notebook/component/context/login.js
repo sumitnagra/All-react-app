@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import Notecontext from './Notecontext';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from '../Navbar';
 import LoadingBar from 'react-top-loading-bar'
 
@@ -87,11 +87,11 @@ const [progress, setProgress] = useState(0)
               <form onSubmit={handlesubmit}>
               <div className="input-group mb-3">
                 <span className="input-group-addon"><i className="fa fa-user mx-2"></i></span>
-                <input type="email" className="form-control" placeholder="Email" name='email' onChange={onChange}/>
+                <input type="email" className="form-control" placeholder="Email" name='email' onChange={onChange} required/>
               </div>
               <div className="input-group mb-4">
                 <span className="input-group-addon"><i className="fa fa-lock mx-2"></i></span>
-                <input type="password" className="form-control" placeholder="Password" name='password' onChange={onChange}/>
+                <input type="password" className="form-control" placeholder="Password" name='password' onChange={onChange} required/>
               </div>
               <div className="row">
                 <div className="col-6">
@@ -104,7 +104,7 @@ const [progress, setProgress] = useState(0)
               </form>
             </div>
           </div>
-          <div className="card text-white bg-primary py-5 d-md-down-none" style={{"width":"44%"}}>
+          <div className="card text-white bg-primary py-5 d-md-down-none" >
             <div className="card-body text-center">
               <div>
                 <h2>Login</h2>

@@ -95,7 +95,7 @@ const [progress, setProgress] = useState(0)
               </div>
             </div>
           </div>
-          <div className="card text-white bg-primary py-5 d-md-down-none" style={{"width":"30%"}}>
+          <div className="card text-white bg-primary py-5 d-md-down-none suggestion" >
             <div className="card-body text-center">
               <div>
                 <h2>Sign up</h2>

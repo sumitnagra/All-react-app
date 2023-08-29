@@ -7,7 +7,6 @@ const Profile = () => {
     return (
         <>
         <div>
-     
             <About />
             <Footer />
             </div>
