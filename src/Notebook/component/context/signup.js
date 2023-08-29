@@ -65,7 +65,7 @@ const [progress, setProgress] = useState(0)
     </form> */}
 <br/>
 <br/>
-<div className="container">
+<div className="container" data-aos="fade-left">
     <div className="row justify-content-center">
       <div className="col-md-8">
         <div className="card-group mb-0">
@@ -99,7 +99,7 @@ const [progress, setProgress] = useState(0)
             <div className="card-body text-center">
               <div>
                 <h2>Sign up</h2>
-                <p>Please create an account if you are the first time visiter on iNotebook, if you already have an account plese login instead of Signup.</p>
+                <p>Please create an account if you are the first time visiter on iNotebook, if you already have an account please login instead of Signup.</p>
                 <button type="button" className="btn btn-primary active mt-3" onClick={handlesubmit}>Register Now!</button>
               </div>
             </div>

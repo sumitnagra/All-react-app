@@ -27,8 +27,8 @@ function Navbar(props) {
 
             </ul>
             {!localStorage.getItem('auth-token') ? <form className="d-flex" role="search">
-              <Link to="/login"><button className="btn btn-outline-success mx-2" type="submit">LogIn</button></Link>
-              <Link to="/signup"> <button className="btn btn-outline-success" type="submit">SignUP</button></Link>
+              <Link to="/login"><button className="btn btn-outline-primary mx-2" type="submit">LogIn</button></Link>
+              <Link to="/signup"> <button className="btn btn-outline-primary" type="submit">SignUP</button></Link>
             </form> : <button className="btn btn-outline-success" onClick={logout}>Logout</button>}
           </div>
         </div>

@@ -76,7 +76,7 @@ const [progress, setProgress] = useState(0)
 } */}
 <br/>
 <br/>
-<div className="container">
+<div className="container" data-aos="fade-right">
     <div className="row justify-content-center">
       <div className="col-md-8">
         <div className="card-group mb-0">
