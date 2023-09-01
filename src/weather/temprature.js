@@ -49,7 +49,7 @@ const Temprature = (props) => {
             <path d="M0 50 C 70 100, 140 85, 200 50" />
 
           </svg>
-          <h4>20°</h4><p>Evening</p></div>
+          <h4>30°</h4><p>Evening</p></div>
         <div className='graph'><div>
           <i className="fa-solid fa-moon fa-2xl" style={{ "color": "black" }} ></i>
         </div>
@@ -67,7 +67,7 @@ const Temprature = (props) => {
             <circle cx="95" cy="27" r="4"
               stroke="darkorange" strokeWidth="4" fill="darkorange" />
           </svg>
-          <h4>28°</h4><p>Night</p></div>
+          <h4>{props.info.temp_min}°</h4><p>Night</p></div>
 
         <div className='tomorrow'></div>
       </div>
