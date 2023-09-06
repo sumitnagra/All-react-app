@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const SkillMeter = (props) => {
+const SkillMeter = () => {
     const [html, setHtml] = useState(0)
     const targetValue = 90;
 
@@ -21,7 +21,8 @@ const SkillMeter = (props) => {
 
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><b>HTML {html}%</b></div>
+                <div className='inner'><img src='https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-logo-0.png'/>
+                </div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="182px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -32,10 +33,27 @@ const SkillMeter = (props) => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
+                <h6> HTML {html}%</h6>
         </div>
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><b>CSS {(html)-20}%</b></div>
+                <div className='inner'><img src='https://clipartcraft.com/images/html5-logo-transparent-background-4.png'/> </div>
+                <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stopColor='#e91e63' />
+                            <stop offset="100%" stopColor='#673ab7' />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="84" cy="82" r="77" strokeLinecap='round' />
+                </svg>
+          
+            </div>
+            <h6> CSS {(html)-20}%</h6>
+        </div>
+        <div className='skill'>
+            <div className='outer'>
+                <div className='inner'><img src='https://avatars1.githubusercontent.com/u/18371059?s=280&v=4'/></div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -46,10 +64,11 @@ const SkillMeter = (props) => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
+            <h6>JAVSCRIPT {(html)-20}%</h6>
         </div>
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><b>JAVSCRIPT {(html)-20}%</b></div>
+                <div className='inner'><img src='https://cdn.auth0.com/blog/react-js/react.png'/></div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -60,20 +79,7 @@ const SkillMeter = (props) => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
-        </div>
-        <div className='skill'>
-            <div className='outer'>
-                <div className='inner'><b>REACT {(html)-20}%</b></div>
-                <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                            <stop offset="0%" stopColor='#e91e63' />
-                            <stop offset="100%" stopColor='#673ab7' />
-                        </linearGradient>
-                    </defs>
-                    <circle cx="84" cy="82" r="77" strokeLinecap='round' />
-                </svg>
-            </div>
+            <h6>REACT {(html)-20}%</h6>
         </div>
         </div>
     </>)

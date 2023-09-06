@@ -7,7 +7,7 @@ const Resume2 = () => {
             <h3>Skills & Expertise</h3>
             <h2>Frontend</h2>
             <SkillMeter/>
-
+            <h2>Backend</h2>
         </div>
     </>)
 }
