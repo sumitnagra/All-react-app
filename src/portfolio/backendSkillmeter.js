@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-const SkillMeter = (props) => {
+const BackendSkillMeter = (props) => {
     const [html, setHtml] = useState(0)
-    const targetValue = 90;
+    const targetValue = 80;
     useEffect(() => {
         let intervalId;
 
@@ -16,7 +16,7 @@ const SkillMeter = (props) => {
         return () => clearInterval(intervalId);
     }, [html, targetValue]);
     return (<>
-            <div className='skillmeter'>
+            <div className='backendskillmeter'>
 
         <div className='skill'>
             <div className='outer'>
@@ -32,7 +32,7 @@ const SkillMeter = (props) => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
-                <h6> HTML {html}%</h6>
+                <h6> Node Js {html}%</h6>
         </div>
         <div className='skill'>
             <div className='outer'>
@@ -83,4 +83,4 @@ const SkillMeter = (props) => {
         </div>
     </>)
 }
-export default SkillMeter
+export default BackendSkillMeter

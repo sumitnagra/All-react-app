@@ -7,7 +7,7 @@
   margin-bottom: 4%;
   display: block;
   border-radius: 10px;
-  height: 100vh;
+  height: auto;
   text-align: center;
 }
 .resume2 h3 {
@@ -17,7 +17,7 @@
           text-decoration: underline black 1px;
   font-weight: 400;
 }
-.resume2 h2 {
+.resume2 h1 {
   text-shadow: 0px 20px 1s0px rgba(0, 0, 0, 0.1);
   margin: 3%;
   font-weight: 600;
@@ -81,12 +81,12 @@
 .skillmeter .skill:nth-child(1) svg {
   stroke-dasharray: 0;
   stroke-dashoffset: 0;
-  animation: html 2s linear forwards;
+  animation: html 2.5s linear forwards;
 }
 .skillmeter .skill:nth-child(2) svg {
   stroke-dasharray: 0;
   stroke-dashoffset: 0;
-  animation: css 2s linear forwards;
+  animation: css 2.2s linear forwards;
 }
 .skillmeter .skill:nth-child(3) svg {
   stroke-dasharray: 0;
@@ -99,6 +99,32 @@
   animation: javascript 2s linear forwards;
 }
 
+.backendskillmeter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.backendskillmeter .skill:nth-child(1) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: html 2.5s linear forwards;
+}
+.backendskillmeter .skill:nth-child(2) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: css 2.2s linear forwards;
+}
+.backendskillmeter .skill:nth-child(3) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: javascript 2s linear forwards;
+}
+.backendskillmeter .skill:nth-child(4) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: javascript 2s linear forwards;
+}
+
 @keyframes html {
   100% {
     stroke-dasharray: 420;
@@ -106,7 +132,7 @@
 }
 @keyframes css {
   100% {
-    stroke-dasharray: 337;
+    stroke-dasharray: 380;
   }
 }
 @keyframes javascript {
@@ -115,9 +141,13 @@
   }
 }
 @media screen and (min-width: 300px) and (max-width: 500px) {
-  .skill {
-    width: 98%;
-    margin: 0;
+  .resume2 {
+    width: 90%;
+  }
+  .resume2 .skill {
+    text-align: -webkit-center;
+    width: 75%;
+    margin: auto;
   }
   .skillmeter {
     display: block;
