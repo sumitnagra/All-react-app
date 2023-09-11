@@ -19,7 +19,7 @@
         font-weight: 400;
     }
 
-    h2 {
+    h1 {
       text-shadow: 0px 20px 1s0px rgba(0, 0, 0, 0.1);
         margin: 3%;
         font-weight: 600;
@@ -61,7 +61,6 @@
                
                     img{
                         width:40%;
-                       
                     }
             }
 
@@ -98,14 +97,46 @@
     .skill:nth-child(1) svg {
         stroke-dasharray: 0;
         stroke-dashoffset: 0;
-        animation: html 2s linear forwards;
+        animation: html 2.5s linear forwards;
 
     }
 
     .skill:nth-child(2) svg {
         stroke-dasharray: 0;
         stroke-dashoffset: 0;
-        animation: css 2s linear forwards;
+        animation: css 2.2s linear forwards;
+
+    }
+
+    .skill:nth-child(3) svg {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        animation: javascript 2s linear forwards;
+
+    }
+
+    .skill:nth-child(4) svg {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        animation: javascript 2s linear forwards;
+
+    }
+}
+.backendskillmeter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .skill:nth-child(1) svg {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        animation: html 2.5s linear forwards;
+
+    }
+
+    .skill:nth-child(2) svg {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+        animation: css 2.2s linear forwards;
 
     }
 
@@ -166,7 +197,11 @@
 
 @keyframes css {
     100% {
+<<<<<<< HEAD
         stroke-dasharray: 360;
+=======
+        stroke-dasharray: 380;
+>>>>>>> 791b439879a8693aace8402264f3f5f414241fee
     }
 }
 
@@ -198,9 +233,14 @@
     }
 }
 @media screen and (min-width:300px) and (max-width:500px) {
- .skill{
-    width:98%;
-    margin: 0;
+    .resume2{
+        width: 90%;
+    }
+   
+ .resume2 .skill{
+    text-align: -webkit-center;
+    width:75%;
+    margin: auto;
  }
  .skillmeter{
     display: block;
