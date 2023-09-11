@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const SkillMeter = () => {
+const BackendSkill = () => {
     const [html, setHtml] = useState(0)
     const targetValue = 90;
 
@@ -17,11 +17,11 @@ const SkillMeter = () => {
         return () => clearInterval(intervalId);
     }, [html, targetValue]);
     return (<>
-            <div className='skillmeter'>
+            <div className='backendSkill'>
 
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><img src='https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-logo-0.png'/>
+                <div className='inner'><img src='https://logos-download.com/wp-content/uploads/2016/09/Node_logo_NodeJS.png'/>
                 </div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="182px">
                     <defs>
@@ -33,11 +33,11 @@ const SkillMeter = () => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
-                <h6> HTML {html}%</h6>
+                <h6> NODE JS  {html-20}%</h6>
         </div>
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><img src='https://clipartcraft.com/images/html5-logo-transparent-background-4.png'/> </div>
+                <div className='inner'><img src='https://media.zeemly.com/zeemly/product/expressjs.png'/> </div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -49,11 +49,11 @@ const SkillMeter = () => {
                 </svg>
           
             </div>
-            <h6> CSS {(html)-10}%</h6>
+            <h6> EXPRESS {(html)-15}%</h6>
         </div>
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><img src='https://avatars1.githubusercontent.com/u/18371059?s=280&v=4'/></div>
+                <div className='inner'><img src='https://www.omri.dev/static/media/mongodblogo.ef76cdb9.png'/></div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -64,11 +64,11 @@ const SkillMeter = () => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
-            <h6>JAVSCRIPT {(html)-20}%</h6>
+            <h6>MONGODB {(html)-10}%</h6>
         </div>
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><img src='https://cdn.auth0.com/blog/react-js/react.png'/></div>
+                <div className='inner'><img src='https://certref.com/cdn/cache/1170x780/image/2019/05/23/452ca0a2b79a95a25eb41f961b3dffb5.png'/></div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -79,9 +79,9 @@ const SkillMeter = () => {
                     <circle cx="84" cy="82" r="77" strokeLinecap='round' />
                 </svg>
             </div>
-            <h6>REACT {(html)-20}%</h6>
+            <h6>MySQL {(html)-20}%</h6>
         </div>
         </div>
     </>)
 }
-export default SkillMeter
+export default BackendSkill

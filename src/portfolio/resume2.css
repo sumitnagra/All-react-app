@@ -7,7 +7,7 @@
   margin-bottom: 4%;
   display: block;
   border-radius: 10px;
-  height: 100vh;
+  height: auto;
   text-align: center;
 }
 .resume2 h3 {
@@ -99,6 +99,32 @@
   animation: javascript 2s linear forwards;
 }
 
+.backendSkill {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.backendSkill .skill:nth-child(1) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: node 2s linear forwards;
+}
+.backendSkill .skill:nth-child(2) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: express 2s linear forwards;
+}
+.backendSkill .skill:nth-child(3) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: mongo 2s linear forwards;
+}
+.backendSkill .skill:nth-child(4) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: sql 2s linear forwards;
+}
+
 @keyframes html {
   100% {
     stroke-dasharray: 420;
@@ -106,10 +132,30 @@
 }
 @keyframes css {
   100% {
-    stroke-dasharray: 337;
+    stroke-dasharray: 360;
   }
 }
 @keyframes javascript {
+  100% {
+    stroke-dasharray: 300;
+  }
+}
+@keyframes node {
+  100% {
+    stroke-dasharray: 300;
+  }
+}
+@keyframes express {
+  100% {
+    stroke-dasharray: 340;
+  }
+}
+@keyframes mongo {
+  100% {
+    stroke-dasharray: 330;
+  }
+}
+@keyframes sql {
   100% {
     stroke-dasharray: 300;
   }

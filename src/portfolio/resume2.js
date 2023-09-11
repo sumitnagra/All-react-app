@@ -1,3 +1,4 @@
+import BackendSkill from './backendskill'
 import './resume2.css'
 import SkillMeter from './skillmeter'
 const Resume2 = () => {
@@ -8,6 +9,7 @@ const Resume2 = () => {
             <h2>Frontend</h2>
             <SkillMeter/>
             <h2>Backend</h2>
+            <BackendSkill/>
         </div>
     </>)
 }
