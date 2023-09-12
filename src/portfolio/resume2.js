@@ -1,6 +1,7 @@
 import BackendSkill from './backendskill'
 import './resume2.css'
 import SkillMeter from './skillmeter'
+import Tools from './toolsandlibrary'
 const Resume2 = () => {
 
     return (<>
@@ -10,6 +11,8 @@ const Resume2 = () => {
             <SkillMeter/>
             <h2>Backend</h2>
             <BackendSkill/>
+            <h2>Tools and Library</h2>
+            <Tools/>
         </div>
     </>)
 }

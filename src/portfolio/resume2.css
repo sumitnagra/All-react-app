@@ -15,12 +15,14 @@
   padding: 3%;
   -webkit-text-decoration: underline black 1px;
           text-decoration: underline black 1px;
-  font-weight: 400;
+  font-weight: 500;
 }
-.resume2 h1 {
+.resume2 h2 {
   text-shadow: 0px 20px 1s0px rgba(0, 0, 0, 0.1);
-  margin: 3%;
-  font-weight: 700;
+  margin: 2%;
+  font-weight: 600;
+  -webkit-text-decoration: underline 1px;
+          text-decoration: underline 1px;
 }
 .resume2 .skill {
   display: block;
@@ -151,6 +153,32 @@
   animation: sql 2s linear forwards;
 }
 
+.libraray {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.libraray .skill:nth-child(1) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: boostrtap 2.5s linear forwards;
+}
+.libraray .skill:nth-child(2) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: jquery 2.2s linear forwards;
+}
+.libraray .skill:nth-child(3) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: redux 2s linear forwards;
+}
+.libraray .skill:nth-child(4) svg {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: scss 2s linear forwards;
+}
+
 @keyframes html {
   100% {
     stroke-dasharray: 420;
@@ -186,7 +214,27 @@
     stroke-dasharray: 300;
   }
 }
-@media screen and (min-width: 300px) and (max-width: 500px) {
+@keyframes boostrtap {
+  100% {
+    stroke-dasharray: 357;
+  }
+}
+@keyframes jquery {
+  100% {
+    stroke-dasharray: 306;
+  }
+}
+@keyframes redux {
+  100% {
+    stroke-dasharray: 350;
+  }
+}
+@keyframes scss {
+  100% {
+    stroke-dasharray: 400;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
   .resume2 {
     width: 90%;
   }
@@ -197,5 +245,25 @@
   }
   .skillmeter {
     display: block;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .resume2 {
+    width: 80%;
+  }
+  .resume2 .skill {
+    text-align: -webkit-center;
+    width: 45%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1340px) {
+  .resume2 {
+    width: 80%;
+  }
+  .resume2 .skill {
+    text-align: -webkit-center;
+    width: 33%;
+    margin: auto;
   }
 }/*# sourceMappingURL=resume2.css.map */
