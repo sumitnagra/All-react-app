@@ -68,7 +68,7 @@ const Tools = () => {
         </div>
         <div className='skill'>
             <div className='outer'>
-                <div className='inner'><img src='https://certref.com/cdn/cache/1170x780/image/2019/05/23/452ca0a2b79a95a25eb41f961b3dffb5.png'/></div>
+                <div className='inner'><img src='https://front.id/sites/default/files/2017-05/scss.png'/></div>
                 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
                     <defs>
                         <linearGradient id="GradientColor">
@@ -80,6 +80,21 @@ const Tools = () => {
                 </svg>
             </div>
             <h6>SCSS {html}%</h6>
+        </div>
+        <div className='skill'>
+            <div className='outer'>
+                <div className='inner'><img src='https://www.disquisitioner.com/img/github-icon-x.png'/></div>
+                <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width="180px" height="180px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stopColor='#e91e63' />
+                            <stop offset="100%" stopColor='#673ab7' />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="84" cy="82" r="77" strokeLinecap='round' />
+                </svg>
+            </div>
+            <h6>Git & Github {html-10}%</h6>
         </div>
         </div>
     </>)

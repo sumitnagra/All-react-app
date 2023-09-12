@@ -222,6 +222,12 @@
             animation: scss 2s linear forwards;
     
         }
+        .skill:nth-child(5) svg {
+            stroke-dasharray: 0;
+            stroke-dashoffset: 0;
+            animation: redux 2s linear forwards;
+    
+        }
     }
 @keyframes html {
     100% {
