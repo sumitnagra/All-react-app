@@ -14,6 +14,11 @@ const Resume2 = () => {
             <h2>Tools and Library</h2>
             <Tools/>
         </div>
+        <div className='resume2' data-aos="fade-up">
+            <h3>Education</h3>
+            <h1>Bsc Computer Science</h1>
+            <h4>2016-2021</h4>
+        </div>
     </>)
 }
 export default Resume2

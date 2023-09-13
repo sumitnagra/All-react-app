@@ -10,6 +10,9 @@
   height: auto;
   text-align: center;
 }
+.resume2 h4 {
+  padding: 1%;
+}
 .resume2 h3 {
   width: 100%;
   padding: 3%;
