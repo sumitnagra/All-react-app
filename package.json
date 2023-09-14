@@ -28,7 +28,10 @@
     "recharts": "^2.7.3",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.2",
+    "script": "^0.1.4",
+    "type": "^2.7.2",
     "typed.js": "^2.0.16",
+    "typescript": "^5.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

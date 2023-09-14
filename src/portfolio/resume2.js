@@ -21,4 +21,4 @@ const Resume2 = () => {
         </div>
     </>)
 }
-export default Resume2
+export default Resume2 
